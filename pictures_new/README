@@ -1,0 +1,12 @@
+Show pictures on a specific directory
+
+Author: klaus.ulrich@web.de
+
+Build
+-----
+
+Just call ant
+
+Run
+---
+adopt scripts/pictures.sh and run it
