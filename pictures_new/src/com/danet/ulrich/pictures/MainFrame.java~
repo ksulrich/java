@@ -47,9 +47,7 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
 public class MainFrame {
-    private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
     private static final String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
-    private static final Boolean DEBUG = new Boolean(DEBUG_STR);
 	
     private JTextArea description;
     private JList fileList;
@@ -66,7 +64,7 @@ public class MainFrame {
     private double degree;
 
     public static void main(String[] args) throws IOException {
-    	System.out.println("DEBUG=" + DEBUG);
+
         if (args.length == 1) {
             frame = new JFrame("Bilder");
             MainFrame mainFrame = new MainFrame(args[0]);
@@ -123,8 +121,7 @@ public class MainFrame {
         model = new DefaultListModel();
         elements = Element.readElements(new File(rootDir));
         for (int i = 0; i < elements.length; i++) {
-        	if (DEBUG)
-        		System.out.println(i + ": " + elements[i].toStringDebug());
+            System.out.println(i + ": " + elements[i].toStringDebug());
             model.add(i, elements[i]);
         }
         fileList.setModel(model);
@@ -147,8 +144,7 @@ public class MainFrame {
                     currentElement.setImage(image);
                     ((NavigableImagePanel) imagePanel).setImage(image);
 
-                    if (DEBUG)
-                    	System.out.println("currentElement=" + currentElement.toStringDebug());
+                    System.out.println("currentElement=" + currentElement.toStringDebug());
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 } finally {
@@ -158,8 +154,7 @@ public class MainFrame {
         });
         fileList.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-            	if (DEBUG)
-            		System.out.println("E=" + e);
+                System.out.println("E=" + e);
                 if (e.getButton() == MouseEvent.BUTTON3 ||
                     e.getClickCount() == 2) {
                     currentElement.mark();
@@ -172,8 +167,7 @@ public class MainFrame {
 
         delete.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if (DEBUG)
-                	System.out.println("Delete: " + currentElement.getFileName());
+                System.out.println("Delete: " + currentElement.getFileName());
                 if (!currentElement.deleteJpgFile()) {
                     JOptionPane.showMessageDialog(mainPanel, "Can not delete picture " +
                                                              currentElement.getFileName());
@@ -267,12 +261,12 @@ public class MainFrame {
         public ImagePanel() {
             addMouseListener(new MouseAdapter() {
                 public void mouseClicked(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mouseClicked: " + e);
+                    System.out.println("XXX: mouseClicked: " + e);
                     repaint();
                 }
 
                 public void mousePressed(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mousePressed: " + e);
+                    System.out.println("XXX: mousePressed: " + e);
                     if (e.getClickCount() == 2) {
                         zoomRect.x = 0;
                         zoomRect.y = 0;
@@ -287,19 +281,18 @@ public class MainFrame {
                     zoomRect.y = e.getY();
                     zoomRect.width = 1;
                     zoomRect.height = 1;
-                    if (DEBUG) System.out.println("mousePressed: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
+                    System.out.println("mousePressed: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
                                        ",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
                     drawZoomRect();
                 }
 
                 public void mouseReleased(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mouseReleased: " + e);
+                    System.out.println("XXX: mouseReleased: " + e);
                     if (inZoom) {
                         zoomRect.width = e.getX() - zoomRect.x;
                         zoomRect.height = e.getY() - zoomRect.y;
-                        if (DEBUG)
-                        	System.out.println("mouseReleased: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
-                        			",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
+                        System.out.println("mouseReleased: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
+                                           ",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
                         repaint();
                     }
 //                    inZoom = false;
@@ -365,12 +358,11 @@ public class MainFrame {
                 scaleHeight = (double) h / (double) zoomRect.height;
                 scaleZoom = Math.min(scaleWidth, scaleHeight);
             }
-            if (DEBUG)
-            	System.out.println("inZoom=" + inZoom + ", scale=" + scale + ", scaleZoom=" + scaleZoom +
-            			", H=" + h + ", w=" + w +
-            			", imgH=" + imageHeight + ", imgW=" + imageWidth +
-            			", zoomRect.x=" + zoomRect.x + ", zoomRect.y=" + zoomRect.y +
-            			", zoomRect.heigth=" + zoomRect.height + ", zoomRect.width=" + zoomRect.width);
+            System.out.println("inZoom=" + inZoom + ", scale=" + scale + ", scaleZoom=" + scaleZoom +
+                               ", H=" + h + ", w=" + w +
+                               ", imgH=" + imageHeight + ", imgW=" + imageWidth +
+                               ", zoomRect.x=" + zoomRect.x + ", zoomRect.y=" + zoomRect.y +
+                               ", zoomRect.heigth=" + zoomRect.height + ", zoomRect.width=" + zoomRect.width);
 
             if (inZoom) {
                 AffineTransform moveTr = AffineTransform.getTranslateInstance(-zoomRect.x,
@@ -444,7 +436,7 @@ public class MainFrame {
 		public void windowClosed(WindowEvent e) {
             final File dir = new File(OUTDIR);
             if (!dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
-                System.err.println("Renaming of " + OUTDIR + " failed");
+                System.err.println("Renaming of /tmp/pictures failed");
             }
             dir.mkdir();
             for (int i = 0; i < model.size(); i++) {
@@ -455,7 +447,6 @@ public class MainFrame {
                     e1.printStackTrace();
                 }
             }
-	    System.out.println("Marked files saved in " + OUTDIR);
         }
     }
 }
