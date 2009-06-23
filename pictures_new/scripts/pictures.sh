@@ -12,7 +12,9 @@ fi
 
 DELIMITER=":"
 FORMS=../lib/forms_rt.jar
+#FORMS=$HOME/lib/forms_rt.jar
 PICTURES=../bin
+#PICTURES=${HOME}/lib/pictures.jar
 # set output directory for maked pictures
 OUTDIR="/tmp/pics_out"
 #DEBUG="true"
@@ -25,7 +27,6 @@ then
 	PICTURES=`cygpath -w $PICTURES`
 fi
 
-#echo "java -DOUTDIR=${OUTDIR} -classpath \"${FORMS}${DELIMITER}${PICTURES}\" com.danet.ulrich.pictures.MainFrame $PICS"
 cmd="java -DDEBUG=${DEBUG} -DOUTDIR=${OUTDIR} -classpath ${FORMS}${DELIMITER}${PICTURES} com.danet.ulrich.pictures.MainFrame $PICS"
 echo $cmd
 $cmd
