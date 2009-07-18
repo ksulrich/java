@@ -72,8 +72,6 @@ public class MainFrame {
             MainFrame mainFrame = new MainFrame(args[0]);
             frame.setContentPane(mainFrame.mainPanel);
 
-            //frame.pack();
-            //frame.setSize(800, 600);
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             
             GraphicsEnvironment ge = 
