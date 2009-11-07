@@ -101,6 +101,8 @@ public class MainFrame {
                 } else {
                     return;
                 }
+                if (DEBUG) System.out.println("Degree = "+ degree);
+                imagePanel.setDegree(degree);
                 imagePanel.repaint();
             }
         });
@@ -246,7 +248,7 @@ public class MainFrame {
         panel5.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
         panel3.add(panel5, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null));
         delete = new JButton();
-        delete.setText("Löschen");
+        delete.setText("LÃ¶schen");
         panel5.add(delete, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null));
     }
 
