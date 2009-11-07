@@ -12,3 +12,6 @@ Run
 Adopt  
   scripts/pictures.sh 
 and run it
+
+Alternatively, run scripts/MyFrame.sh like this:
+./MyFrame.sh C:\\pictures
