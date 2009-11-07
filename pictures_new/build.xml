@@ -54,9 +54,7 @@
 		</java>
 	</target>
 	<target description="Generate pictures.jar" name="build-jar">
-		<jar destfile="pictures.jar" basedir="bin" 
-			includes="**/*" excludes="*.jar"/>
-		<jar update="true" destfile="pictures.jar" basedir="src" 
-					includes="**/*" />
+		<jar destfile="pictures.jar" basedir="bin" includes="**/*" excludes="*.jar" />
+		<jar update="true" destfile="pictures.jar" basedir="src" includes="**/*" />
 	</target>
 </project>
