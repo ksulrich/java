@@ -49,7 +49,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 public class MainFrame {
     private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
     private static final String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
-    private static final Boolean DEBUG = new Boolean(DEBUG_STR);
+    static final Boolean DEBUG = new Boolean(DEBUG_STR);
 	
     private JTextArea description;
     private JList fileList;
@@ -65,20 +65,10 @@ public class MainFrame {
     private JButton delete;
     private double degree;
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
     	System.out.println("DEBUG=" + DEBUG);
         if (args.length == 1) {
-            frame = new JFrame("Bilder");
-            MainFrame mainFrame = new MainFrame(args[0]);
-            frame.setContentPane(mainFrame.mainPanel);
-
-            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-            
-            GraphicsEnvironment ge = 
-				GraphicsEnvironment.getLocalGraphicsEnvironment();
-			Rectangle bounds = ge.getMaximumWindowBounds();
-			frame.setSize(new Dimension(bounds.width, bounds.height));
-			frame.setVisible(true);		
+            new MainFrame(args[0]);
         } else {
             System.err.println("Usage: MainFrame <root-dir-of-pictures>");
         }
@@ -86,18 +76,14 @@ public class MainFrame {
 
     public MainFrame(String rootDir) throws IOException {
     	setup();
+    	frame = new JFrame("Bilder");
+    	
         Container parent = imagePanel.getParent();
         parent.remove(imagePanel);
         imagePanel = new NavigableImagePanel();
         parent.add(imagePanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null));
 
         frame.addWindowListener(new ClosingWindowListener());
-
-        //        frame.addComponentListener(new ComponentAdapter() {
-        //            public void componentResized(ComponentEvent e) {
-        //                imagePanel.repaint();
-        //            }
-        //        });
 
         description.setLineWrap(true);
         description.setFont(new Font(null, Font.BOLD, 12));
@@ -187,6 +173,15 @@ public class MainFrame {
             }
         });
         fileList.setSelectedIndex(0);
+        frame.setContentPane(mainPanel);
+
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+        GraphicsEnvironment ge = 
+			GraphicsEnvironment.getLocalGraphicsEnvironment();
+		Rectangle bounds = ge.getMaximumWindowBounds();
+		frame.setSize(new Dimension(bounds.width, bounds.height));
+		frame.setVisible(true);
     }
 
     private void setup() {
@@ -253,189 +248,6 @@ public class MainFrame {
         delete = new JButton();
         delete.setText("Löschen");
         panel5.add(delete, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null));
-    }
-
-    class ImagePanel extends JPanel {
-		private static final long serialVersionUID = -1197054716741676059L;
-		
-		private Image image;
-        private boolean inZoom = false;
-        private Rectangle zoomRect = new Rectangle(0, 0, 0, 0);;
-
-        public ImagePanel() {
-            addMouseListener(new MouseAdapter() {
-                public void mouseClicked(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mouseClicked: " + e);
-                    repaint();
-                }
-
-                public void mousePressed(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mousePressed: " + e);
-                    if (e.getClickCount() == 2) {
-                        zoomRect.x = 0;
-                        zoomRect.y = 0;
-                        zoomRect.width = getSize().width;
-                        zoomRect.height = getSize().height;
-                        inZoom = false;
-                        return;
-                    }
-                    e.getPoint();
-                    //inZoom = true;
-                    zoomRect.x = e.getX();
-                    zoomRect.y = e.getY();
-                    zoomRect.width = 1;
-                    zoomRect.height = 1;
-                    if (DEBUG) System.out.println("mousePressed: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
-                                       ",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
-                    drawZoomRect();
-                }
-
-                public void mouseReleased(MouseEvent e) {
-                    if (DEBUG) System.out.println("XXX: mouseReleased: " + e);
-                    if (inZoom) {
-                        zoomRect.width = e.getX() - zoomRect.x;
-                        zoomRect.height = e.getY() - zoomRect.y;
-                        if (DEBUG)
-                        	System.out.println("mouseReleased: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
-                        			",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
-                        repaint();
-                    }
-//                    inZoom = false;
-                }
-            });
-            addMouseMotionListener(new MouseMotionAdapter() {
-                public void mouseDragged(MouseEvent e) {
-                    inZoom = true;
-                    int nx = e.getX();
-                    int ny = e.getY();
-                    nx = nx - zoomRect.x;
-                    ny = ny - zoomRect.y;
-                    if (nx < 0)
-                        nx = nx * (-1);
-                    if (ny < 0)
-                        ny = ny * (-1);
-                    drawZoomRect();
-                    zoomRect.width = nx;
-                    zoomRect.height = ny;
-//                    System.out.println("mouseDragged: zommRect[x=" + zoomRect.x + ",y=" + zoomRect.y +
-//                                       ",width=" + zoomRect.width + ",height=" + zoomRect.height + "]");
-                    drawZoomRect();
-                }
-
-            });
-        }
-
-        public void drawZoomRect() {
-            Graphics2D g = (Graphics2D) (getGraphics());
-            g.setColor(Color.red);
-            g.setStroke(new BasicStroke(1.0f));
-            g.setXORMode(Color.white);
-            g.drawRect(zoomRect.x, zoomRect.y, zoomRect.width, zoomRect.height);
-            g.setPaintMode();
-        }
-
-        public void add(Image image) {
-            this.image = image;
-            repaint();
-        }
-
-        public void paintComponent(Graphics g) {
-            super.paintComponent(g); //paint background
-
-            Graphics2D g2 = (Graphics2D) g;
-            AffineTransform transSaved = g2.getTransform();
-
-            int w = getSize().width;
-            int h = getSize().height;
-
-            int imageWidth, imageHeight;
-            double scaleWidth, scaleHeight, scaleZoom = 1.0d;
-            imageWidth = image.getWidth(this);
-            imageHeight = image.getHeight(this);
-            scaleWidth = (double) w / (double) imageWidth;
-            scaleHeight = (double) h / (double) imageHeight;
-            double scale = Math.min(scaleWidth, scaleHeight);
-            if (inZoom) {
-//                imageWidth = zoomRect.width;
-//                imageHeight = zoomRect.height;
-
-                scaleWidth =  (double) w / (double) zoomRect.width;
-                scaleHeight = (double) h / (double) zoomRect.height;
-                scaleZoom = Math.min(scaleWidth, scaleHeight);
-            }
-            if (DEBUG)
-            	System.out.println("inZoom=" + inZoom + ", scale=" + scale + ", scaleZoom=" + scaleZoom +
-            			", H=" + h + ", w=" + w +
-            			", imgH=" + imageHeight + ", imgW=" + imageWidth +
-            			", zoomRect.x=" + zoomRect.x + ", zoomRect.y=" + zoomRect.y +
-            			", zoomRect.heigth=" + zoomRect.height + ", zoomRect.width=" + zoomRect.width);
-
-            if (inZoom) {
-                AffineTransform moveTr = AffineTransform.getTranslateInstance(-zoomRect.x,
-                                                                              -zoomRect.y);
-                g2.transform(moveTr);
-//                transform.concatenate(moveTr);
-            }
-
-            AffineTransform scaleTr = AffineTransform.getScaleInstance(scale, scale);
-            g2.transform(scaleTr);
-//            AffineTransform transform = new AffineTransform();
-
-            if (inZoom) {
-                AffineTransform scaleZoomTr = AffineTransform.getScaleInstance(scaleZoom, scaleZoom);
-                g2.transform(scaleZoomTr);
-            }
-
-            double dx = (imageWidth / 2);
-            double dy = (imageHeight / 2);
-            AffineTransform rotateTr = AffineTransform.getRotateInstance(Math.toRadians(degree), dx, dy);
-            g2.transform(rotateTr);
-
-            //Now draw the imageComp scaled.
-            //g.drawImage(image, 0, 0, (int) (imageWidth / scale), (int) (imageHeight / scale), this);
-            g.drawImage(image, zoomRect.x, zoomRect.y, imageWidth, imageHeight, this);
-
-            g2.setTransform(transSaved);
-            g2.dispose();
-
-            //            double w = getSize().width;
-            //            double h = getSize().height;
-            //            double imageHeight = image.getHeight(this);
-            //            double imageWidth = image.getWidth(this);
-            //
-            //            double scaleWidth = w / imageWidth;
-            //            double scaleHeight = h / imageHeight;
-            //            double scale = Math.max(scaleWidth, scaleHeight);
-            //
-            //            AffineTransform scaleTr = new AffineTransform();
-            //            scaleTr.scale(scale, scale);
-            //
-            //            AffineTransform rotateTr = new AffineTransform();
-            //            rotateTr.rotate(Math.toRadians(degree));
-            //
-            //            AffineTransform toCenterAt = new AffineTransform();
-            //
-            //
-            //            toCenterAt.concatenate(rotateTr);
-            //            //toCenterAt.concatenate(scaleTr);
-            //            //toCenterAt.translate(-(w/2), -(h/2));
-            //
-            //            //toCenterAt.translate(+(imageWidth/2), +(imageHeight/2));
-            //
-            //            System.out.println("degree="+degree+ ", imageWidth="+imageWidth+", imageHeight="+imageHeight);
-            //
-            //            //trans.translate(-((imageWidth/scale)/2), -((imageHeight/scale)/2));
-            //            //toCenterAt.translate(-((w)), -((h)));
-            //            g2.setTransform(toCenterAt);
-            //
-            //            //Draw imageComp rotateTr its natural size first.
-            //            //g.drawImage(image, 0, 0, this);
-            //
-            //            //Now draw the imageComp scaled.
-            //            g.drawImage(image, 0, 0, (int) (imageWidth * scale), (int) (imageHeight * scale), this);
-            //            //g.drawImage(image, 0, 0, (int) (imageWidth), (int) (imageHeight), this);
-            //            g2.setTransform(transSaved);
-        }
     }
 
     public class ClosingWindowListener extends WindowAdapter {
