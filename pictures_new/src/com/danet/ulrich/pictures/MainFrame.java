@@ -41,19 +41,19 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 
 public class MainFrame {
     private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
-    private static final String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
-    static final Boolean DEBUG = new Boolean(DEBUG_STR);
+    private static String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
+    static final Boolean DEBUG = Boolean.valueOf(DEBUG_STR);
 	
     private JTextArea description;
     private JList fileList;
     private JTextField title;
     private JSplitPane mainPanel;
-    private Element[] elements;
     private DefaultListModel model;
     private static JFrame frame;
     private ImageLoader imageComp;
     private Element currentElement;
-    private NavigableImagePanel imagePanel;
+    private JPanel imagePanel;
+    private NavigableImagePanel navPanel;
     //private JLabel imageIcon;
     private JButton delete;
     private double degree;
@@ -68,12 +68,17 @@ public class MainFrame {
     }
 
     public MainFrame(String rootDir) throws IOException {
+        String os = System.getProperty("os.name");
+        if (os.startsWith("Windows")) {
+            OUTDIR = "C:\\temp\\pictures";
+        }
     	setup();
     	frame = new JFrame("Bilder");
     	
         Container parent = imagePanel.getParent();
         parent.remove(imagePanel);
-        imagePanel = new NavigableImagePanel();
+        navPanel = new NavigableImagePanel();
+        imagePanel = navPanel;
         parent.add(imagePanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null));
 
         frame.addWindowListener(new ClosingWindowListener());
@@ -95,12 +100,12 @@ public class MainFrame {
                     return;
                 }
                 if (DEBUG) System.out.println("Degree = "+ degree);
-                imagePanel.setDegree(degree);
+                navPanel.setDegree(degree);
                 imagePanel.repaint();
             }
         });
         model = new DefaultListModel();
-        elements = Element.readElements(new File(rootDir));
+        Element[] elements= Element.readElements(new File(rootDir));
         for (int i = 0; i < elements.length; i++) {
         	if (DEBUG)
         		System.out.println(i + ": " + elements[i].toStringDebug());

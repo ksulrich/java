@@ -3,7 +3,6 @@ package de.ulrich.shares;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -21,19 +20,16 @@ public class ShareHandler {
 	}
 
 	public List<Share> get(String name) {
-		List<Share> shareList = shares.get(name);
-		return shareList;
+        return shares.get(name);
 	}
 	
 	public Share get(String name, int quantity) {
 		List<Share> shares = get(name);
-		Iterator<Share> it = shares.iterator();
-		while (it.hasNext()) {
-			Share share = it.next();
-			if (share.getQuantity() == quantity) {
-				return share;
-			}
-		}
+        for (Share share1 : shares) {
+            if (share1.getQuantity() == quantity) {
+                return share1;
+            }
+        }
 		return null;
 	}
 	
@@ -41,15 +37,13 @@ public class ShareHandler {
 	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		Set<String> keys = shares.keySet();
-		Iterator<String> it = keys.iterator();
-		while (it.hasNext()) {
-			String ticker = it.next();
-			sb.append(ticker + "\n");
-			List<Share> shareList = shares.get(ticker);
-			for (Share share : shareList) {
-				sb.append("\t" + share + "\n");
-			}
-		}
+        for (String key : keys) {
+            sb.append(key).append("\n");
+            List<Share> shareList = shares.get(key);
+            for (Share share : shareList) {
+                sb.append("\t").append(share).append("\n");
+            }
+        }
 		return sb.toString();
 	}
 
@@ -62,16 +56,15 @@ public class ShareHandler {
 		if (share == null) {
 			List<Share> shares = get(name);
 			System.out.println(shares);
-			Iterator<Share> it = shares.iterator();
-			while (it.hasNext()) {
-				Share shareIt = it.next();
-				if (shareIt.getQuantity() < quantity) {
-					quantity =- shareIt.getQuantity();
-					shareIt.setSell(today);
-					assert(quantity >= 0) : "We can not sell more as we have";
-				}
-			}
+            for (Share share1 : shares) {
+                if (share1.getQuantity() < quantity) {
+                    quantity = -share1.getQuantity();
+                    share1.setSell(today);
+                    assert (quantity >= 0) : "We can not sell more as we have";
+                }
+            }
 		}
-		share.setSell(today);
+        assert share != null;
+        share.setSell(today);
 	}
 }

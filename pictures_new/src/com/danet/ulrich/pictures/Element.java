@@ -32,7 +32,7 @@ public class Element implements Comparable<Object> {
 
     // -------------------------- STATIC METHODS --------------------------
 
-    public final static Element[] readElements(File imageDir) throws IOException {
+    public static Element[] readElements(File imageDir) throws IOException {
         if (!imageDir.exists()) {
             throw new FileNotFoundException("Directory " + imageDir.getName() + " does not exist");
         }
@@ -40,37 +40,28 @@ public class Element implements Comparable<Object> {
         getJpgFileNames(jpgFiles, imageDir);
 
         Set<Element> elements = new TreeSet<Element>();
-        for (int i = 0; i < jpgFiles.size(); i++) {
-            Element element = new Element(new File(jpgFiles.get(i).toString()));
+        for (String jpgFile1 : jpgFiles) {
+            Element element = new Element(new File(jpgFile1));
             elements.add(element);
         }
-        return (Element[]) elements.toArray(new Element[elements.size()]);
+        return elements.toArray(new Element[elements.size()]);
     }
 
     private static void getJpgFileNames(List<String> fileNames, File imageDir) {
         String[] allFileNames = imageDir.list();
-        for (int i = 0; i < allFileNames.length; i++) {
-            File file = new File(imageDir.getPath() + File.separator + allFileNames[i]);
+        for (String allFileName : allFileNames) {
+            File file = new File(imageDir.getPath() + File.separator + allFileName);
             if (file.isDirectory()) {
                 getJpgFileNames(fileNames, file);
             }
         }
         String[] files = imageDir.list(new FilenameFilter() {
             public boolean accept(File dir, String name) {
-                if (name.endsWith("-thumb.jpg")) {
-                    return false;
-                }
-                if (name.endsWith(".jpg")) {
-                    return true;
-                }
-                if (name.endsWith(".JPG")) {
-                	return true;
-                }
-                return false;
+                return !name.endsWith("-thumb.jpg") && (name.endsWith(".jpg") || name.endsWith(".JPG"));
             }
         });
-        for (int i = 0; i < files.length; i++) {
-            fileNames.add(imageDir.getPath() + File.separator + files[i]);
+        for (String file : files) {
+            fileNames.add(imageDir.getPath() + File.separator + file);
         }
     }
 
@@ -86,19 +77,11 @@ public class Element implements Comparable<Object> {
     //        return baseDir;
     //    }
 
-    public File getJpgFile() {
-        return jpgFile;
-    }
-
     public String getDesc() throws IOException {
         if (desc == null) {
             readText();
         }
         return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
     }
 
     private void readText() throws IOException {
@@ -114,7 +97,7 @@ public class Element implements Comparable<Object> {
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(descFile)));
             String input;
             while ((input = br.readLine()) != null) {
-                sb.append(input + "\n");
+                sb.append(input).append("\n");
             }
         }
         return sb.toString();
@@ -136,6 +119,7 @@ public class Element implements Comparable<Object> {
                 nlPos = text.length();
             }
         }
+        assert text != null;
         return text.substring(0, nlPos).trim();
     }
 
@@ -143,9 +127,9 @@ public class Element implements Comparable<Object> {
         return text.substring(text.indexOf('\n') + 1).trim();
     }
 
-    public BufferedImage getImage() {
-        return this.image;
-    }
+//    public BufferedImage getImage() {
+//        return this.image;
+//    }
     
     public void setImage(BufferedImage image) {
         this.image = image;
@@ -156,10 +140,6 @@ public class Element implements Comparable<Object> {
             readText();
         }
         return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getFileName() {
@@ -206,7 +186,7 @@ public class Element implements Comparable<Object> {
         this.desc = desc;
 
         File descFile = getDescriptionFile();
-        BufferedWriter bout = null;
+        BufferedWriter bout;
         try {
             bout = new BufferedWriter(new FileWriter(descFile));
             bout.write(title);
@@ -251,13 +231,11 @@ public class Element implements Comparable<Object> {
     public void copy(File dir) throws IOException {
         if (isMark()) {
             byte[] buf = new byte[4096];
-            String parent = jpgFile.getParent();
-            String year = parent.substring(parent.lastIndexOf(File.separator)+1);
             FileInputStream fis = new FileInputStream(jpgFile);
-            File outFile = new File(dir.toString() + File.separator + year + "-" + jpgFile.getName());
+            File outFile = new File(dir.toString() + File.separator + jpgFile.getName());
             outFile.createNewFile();
             FileOutputStream fos = new FileOutputStream(outFile);
-            int len = -1;
+            int len;
             while ((len = fis.read(buf)) != -1) {
                 fos.write(buf, 0, len);
             }
