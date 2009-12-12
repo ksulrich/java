@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.danet.gui.Zeiten2">
+  <grid id="385d" binding="mainPanel" row-count="1" column-count="2" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="83" y="78" width="708" height="615"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <scrollpane id="62184" binding="listScrollPane">
+        <constraints>
+          <xy x="0" y="0" width="191" height="615"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3"/>
+        </constraints>
+        <properties>
+          <horizontalScrollBarPolicy value="30"/>
+          <verticalScrollBarPolicy value="20"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="beec8" class="javax.swing.JList" binding="list">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+      <grid id="f4c93" row-count="1" column-count="1" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="201" y="0" width="507" height="615"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="e7eee" row-count="1" column-count="1" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <xy x="0" y="264" width="507" height="87"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="a223d" row-count="3" column-count="1" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <xy x="0" y="0" width="507" height="87"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="ab823" class="javax.swing.JLabel" binding="topicLabel">
+                    <constraints>
+                      <xy x="232" y="2" width="43" height="15"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="DATUM"/>
+                    </properties>
+                  </component>
+                  <grid id="9cb95" row-count="1" column-count="2" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <xy x="191" y="30" width="124" height="22"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="e2cdc" class="javax.swing.JLabel">
+                        <constraints>
+                          <xy x="0" y="3" width="69" height="15"/>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Gesamtzeit:"/>
+                        </properties>
+                      </component>
+                      <component id="258ee" class="javax.swing.JTextField" binding="timeField">
+                        <constraints>
+                          <xy x="74" y="0" width="50" height="22"/>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0">
+                            <preferred-size width="50" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <columns value="6"/>
+                          <editable value="false"/>
+                          <horizontalAlignment value="0"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="a1036" row-count="1" column-count="6" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <xy x="0" y="62" width="507" height="25"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <enabled value="false"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="c13ca" class="javax.swing.JButton" binding="startButton">
+                        <constraints>
+                          <xy x="0" y="0" width="64" height="25"/>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Start:"/>
+                        </properties>
+                      </component>
+                      <component id="d40e8" class="javax.swing.JTextField" binding="startField">
+                        <constraints>
+                          <xy x="74" y="1" width="100" height="22"/>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="7" hsize-policy="6" anchor="8" fill="0">
+                            <preferred-size width="100" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <columns value="10"/>
+                          <editable value="false"/>
+                          <horizontalAlignment value="0"/>
+                        </properties>
+                      </component>
+                      <component id="9cff1" class="javax.swing.JButton" binding="endButton">
+                        <constraints>
+                          <xy x="184" y="0" width="67" height="25"/>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Ende:"/>
+                        </properties>
+                      </component>
+                      <component id="b8d59" class="javax.swing.JTextField" binding="endField">
+                        <constraints>
+                          <xy x="261" y="1" width="100" height="22"/>
+                          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0">
+                            <preferred-size width="100" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <columns value="10"/>
+                          <editable value="false"/>
+                          <horizontalAlignment value="0"/>
+                        </properties>
+                      </component>
+                      <component id="7b149" class="javax.swing.JLabel">
+                        <constraints>
+                          <xy x="371" y="5" width="46" height="15"/>
+                          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Summe:"/>
+                        </properties>
+                      </component>
+                      <component id="b26e8" class="javax.swing.JTextField" binding="sumField">
+                        <constraints>
+                          <xy x="427" y="1" width="80" height="22"/>
+                          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0">
+                            <preferred-size width="80" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <editable value="false"/>
+                          <horizontalAlignment value="0"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
