@@ -3,47 +3,23 @@
  */
 package com.danet.ulrich.pictures;
 
-import java.awt.Container;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GraphicsEnvironment;
-import java.awt.Insets;
-import java.awt.Rectangle;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+
+import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import java.awt.*;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-
-import com.intellij.uiDesigner.core.GridConstraints;
-import com.intellij.uiDesigner.core.GridLayoutManager;
 
 public class MainFrame {
     private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
     private static String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
     static final Boolean DEBUG = Boolean.valueOf(DEBUG_STR);
-	
+
     private JTextArea description;
     private JList fileList;
     private JTextField title;
@@ -58,8 +34,8 @@ public class MainFrame {
     private JButton delete;
     private double degree;
 
-	public static void main(String[] args) throws IOException {
-    	System.out.println("DEBUG=" + DEBUG);
+    public static void main(String[] args) throws IOException {
+        System.out.println("DEBUG=" + DEBUG);
         if (args.length == 1) {
             new MainFrame(args[0]);
         } else {
@@ -72,9 +48,9 @@ public class MainFrame {
         if (os.startsWith("Windows")) {
             OUTDIR = "C:\\temp\\pictures";
         }
-    	setup();
-    	frame = new JFrame("Bilder");
-    	
+        setup();
+        frame = new JFrame("Bilder");
+
         Container parent = imagePanel.getParent();
         parent.remove(imagePanel);
         navPanel = new NavigableImagePanel();
@@ -87,28 +63,28 @@ public class MainFrame {
         description.setFont(new Font(null, Font.BOLD, 12));
         title.setFont(new Font(null, Font.BOLD, 16));
 
-        fileList.addKeyListener(new KeyAdapter(){
+        fileList.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
                     degree += 90;
                 } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
                     degree -= 90;
                 } else if (e.getKeyChar() == 'm') {
-                	currentElement.mark();
-                	fileList.repaint();
+                    currentElement.mark();
+                    fileList.repaint();
                 } else {
                     return;
                 }
-                if (DEBUG) System.out.println("Degree = "+ degree);
+                if (DEBUG) System.out.println("Degree = " + degree);
                 navPanel.setDegree(degree);
                 imagePanel.repaint();
             }
         });
         model = new DefaultListModel();
-        Element[] elements= Element.readElements(new File(rootDir));
+        Element[] elements = Element.readElements(new File(rootDir));
         for (int i = 0; i < elements.length; i++) {
-        	if (DEBUG)
-        		System.out.println(i + ": " + elements[i].toStringDebug());
+            if (DEBUG)
+                System.out.println(i + ": " + elements[i].toStringDebug());
             model.add(i, elements[i]);
         }
         fileList.setModel(model);
@@ -132,7 +108,7 @@ public class MainFrame {
                     ((NavigableImagePanel) imagePanel).setImage(image);
 
                     if (DEBUG)
-                    	System.out.println("currentElement=" + currentElement.toStringDebug());
+                        System.out.println("currentElement=" + currentElement.toStringDebug());
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 } finally {
@@ -142,10 +118,10 @@ public class MainFrame {
         });
         fileList.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-            	if (DEBUG)
-            		System.out.println("E=" + e);
+                if (DEBUG)
+                    System.out.println("E=" + e);
                 if (e.getButton() == MouseEvent.BUTTON3 ||
-                    e.getClickCount() == 2) {
+                        e.getClickCount() == 2) {
                     currentElement.mark();
                     fileList.repaint();
                 }
@@ -157,10 +133,10 @@ public class MainFrame {
         delete.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (DEBUG)
-                	System.out.println("Delete: " + currentElement.getFileName());
+                    System.out.println("Delete: " + currentElement.getFileName());
                 if (!currentElement.deleteJpgFile()) {
                     JOptionPane.showMessageDialog(mainPanel, "Can not delete picture " +
-                                                             currentElement.getFileName());
+                            currentElement.getFileName());
                     return;
                 }
                 int selectionIndex = fileList.getSelectedIndex();
@@ -176,35 +152,37 @@ public class MainFrame {
         frame.setContentPane(mainPanel);
 
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        
-        GraphicsEnvironment ge = 
-			GraphicsEnvironment.getLocalGraphicsEnvironment();
-		Rectangle bounds = ge.getMaximumWindowBounds();
-		frame.setSize(new Dimension(bounds.width, bounds.height));
-		frame.setVisible(true);
+
+        GraphicsEnvironment ge =
+                GraphicsEnvironment.getLocalGraphicsEnvironment();
+        Rectangle bounds = ge.getMaximumWindowBounds();
+        frame.setSize(new Dimension(bounds.width, bounds.height));
+        frame.setVisible(true);
     }
 
     private void setup() {
-    	final File dir = new File(OUTDIR);
+        final File dir = new File(OUTDIR);
         if (dir.exists() &&
-        	!dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
+                !dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
             System.err.println("Renaming of " + OUTDIR + " failed");
             System.exit(1);
         }
         dir.mkdir();
-	}
+    }
 
-	{
-        // GUI initializer generated by IntelliJ IDEA GUI Designer
-        // !!! IMPORTANT !!!
-        // DO NOT EDIT OR ADD ANY CODE HERE!
+    {
+// GUI initializer generated by IntelliJ IDEA GUI Designer
+// >>> IMPORTANT!! <<<
+// DO NOT EDIT OR ADD ANY CODE HERE!
         $$$setupUI$$$();
     }
 
     /**
      * Method generated by IntelliJ IDEA GUI Designer
-     * !!! IMPORTANT !!!
+     * >>> IMPORTANT!! <<<
      * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
      */
     private void $$$setupUI$$$() {
         mainPanel = new JSplitPane();
@@ -217,41 +195,48 @@ public class MainFrame {
         panel1.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
         mainPanel.setLeftComponent(panel1);
         final JScrollPane scrollPane1 = new JScrollPane();
-        panel1.add(scrollPane1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(0, 150), null, null));
+        panel1.add(scrollPane1, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(0, 150), null, null, 0, false));
         scrollPane1.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLoweredBevelBorder(), "Bilder"));
         fileList = new JList();
         scrollPane1.setViewportView(fileList);
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panel1.add(panel2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(0, -1), new Dimension(300, -1), null));
+        panel1.add(panel2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(0, -1), new Dimension(300, -1), null, 0, false));
         panel2.setBorder(BorderFactory.createTitledBorder("Beschreibung"));
         description = new JTextArea();
         description.setLineWrap(true);
         description.setWrapStyleWord(true);
-        panel2.add(description, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(0, 150), null, null));
+        panel2.add(description, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(0, 150), null, null, 0, false));
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
         mainPanel.setRightComponent(panel3);
         final JPanel panel4 = new JPanel();
         panel4.setLayout(new GridLayoutManager(2, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panel3.add(panel4, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null));
+        panel3.add(panel4, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         panel4.setBorder(BorderFactory.createTitledBorder("Titel und Bild"));
         title = new JTextField();
         title.setHorizontalAlignment(0);
         title.setText("");
-        panel4.add(title, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(800, -1), null));
-        imagePanel = new NavigableImagePanel();
-        panel4.add(imagePanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(800, 600), new Dimension(800, 600), null));
+        panel4.add(title, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(800, -1), null, 0, false));
+        imagePanel = new JPanel();
+        panel4.add(imagePanel, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(800, 600), new Dimension(800, 600), null, 0, false));
         final JPanel panel5 = new JPanel();
         panel5.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
-        panel3.add(panel5, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null));
+        panel3.add(panel5, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, 1, null, null, null, 0, false));
         delete = new JButton();
-        delete.setText("LÃ¶schen");
-        panel5.add(delete, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null));
+        delete.setText("Löschen");
+        panel5.add(delete, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
+        return mainPanel;
     }
 
     public class ClosingWindowListener extends WindowAdapter {
-		public void windowClosed(WindowEvent e) {
+        public void windowClosed(WindowEvent e) {
             final File dir = new File(OUTDIR);
             if (!dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
                 System.err.println("Renaming of " + OUTDIR + " failed");
@@ -265,7 +250,7 @@ public class MainFrame {
                     e1.printStackTrace();
                 }
             }
-	    System.out.println("Marked files saved in " + OUTDIR);
+            System.out.println("Marked files saved in " + OUTDIR);
         }
     }
 }
