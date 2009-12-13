@@ -64,7 +64,7 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <component id="e2cdc" class="javax.swing.JLabel">
+                      <component id="e2cdc" class="javax.swing.JLabel" binding="gesamtzeitLabel">
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -111,6 +111,7 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <background color="-1"/>
                           <columns value="10"/>
                           <editable value="false"/>
                           <horizontalAlignment value="0"/>
@@ -131,12 +132,13 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <background color="-1"/>
                           <columns value="10"/>
                           <editable value="false"/>
                           <horizontalAlignment value="0"/>
                         </properties>
                       </component>
-                      <component id="7b149" class="javax.swing.JLabel">
+                      <component id="7b149" class="javax.swing.JLabel" binding="summeLabel">
                         <constraints>
                           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                         </constraints>
@@ -151,6 +153,7 @@
                           </grid>
                         </constraints>
                         <properties>
+                          <background color="-1"/>
                           <editable value="false"/>
                           <horizontalAlignment value="0"/>
                         </properties>

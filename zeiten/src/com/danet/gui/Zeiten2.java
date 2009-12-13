@@ -51,6 +51,8 @@ public class Zeiten2 {
     private JButton endButton;
     private JTextField startField;
     private JButton startButton;
+    private JLabel gesamtzeitLabel;
+    private JLabel summeLabel;
 
     public static void main(String[] argv) {
         if (argv.length != 1) {
