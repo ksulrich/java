@@ -15,18 +15,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
-/* $Id: Zeiten2.java,v 1.3 2004/12/23 22:43:42 klaus Exp $
- * COPYRIGHT (c) 2004 Danet IS GmbH
+/* $Id$
+ * COPYRIGHT (c) 2004 Klaus Ulrich
  */
 
 public class Zeiten2 {
-
-    private final static String IN = "IN:";
-    private final static String OUT = "OUT:";
     private final static String START = "START";
     private final static String END = "END";
     private final static String[] MONTH = {
@@ -62,7 +57,7 @@ public class Zeiten2 {
             System.err.println("Usage: Zeiten <database>");
             System.exit(1);
         }
-        List data = Zeiten2.readData(argv[0]);
+        List data = FileBase.readData(argv[0]);
         Zeiten2 zeiten = new Zeiten2(data);
         zeiten.setFocus();
 
@@ -77,83 +72,6 @@ public class Zeiten2 {
 
         frame.pack();
         frame.setVisible(true);
-    }
-
-    /**
-     * Read file and create a List of ListElement objects, containing
-     * a list of in dates and a list of out dates.
-     *
-     * @param file File to read.
-     * @return List of ListElement objects.
-     * @see com.danet.util.ListElement
-     */
-    private static List readData(String file) {
-        List dataList = new ArrayList();
-        try {
-            BufferedReader bin = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
-            String input;
-            int line = 0;
-            ListElement element = null;
-            while ((input = bin.readLine()) != null) {
-                line++;
-                input = input.trim();
-                if (input.charAt(0) != '#') {
-                    if (input.startsWith(IN)) {
-                        String in = input.substring(IN.length());
-                        TimeStamp t = new TimeStamp(in);
-                        if (element == null) {
-                            element = new ListElement();
-                            element.addInElement(t);
-                        } else {
-                            // we already have an element; check if it is a new entry
-                            if (element.getDay() == t.getDay()) {
-                                // same day --> additional entry element
-                                element.addInElement(t);
-                            } else {
-                                // a new entry is found --> append current element
-                                // and create a new element for this entry
-                                dataList.add(element);
-                                element = new ListElement();
-                                element.addInElement(t);
-                            }
-                        }
-                    } else if (input.startsWith(OUT)) {
-                        String out = input.substring(OUT.length());
-                        TimeStamp t = new TimeStamp(out);
-                        if (element == null) {
-                            throw new NoSuchFieldException("Line " + line + ": Corresponding IN element not found");
-                        } else {
-                            // check if it is a following entry of the same day
-                            if (element.getDay() == t.getDay()) {
-                                // following entry
-                                element.addOutElement(t);
-                            } else {
-                                // entry for new day found
-                                // that means no input element found yet --> ERROR
-                                throw new NoSuchFieldException("Line " + line + ": Corresponding IN element not found");
-                            }
-                        }
-                    } else {
-                        System.err.println("Input: '" + input + "' in Line " + line + " ignored");
-                    }
-                }
-            }
-            // check if we need to save the current element
-            if (element != null &&
-                    element.getOutList().size() != 0) {
-                dataList.add(element);
-            }
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-            System.exit(1);
-        } catch (IOException ex) {
-            ex.printStackTrace();
-            System.exit(1);
-        } catch (NoSuchFieldException ex) {
-            ex.printStackTrace();
-            System.exit(1);
-        }
-        return dataList;
     }
 
     private Zeiten2(List data) {
@@ -190,16 +108,6 @@ public class Zeiten2 {
             viewPort.setViewPosition(viewPoint);
             listScrollPane.setViewport(viewPort);
         }
-
-        //add(listScrollPane, BorderLayout.WEST);
-        //add(labelPane, BorderLayout.CENTER);
-        //add(printPane, BorderLayout.SOUTH);
-
-        // main container
-        //Container contentPane = getContentPane();
-        //contentPane.add(listScrollPane, BorderLayout.WEST);
-        //contentPane.add(labelPane, BorderLayout.CENTER);
-//    contentPane.add(printPane, BorderLayout.SOUTH);
     }
 
     int calcCurrentMonth() {
@@ -397,5 +305,4 @@ public class Zeiten2 {
             setSumField();
         }
     }
-
 }
