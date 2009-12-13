@@ -1,5 +1,5 @@
-#**/.metadata
-**/*~
-**/bin/**
-**/*.class
+*~
+bin/
+out/
 .idea/
+*.iml
