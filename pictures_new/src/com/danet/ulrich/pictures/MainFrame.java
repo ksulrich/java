@@ -18,7 +18,7 @@ import java.io.IOException;
 public class MainFrame {
     private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
     private static String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
-    static final Boolean DEBUG = Boolean.valueOf(DEBUG_STR);
+    private static final Boolean DEBUG = Boolean.valueOf(DEBUG_STR);
 
     private JTextArea description;
     private JList fileList;
@@ -235,7 +235,7 @@ public class MainFrame {
         return mainPanel;
     }
 
-    public class ClosingWindowListener extends WindowAdapter {
+    private class ClosingWindowListener extends WindowAdapter {
         public void windowClosed(WindowEvent e) {
             final File dir = new File(OUTDIR);
             if (!dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {

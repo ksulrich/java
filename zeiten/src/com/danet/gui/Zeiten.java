@@ -3,7 +3,6 @@
 package com.danet.gui;
 
 import com.danet.util.ListElement;
-import com.danet.util.SwingWorker;
 import com.danet.util.TimeStamp;
 
 import javax.swing.*;
@@ -16,7 +15,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.print.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +27,11 @@ import java.util.List;
  * </nl>
  */
 public class Zeiten extends JFrame {
-    final static String IN = "IN:", OUT = "OUT:", START = "START", END = "END";
-    final static String[] MONTH = {
+    private final static String IN = "IN:";
+    private final static String OUT = "OUT:";
+    private final static String START = "START";
+    private final static String END = "END";
+    private final static String[] MONTH = {
             "JANUAR",
             "FEBRUAR",
             "MÄRZ",
@@ -45,14 +46,13 @@ public class Zeiten extends JFrame {
             "DEZEMBER"
     };
 
-    private static Zeiten frame;
+    private final JTextField timeField;
+    private final JTextField startField;
+    private final JTextField endField;
+    private final JTextField sumField;
 
-    private JTextField timeField, startField, endField, sumField;
-
-    private JLabel topicLabel;
-    private JList list;
-
-    private SwingWorker worker;
+    private final JLabel topicLabel;
+    private final JList list;
 
     private int startIndex = -1, endIndex = -1;
 
@@ -62,7 +62,7 @@ public class Zeiten extends JFrame {
             System.exit(1);
         }
         List data = Zeiten.readData(argv[0]);
-        frame = new Zeiten(data);
+        Zeiten frame = new Zeiten(data);
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
@@ -151,62 +151,12 @@ public class Zeiten extends JFrame {
         return dataList;
     }
 
-    public Zeiten(List data) {
+    private Zeiten(List data) {
         super("Zeiten");
 
         // topic
         topicLabel = new JLabel();
         topicLabel.setHorizontalAlignment(JLabel.CENTER);
-
-        // print buttons
-        JButton printListButton = new JButton("Print List");
-        printListButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        JButton printButton = new JButton("Print Dialog");
-        printButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                final PrinterJob printerJob = PrinterJob.getPrinterJob();
-                Book book = new Book();
-                PageFormat page = new PageFormat();
-                PrintImage printImg = new PrintImage(list, page);
-                // get the number of pages needed for the printout
-                int pages = printImg.getPages();
-                for (int i = 0; i < pages; i++) {
-                    // for every page a reference to PrintTable and the page
-                    // format has to be appended
-                    book.append(printImg, page);
-                }
-                // the Book object should be printed
-                printerJob.setPageable(book);
-
-                final PrintInfo pi = new PrintInfo();
-                if (printerJob.printDialog()) {
-                    worker = new SwingWorker() {
-                        public Object construct() {
-                            try {
-                                printerJob.print();
-                            } catch (PrinterException ex) {
-                                ex.printStackTrace();
-                            }
-
-                            return 1;
-                        }
-
-                        public void finished() {
-                            pi.dispose();
-                        }
-                    };
-                    worker.start();
-                    pi.pack();
-                    pi.setVisible(true);
-                }
-            }
-        });
-
 
         // time label
         JLabel timeLabel = new JLabel("Gesamtzeit:");
@@ -269,11 +219,6 @@ public class Zeiten extends JFrame {
         labelPane.add(sumPane, BorderLayout.SOUTH);
         labelPane.setBorder(new EmptyBorder(15, 15, 15, 15));
 
-        // Print panel
-        JPanel printPane = new JPanel(new BorderLayout());
-        printPane.add(printButton, BorderLayout.WEST);
-        printPane.setBorder(new EmptyBorder(15, 15, 15, 15));
-
         // insert data elements into list
         DefaultListModel listModel = new DefaultListModel();
         for (Object aData : data) {
@@ -310,15 +255,14 @@ public class Zeiten extends JFrame {
         Container contentPane = getContentPane();
         contentPane.add(listScrollPane, BorderLayout.WEST);
         contentPane.add(labelPane, BorderLayout.CENTER);
-//    contentPane.add(printPane, BorderLayout.SOUTH);
     }
 
-    public void setFocus() {
+    void setFocus() {
         // set input focus to list of data
         list.requestFocus();
     }
 
-    protected int calcCurrentMonth() {
+    int calcCurrentMonth() {
         int index = -1;
         int lastIndex = list.getModel().getSize() - 1;
         ListElement elementList = (ListElement) list.getModel().getElementAt(lastIndex);
@@ -338,7 +282,7 @@ public class Zeiten extends JFrame {
         return index;
     }
 
-    protected void setSumField() {
+    void setSumField() {
         if ((endIndex != -1 && startIndex != -1) &&
                 (endIndex >= startIndex)) {
             int hours = 0;
@@ -364,7 +308,7 @@ public class Zeiten extends JFrame {
      *
      * @param date
      */
-    protected void display(String date, int hours, int minutes) {
+    void display(String date, int hours, int minutes) {
         TimeStamp tStamp = new TimeStamp(date + " " + hours + ":" + minutes);
         topicLabel.setText("<html><h2><b>" + tStamp.getDay() + " " +
                 MONTH[tStamp.getMonth() - 1] +
@@ -379,7 +323,7 @@ public class Zeiten extends JFrame {
     }
 
     class ListElementCellRenderer extends JLabel implements ListCellRenderer {
-        private Border noFocusBorder;
+        private final Border noFocusBorder;
 
         public ListElementCellRenderer() {
             super();
@@ -412,7 +356,7 @@ public class Zeiten extends JFrame {
         }
     }
 
-    class ButtonActionListener implements ActionListener {
+    private class ButtonActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             ListElement elementList = (ListElement) list.getSelectedValue();
             List inList = elementList.getInList();
@@ -427,107 +371,6 @@ public class Zeiten extends JFrame {
                 endIndex = list.getSelectedIndex();
             }
             setSumField();
-        }
-    }
-
-    class PrintImage implements Printable {
-        private JComponent comp;
-        private int pageOffset;
-        private double scaleFactor;
-        private int numPages;
-
-        /**
-         * Creates a <code>PrintImage</code> and calculates some parameters
-         * (scaling factor, number of pages needed).
-         *
-         * @param comp   The image to be printed
-         * @param format Page format for printout
-         */
-        public PrintImage(JComponent comp, PageFormat format) {
-            this(comp, format, 0);
-        }
-
-        /**
-         * Creates a <code>PrintImage</code> and calculates some parameters
-         * (scaling factor, number of pages needed).
-         *
-         * @param comp   The image to be printed
-         * @param format Page format for printout
-         * @param offset Page offset for printout
-         */
-        public PrintImage(JComponent comp, PageFormat format, int offset) {
-            this.comp = comp;
-            this.pageOffset = offset;
-            this.scaleFactor = 1.0; //calcScaleFactor();
-
-            numPages = (int) (comp.getSize().getHeight() / format.getHeight()) + 1;
-        }
-
-        /**
-         * Returns number of pages needed for printout.
-         *
-         * @return number of pages needed for printout.
-         */
-        public int getPages() {
-            return numPages;
-        }
-
-        // interface Printable
-
-        /**
-         * Implementation of print method.
-         *
-         * @param g         - the context into which the page is drawn
-         * @param format    the size and orientation of the page being drawn
-         * @param pageIndex the zero based index of the page to be drawn
-         * @return PAGE_EXISTS if the page is rendered successfully
-         *         or NO_SUCH_PAGE if <code>pageIndex</code> specifies a
-         *         non-existent page.
-         * @throws java.awt.print.PrinterException
-         *          thrown when the print job is terminated.
-         */
-        public int print(Graphics g, PageFormat format, int pageIndex)
-                throws PrinterException {
-
-            Graphics2D g2d = (Graphics2D) g.create();
-            double tx = format.getImageableX();
-            double ty = format.getImageableY() -
-                    format.getImageableHeight() * (pageIndex - pageOffset);
-
-            g2d.translate(tx, ty);
-
-            g2d.scale(scaleFactor, scaleFactor);
-
-            Dimension compSize = comp.getSize();
-            g2d.clipRect(0, 0, compSize.width, compSize.height);
-
-            comp.paint(g2d);
-            g2d.dispose();
-
-            return Printable.PAGE_EXISTS;
-        }
-
-    }
-
-    // interface Printable
-
-    class PrintInfo extends JDialog {
-        public PrintInfo() {
-            super(frame, "Print Dialog", true);
-            JLabel label = new JLabel("<html><b><font siez=+2>Printing...</b></font>", new ImageIcon("/home/ku/lib/printer.gif"), JLabel.CENTER);
-            label.setPreferredSize(new Dimension(200, 200));
-            JPanel panel = new JPanel(new BorderLayout());
-            panel.add(label, BorderLayout.CENTER);
-
-            JButton button = new JButton("Cancel");
-            button.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    System.out.println("Cancel pressed");
-                    worker.interrupt();
-                }
-            });
-            panel.add(button, BorderLayout.SOUTH);
-            getContentPane().add(panel, BorderLayout.CENTER);
         }
     }
 }

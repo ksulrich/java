@@ -5,29 +5,19 @@ import com.danet.util.TimeStamp;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Point;
-import java.awt.Insets;
-import java.awt.Dimension;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /* $Id: Zeiten2.java,v 1.3 2004/12/23 22:43:42 klaus Exp $
  * COPYRIGHT (c) 2004 Danet IS GmbH
@@ -35,9 +25,11 @@ import javax.swing.event.ListSelectionListener;
 
 public class Zeiten2 {
 
-    final static String command = "zeiten -s";
-    final static String IN = "IN:", OUT = "OUT:", START = "START", END = "END";
-    final static String[] MONTH = {
+    private final static String IN = "IN:";
+    private final static String OUT = "OUT:";
+    private final static String START = "START";
+    private final static String END = "END";
+    private final static String[] MONTH = {
             "JANUAR",
             "FEBRUAR",
             "MÄRZ",
@@ -58,7 +50,6 @@ public class Zeiten2 {
     private JList list;
     private JLabel topicLabel;
     private JTextField timeField;
-    private DefaultListModel listModel;
     private JTextField sumField;
     private JComponent mainPanel;
     private JTextField endField;
@@ -71,7 +62,7 @@ public class Zeiten2 {
             System.err.println("Usage: Zeiten <database>");
             System.exit(1);
         }
-        List data = Zeiten.readData(argv[0]);
+        List data = Zeiten2.readData(argv[0]);
         Zeiten2 zeiten = new Zeiten2(data);
         zeiten.setFocus();
 
@@ -85,7 +76,7 @@ public class Zeiten2 {
         });
 
         frame.pack();
-        frame.show();
+        frame.setVisible(true);
     }
 
     /**
@@ -96,7 +87,7 @@ public class Zeiten2 {
      * @return List of ListElement objects.
      * @see com.danet.util.ListElement
      */
-    public static List readData(String file) {
+    private static List readData(String file) {
         List dataList = new ArrayList();
         try {
             BufferedReader bin = new BufferedReader(new InputStreamReader(new FileInputStream(file)));
@@ -165,7 +156,7 @@ public class Zeiten2 {
         return dataList;
     }
 
-    public Zeiten2(List data) {
+    private Zeiten2(List data) {
         startButton.addActionListener(new Zeiten2.ButtonActionListener());
         startButton.setActionCommand(START);
 
@@ -173,16 +164,16 @@ public class Zeiten2 {
         endButton.setActionCommand(END);
 
         // insert data elements into list
-        listModel = new DefaultListModel();
+        DefaultListModel listModel = new DefaultListModel();
         list.setModel(listModel);
-        for (Iterator i = data.iterator(); i.hasNext();) {
-            listModel.addElement(i.next());
+        for (Object aData : data) {
+            listModel.addElement(aData);
         }
         list.setCellRenderer(new Zeiten2.ListElementCellRenderer());
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.addListSelectionListener(new ListSelectionListener() {
             public void valueChanged(ListSelectionEvent e) {
-                if (e.getValueIsAdjusting() == false) {
+                if (!e.getValueIsAdjusting()) {
                     ListElement element = (ListElement) list.getSelectedValue();
                     display(element.getDate(), element.getAccuHours(), element.getAccuMinutes());
                 }
@@ -211,7 +202,7 @@ public class Zeiten2 {
 //    contentPane.add(printPane, BorderLayout.SOUTH);
     }
 
-    protected int calcCurrentMonth() {
+    int calcCurrentMonth() {
         int index = -1;
         int lastIndex = list.getModel().getSize() - 1;
         ListElement elementList = (ListElement) list.getModel().getElementAt(lastIndex);
@@ -231,7 +222,7 @@ public class Zeiten2 {
         return index;
     }
 
-    protected void display(String date, int hours, int minutes) {
+    void display(String date, int hours, int minutes) {
         TimeStamp tStamp = new TimeStamp(date + " " + hours + ":" + minutes);
         topicLabel.setText("<html><h2><b>" + tStamp.getDay() + " " +
                 MONTH[tStamp.getMonth() - 1] +
@@ -245,16 +236,14 @@ public class Zeiten2 {
         }
     }
 
-    public void setFocus() {
+    void setFocus() {
         // set input focus to list of data
         list.requestFocus();
     }
 
-    protected void setSumField() {
+    void setSumField() {
         if ((endIndex != -1 && startIndex != -1) &&
                 (endIndex >= startIndex)) {
-            ListElement startElement = (ListElement) list.getModel().getElementAt(startIndex);
-            ListElement endElement = (ListElement) list.getModel().getElementAt(endIndex);
             int hours = 0;
             int minutes = 0;
             for (int i = startIndex; i <= endIndex; i++) {
@@ -305,6 +294,7 @@ public class Zeiten2 {
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
         panel2.add(panel3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        panel3.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null));
         topicLabel = new JLabel();
         topicLabel.setText("DATUM");
         panel3.add(topicLabel, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -357,7 +347,7 @@ public class Zeiten2 {
 
 
     class ListElementCellRenderer extends JLabel implements ListCellRenderer {
-        private Border noFocusBorder;
+        private final Border noFocusBorder;
 
         public ListElementCellRenderer() {
             super();
@@ -370,9 +360,7 @@ public class Zeiten2 {
                                                       boolean isSelected, boolean hasFocus) {
             ListElement element = (ListElement) value;
             List inList = element.getInList();
-            List outList = element.getOutList();
             TimeStamp tin = (TimeStamp) inList.get(0);
-            TimeStamp tout = (TimeStamp) outList.get(outList.size() - 1);
             setText(tin.getDate());
             setComponentOrientation(list.getComponentOrientation());
             if (isSelected) {
@@ -392,14 +380,14 @@ public class Zeiten2 {
         }
     }
 
-    class ButtonActionListener implements ActionListener {
+    private class ButtonActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             ListElement elementList = (ListElement) list.getSelectedValue();
             List inList = elementList.getInList();
             List outList = elementList.getOutList();
             TimeStamp tin = (TimeStamp) inList.get(0);
             TimeStamp tout = (TimeStamp) outList.get(outList.size() - 1);
-            if (e.getActionCommand() == START) {
+            if (e.getActionCommand().equals(START)) {
                 startField.setText(tin.getDate());
                 startIndex = list.getSelectedIndex();
             } else {
