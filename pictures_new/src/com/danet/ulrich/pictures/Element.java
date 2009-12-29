@@ -57,7 +57,16 @@ public class Element implements Comparable<Object> {
         }
         String[] files = imageDir.list(new FilenameFilter() {
             public boolean accept(File dir, String name) {
-                return !name.endsWith("-thumb.jpg") && (name.endsWith(".jpg") || name.endsWith(".JPG"));
+                if (name.endsWith("-thumb.jpg")) {
+                    return false;
+                }
+                if (name.endsWith(".jpg")) {
+                    return true;
+                }
+                if (name.endsWith(".JPG")) {
+                	return true;
+                }
+                return false;
             }
         });
         for (String file : files) {
@@ -77,11 +86,19 @@ public class Element implements Comparable<Object> {
     //        return baseDir;
     //    }
 
+    public File getJpgFile() {
+        return jpgFile;
+    }
+
     public String getDesc() throws IOException {
         if (desc == null) {
             readText();
         }
         return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     private void readText() throws IOException {
@@ -127,9 +144,9 @@ public class Element implements Comparable<Object> {
         return text.substring(text.indexOf('\n') + 1).trim();
     }
 
-//    public BufferedImage getImage() {
-//        return this.image;
-//    }
+    public BufferedImage getImage() {
+        return this.image;
+    }
     
     public void setImage(BufferedImage image) {
         this.image = image;
@@ -140,6 +157,10 @@ public class Element implements Comparable<Object> {
             readText();
         }
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getFileName() {
@@ -231,8 +252,10 @@ public class Element implements Comparable<Object> {
     public void copy(File dir) throws IOException {
         if (isMark()) {
             byte[] buf = new byte[4096];
+            String parent = jpgFile.getParent();
+            String year = parent.substring(parent.lastIndexOf(File.separator)+1);
             FileInputStream fis = new FileInputStream(jpgFile);
-            File outFile = new File(dir.toString() + File.separator + jpgFile.getName());
+            File outFile = new File(dir.toString() + File.separator + year + "-" + jpgFile.getName());
             outFile.createNewFile();
             FileOutputStream fos = new FileOutputStream(outFile);
             int len;
