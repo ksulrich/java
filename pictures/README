@@ -5,13 +5,10 @@ Author: klaus.ulrich@web.de
 Build
 =====
 
-Just call ant
+Just call mvn package
 
 Run
 ===
 Adopt  
   scripts/pictures.sh 
 and run it
-
-Alternatively, run scripts/MyFrame.sh like this:
-./MyFrame.sh C:\\pictures
