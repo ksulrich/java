@@ -3,10 +3,6 @@
  */
 package com.ulrich;
 
-import com.ulrich.Element;
-import com.ulrich.ElementListCellRenderer;
-import com.ulrich.ImageLoader;
-import com.ulrich.NavigableImagePanel;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
@@ -21,7 +17,7 @@ import java.io.IOException;
 
 public class MainFrame {
     private static final String DEBUG_STR = System.getProperty("DEBUG", "false");
-    private static String OUTDIR = System.getProperty("OUTDIR", "/tmp/a");
+    private static String OUTDIR = System.getProperty("OUTDIR", "/tmp/pictures");
     private static final Boolean DEBUG = Boolean.valueOf(DEBUG_STR);
 
     private JTextArea description;
@@ -50,7 +46,7 @@ public class MainFrame {
     public MainFrame(String rootDir) throws IOException {
         String os = System.getProperty("os.name");
         if (os.startsWith("Windows")) {
-            OUTDIR = "C:\\temp\\a";
+            OUTDIR = "C:\\temp\\pictures";
         }
         setup();
         frame = new JFrame("Bilder");
@@ -164,14 +160,16 @@ public class MainFrame {
         frame.setVisible(true);
     }
 
-    private void setup() {
+    private void setup() throws IOException {
         final File dir = new File(OUTDIR);
         if (dir.exists() &&
                 !dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
             System.err.println("Renaming of " + OUTDIR + " failed");
             System.exit(1);
         }
-        dir.mkdir();
+        if (! dir.mkdir()) {
+            throw new IOException("Can not create directory " + dir.toString());
+        }
     }
 
     {
@@ -241,11 +239,12 @@ public class MainFrame {
 
     private class ClosingWindowListener extends WindowAdapter {
         public void windowClosed(WindowEvent e) {
-            final File dir = new File(OUTDIR);
-            if (!dir.renameTo(new File(dir.toString() + "." + System.currentTimeMillis()))) {
-                System.err.println("Renaming of " + OUTDIR + " failed");
+            ListSelectionListener[] lsl = fileList.getListSelectionListeners();
+            for (ListSelectionListener l : lsl) {
+                l.valueChanged(new ListSelectionEvent(frame, 0, 0, false));
             }
-            dir.mkdir();
+
+            final File dir = new File(OUTDIR);
             for (int i = 0; i < model.size(); i++) {
                 Element elem = (Element) model.getElementAt(i);
                 try {

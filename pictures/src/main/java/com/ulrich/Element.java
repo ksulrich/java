@@ -181,7 +181,6 @@ public class Element implements Comparable<Object> {
         if ((title.equals(getTitle())) && desc.equals(getDesc())) {
             return;
         }
-        System.out.println("Save: " + toStringDebug());
         this.title = title;
         this.desc = desc;
 
@@ -197,10 +196,11 @@ public class Element implements Comparable<Object> {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Save: " + toStringDebug());
     }
 
     public String toStringDebug() {
-        return "com.ulrich.Element{" +
+        return "Element{" +
             "title='" + title + "'" +
             ", desc='" + desc + "'" +
             ", jpgFile=" + jpgFile.toString() +
