@@ -1,0 +1,17 @@
+Show pictures on a specific directory
+
+Author: klaus.ulrich@web.de
+
+Build
+=====
+
+Just call ant
+
+Run
+===
+Adopt  
+  scripts/pictures.sh 
+and run it
+
+Alternatively, run scripts/MyFrame.sh like this:
+./MyFrame.sh C:\\pictures
