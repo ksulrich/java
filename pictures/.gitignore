@@ -2,4 +2,5 @@
 *.iml
 *.ipr
 *.ips
-target/*
+*.iws
+target
