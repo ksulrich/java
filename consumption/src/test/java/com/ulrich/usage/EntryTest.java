@@ -2,7 +2,6 @@ package com.ulrich.usage;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import java.text.ParseException;
 
 import static org.junit.Assert.assertEquals;
@@ -30,7 +29,7 @@ public class EntryTest {
 
     @Test
     public void averageTest() {
-        assertTrue(e2.average(e1) == ((double) 34.15) / (15143 - 14597) * 100);
+        assertTrue(e2.average(e1) == 34.15 / (15143 - 14597) * 100);
     }
 
     @Test(expected = IllegalArgumentException.class)
