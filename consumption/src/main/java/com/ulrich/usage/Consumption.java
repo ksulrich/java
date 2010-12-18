@@ -57,16 +57,17 @@ public class Consumption {
     public static void main(String[] argv) throws IOException, ParseException {
         if (argv.length < 1) {
             System.err.println("Consumption: Consumption <input-file>");
+            System.err.println("\tPrint average consumption of gas");
             System.exit(1);
         }
         input = argv[0];
         //System.out.println("Input=" + input);
         Consumption usage = new Consumption();
-        System.out.println("Overall average: " + usage.average());
         for (int i = 1; i < usage.entries.size(); i++) {
             Entry e = usage.entries.get(i);
             System.out.println(e + ": " + usage.average(i));
         }
+        System.out.println("Overall average: " + usage.average());
     }
 
     private float average() {
