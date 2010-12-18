@@ -63,10 +63,7 @@ public class Element implements Comparable<Object> {
                 if (name.endsWith(".jpg")) {
                     return true;
                 }
-                if (name.endsWith(".JPG")) {
-                	return true;
-                }
-                return false;
+                return name.endsWith(".JPG");
             }
         });
         for (String file : files) {
