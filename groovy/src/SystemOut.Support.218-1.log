@@ -1,0 +1,893 @@
+************ Start Display Current Environment ************
+WebSphere Platform 6.1 [WBM 6.2.0.3 if31025.03] [ND 6.1.0.31 cf311015.02]  running with process name MTIM_Cell\node_lx0218_01\SupportCM01 and process id 10209
+Detailed IFix information: Please use the versionInfo command to view this information
+Host Operating System is Linux, version 2.6.18-128.el5PAE
+Java version = 1.5.0, Java Compiler = j9jit23, Java VM name = IBM J9 VM
+was.install.root = /ibm/product/wbm620
+user.install.root = /ibm/product/wbm620/profiles/MTIMProfile01
+Java Home = /ibm/product/wbm620/java/jre
+ws.ext.dirs = /ibm/product/wbm620/java/lib:/ibm/product/wbm620/profiles/MTIMProfile01/classes:/ibm/product/wbm620/classes:/ibm/product/wbm620/lib:/ibm/product/wbm620/installedChannels:/ibm/product/wbm620/lib/ext:/ibm/product/wbm620/web/help:/ibm/product/wbm620/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime
+Classpath = /ibm/product/wbm620/profiles/MTIMProfile01/properties:/ibm/product/wbm620/properties:/ibm/product/wbm620/lib/startup.jar:/ibm/product/wbm620/lib/bootstrap.jar:/ibm/product/wbm620/lib/j2ee.jar:/ibm/product/wbm620/lib/lmproxy.jar:/ibm/product/wbm620/lib/urlprotocols.jar:/ibm/product/wbm620/deploytool/itp/batchboot.jar:/ibm/product/wbm620/deploytool/itp/batch2.jar:/ibm/product/wbm620/java/lib/tools.jar
+Java Library path = /ibm/product/wbm620/java/jre/bin:/ibm/product/wbm620/bin:/ibm/product/wbm620/profiles/MTIMProfile01/ABX/bin/redhat/71:/ibm/product/wbm620/profiles/MTIMProfile01/ABX/bin/redhat/71/lib:/oracle/product/ias1111ohs2/lib::/usr/lib
+************* End Display Current Environment *************
+[8/16/11 11:53:52:222 CEST] 0000000a ManagerAdmin  I   TRAS0017I: The startup trace state is *=info.
+[8/16/11 11:53:52:533 CEST] 0000000a ManagerAdmin  I   TRAS0111I: The message IDs that are in use are deprecated
+[8/16/11 11:53:52:704 CEST] 0000000a AdminInitiali A   ADMN0015I: The administration service is initialized.
+[8/16/11 11:53:53:065 CEST] 0000000a PluginConfigS I   PLGC0057I: The plug-in configuration service started successfully.
+[8/16/11 11:53:53:139 CEST] 0000000a SSLComponentI I   CWPKI0001I: SSL service is initializing the configuration
+[8/16/11 11:53:53:168 CEST] 0000000a WSKeyStore    W   CWPKI0041W: One or more key stores are using the default password.
+[8/16/11 11:53:53:185 CEST] 0000000a SSLConfigMana I   CWPKI0027I: Disabling default hostname verification for HTTPS URL connections.
+[8/16/11 11:53:53:197 CEST] 0000000a SSLDiagnostic I   CWPKI0014I: The SSL component's FFDC Diagnostic Module com.ibm.ws.ssl.core.SSLDiagnosticModule registered successfully: true.
+[8/16/11 11:53:53:200 CEST] 0000000a SSLComponentI I   CWPKI0002I: SSL service initialization completed successfully
+[8/16/11 11:53:53:211 CEST] 0000000a DiagnosticCon I com.ibm.wsspi.rasdiag.DiagnosticConfigHome setStateCollectionSpec RASD0012I: Updating State Collection Spec from Uninitialized Value to .*:.*=0
+[8/16/11 11:53:53:226 CEST] 0000000a PMIImpl       A   CWPMI1001I: PMI is enabled
+[8/16/11 11:53:53:821 CEST] 0000000a SibMessage    I   [:] CWSIU0000I: Release: WAS61.SIB Level: cf311007.24
+[8/16/11 11:53:53:929 CEST] 0000000a SecurityDM    I   SECJ0231I: The Security component's FFDC Diagnostic Module com.ibm.ws.security.core.SecurityDM registered successfully: true.
+[8/16/11 11:53:53:979 CEST] 0000000a AuditServiceI A   SECJ6004I: Security Auditing is disabled. 
+[8/16/11 11:53:53:983 CEST] 0000000a distSecurityC I   SECJ0309I: Java 2 Security is disabled.
+[8/16/11 11:53:53:986 CEST] 0000000a Configuration A   SECJ0215I: Successfully set JAAS login provider configuration class to com.ibm.ws.security.auth.login.Configuration.
+[8/16/11 11:53:53:996 CEST] 0000000a distSecurityC I   SECJ0212I: WCCM JAAS configuration information successfully pushed to login provider class.
+[8/16/11 11:53:55:960 CEST] 0000000a distSecurityC I   SECJ0240I: Security service initialization completed successfully
+[8/16/11 11:53:56:079 CEST] 0000000a ObjectPoolSer I   OBPL0007I: Object Pool Manager service is disabled.
+[8/16/11 11:53:56:152 CEST] 0000000a J2EEServiceMa I   ASYN0059I: Work Manager service initialized successfully.
+[8/16/11 11:53:56:210 CEST] 0000000a CScopeCompone I   CSCP0002I: Compensation service is disabled.
+[8/16/11 11:53:56:367 CEST] 0000000a ActivitySessi I   WACS0045I: ActivitySession service is disabled.
+[8/16/11 11:53:56:402 CEST] 0000000a SOAPContainer I   WSWS1062I: The SOAP Container service has been initialized.
+[8/16/11 11:53:56:473 CEST] 0000000a EifConverterS I com.ibm.wtci.eif.jms.admin.EifConverterService initialize CEIED1002I The EIF Converter Service has been initialized successfully.
+[8/16/11 11:53:56:503 CEST] 0000000a SchedulerServ I   SCHD0036I: The Scheduler Service is initializing.
+[8/16/11 11:53:56:531 CEST] 0000000a SchedulerServ I   SCHD0037I: The Scheduler Service has been initialized.
+[8/16/11 11:53:56:864 CEST] 0000000a WebsphereComm I WebsphereCommonLauncher  CWSCT0332I: SIP Container was launched successfully but will only be initialized when first SIP application is loaded.
+[8/16/11 11:53:56:867 CEST] 0000000a MonitorServer I   Enabling WebSphere Business Monitor functionality.
+[8/16/11 11:53:56:883 CEST] 0000000a LifecycleServ I com.ibm.wbimonitor.lifecycle.LifecycleServicesStartup initialize( Object ) CWMLC0201I: LifecycleServices initialization processing terminated.  Reason: [isSupportedProcess=false].
+[8/16/11 11:53:56:925 CEST] 0000000a BSpaceMBeansS I com.ibm.bspace.plugin.BSpaceMBeansStartup initialize( Object ) CWMDS0202I:BSPACE- MBeans initialization processing completed.
+[8/16/11 11:53:57:019 CEST] 0000000a WorkSpaceMana A   WKSP0500I: Workspace configuration consistency check is false.
+[8/16/11 11:53:57:517 CEST] 0000000a AlphabloxConf I com.ibm.wbimonitor.alphablox.AlphabloxConfigStartup initialize( Object ) CWMLC6201I: AlphabloxConfig initialization processing terminated.  Reason: [isAlphabloxInstalled=false].
+[8/16/11 11:53:57:525 CEST] 0000000a StartUpServic I   STUP0011I: The Startup Beans service started successfully.
+[8/16/11 11:53:57:536 CEST] 0000000a I18nService   I   I18N0010I: The Internationalization service is created on SupportCM01.
+[8/16/11 11:53:57:538 CEST] 0000000a I18nServiceSe I   I18N0010I: The Internationalization service is disabled on SupportCM01.
+[8/16/11 11:53:57:599 CEST] 0000000a UserManagemen I   CWWIM6000I Starting bootstrap sequence for the dynamic reload manager.
+[8/16/11 11:53:57:606 CEST] 0000000a UserManagemen I   CWWIM6001I Waiting for notification that the server has finished starting.
+[8/16/11 11:53:57:639 CEST] 0000000a ThreadPoolMgr W   WSVR0626W: The ThreadPool setting on the ObjectRequestBroker service is deprecated.
+[8/16/11 11:53:57:660 CEST] 0000000a SSLComponentI I   CWPKI0003I: SSL service is starting
+[8/16/11 11:53:57:669 CEST] 0000000a SSLComponentI I   CWPKI0004I: SSL service started successfully
+[8/16/11 11:53:57:807 CEST] 0000000a SASRas        A   JSAS0006I: Security connection interceptor initialized.
+[8/16/11 11:53:57:818 CEST] 0000000a SASRas        A   JSAS0001I: Security configuration initialized.
+[8/16/11 11:53:57:829 CEST] 0000000a SASRas        A   JSAS0003I: Authentication mechanism: LTPA
+[8/16/11 11:53:57:830 CEST] 0000000a SASRas        A   JSAS0004I: Principal name: LDAP.mgi.de:389/
+[8/16/11 11:53:58:596 CEST] 0000000a SASRas        A   JSAS0007I: Client request interceptor registered.
+[8/16/11 11:53:58:629 CEST] 0000000a SASRas        A   JSAS0008I: Server request interceptor registered.
+[8/16/11 11:53:58:645 CEST] 0000000a SecurityCompo A   JSAS0009I: IOR interceptor registered.
+[8/16/11 11:53:59:064 CEST] 0000000a CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [].
+[8/16/11 11:53:59:415 CEST] 0000000a MbuRmmAdapter I   DCSV1001I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Created a new transport infrastructure instance successfully. Transport type is ChannelFramework. Version information is 1.9.8.19 - 16/03/09.
+[8/16/11 11:53:59:466 CEST] 0000000a DCSStackImpl  I   DCSV0005I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Started. Stack version information: DCSBV_WAS6_1_20060409. Stack protocol information: 51001.
+[8/16/11 11:53:59:467 CEST] 0000000e ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (1:0.MTIM_Cell\node_lx0218_01\SupportCM01). View channel type is View|Ptp.
+[8/16/11 11:53:59:478 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel TCP_5 is listening on host *  (IPv6) port 9354. 
+[8/16/11 11:53:59:480 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain DCS.
+[8/16/11 11:53:59:486 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain DCS-Secure.
+[8/16/11 11:53:59:488 CEST] 0000000a DCSPluginImpl I   HMGR0001I: The DCS Core Stack transport has been started for core group DefaultCoreGroup. There are 11 members.
+[8/16/11 11:53:59:704 CEST] 0000000a NameServerImp A   NMSV0018I: Name server available on bootstrap port 9810.
+[8/16/11 11:53:59:993 CEST] 0000000a TreeBuilder   I   INIT 179 ms. nodes:41
+[8/16/11 11:54:02:061 CEST] 0000000a authz         I   CWWIM2000I Initialization of the authorization component completed successfully.
+[8/16/11 11:54:02:067 CEST] 0000000a UserRegistryI A   SECJ0136I: Custom Registry:com.ibm.ws.wim.registry.WIMUserRegistry has been initialized
+[8/16/11 11:54:02:084 CEST] 0000000a ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000000a_11.08.16_11.54.02_0.txt
+[8/16/11 11:54:02:094 CEST] 0000000a ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000000a_11.08.16_11.54.02_0.txt
+[8/16/11 11:54:06:483 CEST] 0000000a JMXSoapAdapte A   ADMC0013I: The SOAP connector is available at port 8880
+[8/16/11 11:54:06:669 CEST] 0000000a distSecurityC I   SECJ0243I: Security service started successfully
+[8/16/11 11:54:06:671 CEST] 0000000a distSecurityC I   SECJ0210I: Security enabled true
+[8/16/11 11:54:06:688 CEST] 0000000a J2EEServiceMa I   ASYN0055I: The Work Manager service started successfully.
+[8/16/11 11:54:07:005 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding MonitorEmitterFactory as com/ibm/monitor/MonitorEmitterFactory
+[8/16/11 11:54:07:106 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Monitor_Database_CF as eis/jdbc/wbm/MonitorDatabase_CMP
+[8/16/11 11:54:07:120 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding CEI ME DataSource_CF as eis/jdbc/event/MessageStore_CMP
+[8/16/11 11:54:07:317 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Action Services QueueConnFactory as jms/ActionManager/QueueConnFactory
+[8/16/11 11:54:07:329 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20100712160000_QF as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20100712160000/QF
+[8/16/11 11:54:07:340 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20100712160000_QF_A as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20100712160000/QF_A
+[8/16/11 11:54:07:353 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20100712160000_QF_R as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20100712160000/QF_R
+[8/16/11 11:54:07:364 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20101108120000_QF as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20101108120000/QF
+[8/16/11 11:54:07:375 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20101108120000_QF_A as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20101108120000/QF_A
+[8/16/11 11:54:07:386 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20101108120000_QF_R as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20101108120000/QF_R
+[8/16/11 11:54:07:396 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.real.xx.monitor.InvoiceUpload_20110228100000_QF as jms/wbm/mtim.real.xx.monitor.InvoiceUpload/20110228100000/QF
+[8/16/11 11:54:07:407 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.real.xx.monitor.InvoiceUpload_20110228100000_QF_A as jms/wbm/mtim.real.xx.monitor.InvoiceUpload/20110228100000/QF_A
+[8/16/11 11:54:07:418 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.real.xx.monitor.InvoiceUpload_20110228100000_QF_R as jms/wbm/mtim.real.xx.monitor.InvoiceUpload/20110228100000/QF_R
+[8/16/11 11:54:07:429 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20110307140000_QF as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20110307140000/QF
+[8/16/11 11:54:07:440 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20110307140000_QF_A as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20110307140000/QF_A
+[8/16/11 11:54:07:453 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20110307140000_QF_R as jms/wbm/mtim.mcc.xx.InvoiceUploadMM/20110307140000/QF_R
+[8/16/11 11:54:07:464 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110210100000_QF as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110210100000/QF
+[8/16/11 11:54:07:474 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110210100000_QF_A as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110210100000/QF_A
+[8/16/11 11:54:07:485 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110210100000_QF_R as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110210100000/QF_R
+[8/16/11 11:54:07:495 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110429090000_QF as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110429090000/QF
+[8/16/11 11:54:07:506 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110429090000_QF_A as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110429090000/QF_A
+[8/16/11 11:54:07:516 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110429090000_QF_R as jms/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110429090000/QF_R
+[8/16/11 11:54:07:527 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110615100000_QF as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110615100000/QF
+[8/16/11 11:54:07:537 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110615100000_QF_A as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110615100000/QF_A
+[8/16/11 11:54:07:547 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110615100000_QF_R as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110615100000/QF_R
+[8/16/11 11:54:07:557 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110628100000_QF as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110628100000/QF
+[8/16/11 11:54:07:567 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110628100000_QF_A as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110628100000/QF_A
+[8/16/11 11:54:07:577 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110628100000_QF_R as jms/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110628100000/QF_R
+[8/16/11 11:54:07:606 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Monitor_Database as jdbc/wbm/MonitorDatabase
+[8/16/11 11:54:07:618 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Monitor_Admin_Database as jdbc/wbm/MonitorAdminDatabase
+[8/16/11 11:54:07:627 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Monitor_ME_Database as jdbc/wbm/MonitorMEDatabase
+[8/16/11 11:54:07:637 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Monitor_MTIM_Cell_Routing_Database as jdbc/wbm/MTIM_Cell/MonitorDatabase
+[8/16/11 11:54:07:648 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding CEI ME DataSource as jdbc/event/MessageStore
+[8/16/11 11:54:07:656 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding MonitorLifecycleWorkManager as wm/wbm/Lifecycle
+[8/16/11 11:54:07:673 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding DataServicesWorkManager as wm/wbm/DataServicesWorkManager
+[8/16/11 11:54:07:676 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_EventParsing as wm/wbm/Moderator/EventParsing
+[8/16/11 11:54:07:680 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_FragmentInsertion as wm/wbm/Moderator/EventFragmentInsertion
+[8/16/11 11:54:07:682 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_EventProcessing as wm/wbm/Moderator/EventProcessing
+[8/16/11 11:54:07:686 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_FragmentReadiness as wm/wbm/Moderator/FragmentReadiness
+[8/16/11 11:54:07:689 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_EventConsumption as wm/wbm/Moderator/EventConsumption
+[8/16/11 11:54:07:691 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_Moderator_TimeBasedTriggerProcessing as wm/wbm/Moderator/TimeBasedTriggerProcessing
+[8/16/11 11:54:07:694 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20100712160000_FragmentProcessing as wm/wbm/mtim.mcc.xx.InvoiceUploadMM/20100712160000/FragmentProcessing
+[8/16/11 11:54:07:699 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20101108120000_FragmentProcessing as wm/wbm/mtim.mcc.xx.InvoiceUploadMM/20101108120000/FragmentProcessing
+[8/16/11 11:54:07:703 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.real.xx.monitor.InvoiceUpload_20110228100000_FragmentProcessing as wm/wbm/mtim.real.xx.monitor.InvoiceUpload/20110228100000/FragmentProcessing
+[8/16/11 11:54:07:707 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.InvoiceUploadMM_20110307140000_FragmentProcessing as wm/wbm/mtim.mcc.xx.InvoiceUploadMM/20110307140000/FragmentProcessing
+[8/16/11 11:54:07:711 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110210100000_FragmentProcessing as wm/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110210100000/FragmentProcessing
+[8/16/11 11:54:07:716 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.mcc.xx.monitor.DiscountDownload_20110429090000_FragmentProcessing as wm/wbm/mtim.mcc.xx.monitor.DiscountDownload/20110429090000/FragmentProcessing
+[8/16/11 11:54:07:720 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110615100000_FragmentProcessing as wm/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110615100000/FragmentProcessing
+[8/16/11 11:54:07:725 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding wbm_mtim.xxx.xx.monitor.SAPPOTransfer_20110628100000_FragmentProcessing as wm/wbm/mtim.xxx.xx.monitor.SAPPOTransfer/20110628100000/FragmentProcessing
+[8/16/11 11:54:07:738 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Default Common Event Infrastructure emitter as com/ibm/events/configuration/emitter/Default
+[8/16/11 11:54:07:745 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Default Common Event Infrastructure event bus transmission as com/ibm/events/configuration/bus-transmission/Default
+[8/16/11 11:54:07:761 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Event groups list as com/ibm/events/configuration/event-groups/Default
+[8/16/11 11:54:07:769 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Default Common Event Infrastructure event server as com/ibm/events/configuration/event-server/Default
+[8/16/11 11:54:07:775 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Default Common Event Infrastructure data store as com/ibm/events/configuration/data-store/Default
+[8/16/11 11:54:07:779 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Default Common Event Infrastructure JMS transmission as com/ibm/events/configuration/jms-transmission/Default
+[8/16/11 11:54:07:798 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding event_catalog_CF as eis/jdbc/eventcatalog_CMP
+[8/16/11 11:54:07:816 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding CommonEventInfrastructure_QueueCF as jms/cei/EventQueueConnectionFactory
+[8/16/11 11:54:07:826 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding CommonEventInfrastructure_AllEventsTopicCF as jms/cei/notification/AllEventsTopicConnectionFactory
+[8/16/11 11:54:07:842 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding Oracle JDBC Driver - 4.0 XA DataSource as jdbc/Oracle JDBC Driver - 4.0 XA DataSource
+[8/16/11 11:54:07:854 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding event as jdbc/cei
+[8/16/11 11:54:07:864 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding event_catalog as jdbc/eventcatalog
+[8/16/11 11:54:07:870 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding TECQueue as jms/eif/TECQueue
+[8/16/11 11:54:08:069 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding TECQueueConnFactory as jms/eif/TECQueueConnFactory
+[8/16/11 11:54:08:106 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding DataServicesScheduler as sched/wbm/DataServicesScheduler
+[8/16/11 11:54:08:119 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding DefaultEJBTimerDataSource as jdbc/DefaultEJBTimerDataSource
+[8/16/11 11:54:08:130 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding DefaultWorkManager as wm/default
+[8/16/11 11:54:08:135 CEST] 0000000a ResourceMgrIm I   WSVR0049I: Binding DefaultTimerManager as tm/default
+[8/16/11 11:54:08:190 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel SIB_TCP_JFAP is listening on host *  (IPv6) port 7278. 
+[8/16/11 11:54:08:200 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain InboundBasicMessaging.
+[8/16/11 11:54:08:203 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel SIB_TCP_JFAP_SSL is listening on host *  (IPv6) port 7287. 
+[8/16/11 11:54:08:208 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain InboundSecureMessaging.
+[8/16/11 11:54:08:235 CEST] 0000000a SibMessage    A   [:] CWSIC2001I: Messaging connections are being accepted.
+[8/16/11 11:54:08:285 CEST] 0000000a EventInfrastr I com.ibm.events.service.EventInfrastructureService start CEIC0006I The Common Event Infrastructure service is started.
+[8/16/11 11:54:08:850 CEST] 0000000a AppProfileCom I   ACIN0007I: The application profiling service started successfully.
+[8/16/11 11:54:08:860 CEST] 0000000a WorkAreaServi A   ACWA0002I: WorkArea service not enabled on SupportCM01.
+[8/16/11 11:54:08:890 CEST] 0000000a MonitorRoutin I com.ibm.wbimonitor.router.detection.spi.impl.MonitorRoutingLibraryDetectionStartup activateMBean( String, RuntimeCollaborator, String, String ) CWMRT7901I: Monitor Cross-Cell MBean activated.
+[8/16/11 11:54:08:897 CEST] 0000000a SOAPAcceptorC I   WSSC1019I: The SOAP Acceptor Channel has been configured.
+[8/16/11 11:54:08:982 CEST] 0000000a CacheServiceI I   DYNA0048I: WebSphere Dynamic Cache initialized successfully.
+[8/16/11 11:54:09:201 CEST] 0000000a SchedulerServ I   SCHD0031I: The Scheduler Service is starting.
+[8/16/11 11:54:09:205 CEST] 0000000a SchedulerServ I   SCHD0001I: The Scheduler Service has started.
+[8/16/11 11:54:09:264 CEST] 0000000a RegistryConfi I   CWXRS0017I: Extension Registry objects storage: /ibm/product/wbm620/profiles/MTIMProfile01/temp/node_lx0218_01/SupportCM01/_extensionregistry
+[8/16/11 11:54:09:288 CEST] 0000000a ServerCache   I   DYNA1001I: WebSphere Dynamic Cache instance named ws/com.ibm.workplace/ExtensionRegistryCache1313488449285 initialized successfully.
+[8/16/11 11:54:09:290 CEST] 0000000a ServerCache   I   DYNA1071I: The cache provider "default" is being used.
+[8/16/11 11:54:09:298 CEST] 00000016 WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain chain_0.
+[8/16/11 11:54:09:302 CEST] 0000000a CacheServiceI I   DYNA1001I: WebSphere Dynamic Cache instance named ws/com.ibm.workplace/ExtensionRegistryCache1313488449285 initialized successfully.
+[8/16/11 11:54:09:314 CEST] 0000000a RegistryCache I   CWXRS0002I: DynaCache instance for Extension Registry created with CACHE_SIZE: 5000
+[8/16/11 11:54:09:390 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0218_01\nodeagent.
+[8/16/11 11:54:09:591 CEST] 0000000a WebContainer  I   SRVE0239I: Extension Factory [class com.ibm.ws.jsf.extprocessor.JSFExtensionFactory] was registered successfully.
+[8/16/11 11:54:09:593 CEST] 0000000a WebContainer  I   SRVE0240I: Extension Factory [class com.ibm.ws.jsf.extprocessor.JSFExtensionFactory] has been associated with patterns [""].
+[8/16/11 11:54:09:603 CEST] 0000000a WebContainer  I   SRVE0239I: Extension Factory [class com.ibm.ws.jsp.webcontainerext.ws.WASJSPExtensionFactory] was registered successfully.
+[8/16/11 11:54:09:604 CEST] 0000000a WebContainer  I   SRVE0240I: Extension Factory [class com.ibm.ws.jsp.webcontainerext.ws.WASJSPExtensionFactory] has been associated with patterns [*.jsp *.jspx *.jsw *.jsv ].
+[8/16/11 11:54:09:695 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\DmgrNode\dmgr.
+[8/16/11 11:54:09:728 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0218_01\MessagingCM01.
+[8/16/11 11:54:09:976 CEST] 0000000a WebContainer  I   SRVE0239I: Extension Factory [class com.ibm.ws.portletcontainer.webextension.PortletExtensionFactory] was registered successfully.
+[8/16/11 11:54:09:977 CEST] 0000000a WebContainer  I   SRVE0240I: Extension Factory [class com.ibm.ws.portletcontainer.webextension.PortletExtensionFactory] has been associated with patterns [""].
+[8/16/11 11:54:09:978 CEST] 0000000a WebContainer  I   SRVE0239I: Extension Factory [class com.ibm.ws.portletcontainer.portletserving.PortletServingExtensionFactory] was registered successfully.
+[8/16/11 11:54:09:979 CEST] 0000000a WebContainer  I   SRVE0240I: Extension Factory [class com.ibm.ws.portletcontainer.portletserving.PortletServingExtensionFactory] has been associated with patterns [""].
+[8/16/11 11:54:33:487 CEST] 0000001c RoleViewLeade I   DCSV8054I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View change in process. 
+[8/16/11 11:54:33:497 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (1:0.MTIM_Cell\node_lx0218_01\SupportCM01). The internal details are None.
+[8/16/11 11:54:33:532 CEST] 0000001c MBRStateXchg  I   DCSV8070I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Updated HA Manager state. New state version is CoreGroupConfig : MemberName dmgr, DMGR true, time read 1313488308576, number coordinators 1, numberPreferred 0, numberProcesses 11, version b648781bb7f365455c151e1c03c988d7e185cad3 
+[8/16/11 11:54:33:536 CEST] 0000001c CoordinatorCo I   HMGR0086I: This server is updating its core group configuration. The new document version is CoreGroupConfig : MemberName dmgr, DMGR true, time read 1313488308576, number coordinators 1, numberPreferred 0, numberProcesses 11, version b648781bb7f365455c151e1c03c988d7e185cad3.
+[8/16/11 11:54:33:541 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:54:33:546 CEST] 00000011 ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (4:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 11:54:33:554 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (4:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 4.
+[8/16/11 11:54:33:556 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (4:0.MTIM_Cell\DmgrNode\dmgr), view size is 4 (AV=4, CD=4, CN=4, DF=11)
+[8/16/11 11:54:33:584 CEST] 0000001e RecoveryDirec I   CWRLS0010I: Performing recovery processing for local WebSphere server (MTIM_Cell\node_lx0218_01\SupportCM01).
+[8/16/11 11:54:33:604 CEST] 0000001e RecoveryDirec I   CWRLS0012I: All persistent services have been directed to perform recovery processing for this WebSphere server (MTIM_Cell\node_lx0218_01\SupportCM01).
+[8/16/11 11:54:33:647 CEST] 00000020 RecoveryManag A   WTRN0028I: Transaction service recovering 0 transactions. These are transactions that will be committed.
+[8/16/11 11:54:33:988 CEST] 00000021 CeiApplicatio I com.ibm.events.service.CeiApplicationFilter applicationMayStart(DeployedApplication) CEIC0016I Application EventService will be started because the event service is enabled.
+[8/16/11 11:54:34:000 CEST] 00000022 ApplicationMg A   WSVR0200I: Starting application: IBM_WBM_DATA_SERVICES
+[8/16/11 11:54:34:002 CEST] 00000022 ApplicationMg A   WSVR0203I: Application: IBM_WBM_DATA_SERVICES  Application build level: MON62.MONSRVR [if31024.10]
+[8/16/11 11:54:34:002 CEST] 00000021 ApplicationMg A   WSVR0200I: Starting application: EventService
+[8/16/11 11:54:34:003 CEST] 00000021 ApplicationMg A   WSVR0203I: Application: EventService  Application build level: WAS61.CEI [cf230904.14]
+[8/16/11 11:54:34:005 CEST] 00000023 ApplicationMg A   WSVR0200I: Starting application: IBM_WBM_ACTIONSERVICES
+[8/16/11 11:54:34:007 CEST] 00000023 ApplicationMg A   WSVR0203I: Application: IBM_WBM_ACTIONSERVICES  Application build level: MON62.MONSRVR [if31024.10]
+[8/16/11 11:54:34:231 CEST] 00000023 EJBContainerI I   WSVR0037I: Starting EJB jar: monAAMMDB.jar
+[8/16/11 11:54:34:233 CEST] 00000021 EJBContainerI I   WSVR0037I: Starting EJB jar: DataStoreEjb.jar
+[8/16/11 11:54:34:235 CEST] 00000022 EJBContainerI I   WSVR0037I: Starting EJB jar: DataServicesSchedulerEJB.jar
+[8/16/11 11:54:34:340 CEST] 00000022 EJBContainerI I   WSVR0057I: EJB jar started: DataServicesSchedulerEJB.jar
+[8/16/11 11:54:34:341 CEST] 00000021 EJBContainerI I   WSVR0057I: EJB jar started: DataStoreEjb.jar
+[8/16/11 11:54:34:352 CEST] 00000021 EJBContainerI I   WSVR0037I: Starting EJB jar: EventServerEjb.jar
+[8/16/11 11:54:34:360 CEST] 00000022 ApplicationMg A   WSVR0221I: Application started: IBM_WBM_DATA_SERVICES
+[8/16/11 11:54:34:389 CEST] 00000021 EJBContainerI I   WSVR0057I: EJB jar started: EventServerEjb.jar
+[8/16/11 11:54:34:398 CEST] 00000021 EJBContainerI I   WSVR0037I: Starting EJB jar: EventCatalogEjb.jar
+[8/16/11 11:54:34:460 CEST] 00000021 EJBContainerI I   WSVR0057I: EJB jar started: EventCatalogEjb.jar
+[8/16/11 11:54:34:468 CEST] 00000021 EJBContainerI I   WSVR0037I: Starting EJB jar: EventServerMdb.jar
+[8/16/11 11:54:35:825 CEST] 00000023 WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain chain_1.
+[8/16/11 11:54:36:493 CEST] 00000023 ActivationSpe I   J2CA0523I: The Message Endpoint for ActivationSpec jms/ActionManager/ActivationSpec (com.ibm.ws.sib.api.jmsra.impl.JmsJcaActivationSpecImpl) and MDB Application IBM_WBM_ACTIONSERVICES#monAAMMDB.jar#Action Manager Dispatcher is activated.
+[8/16/11 11:54:36:516 CEST] 00000023 EJBContainerI I   WSVR0057I: EJB jar started: monAAMMDB.jar
+[8/16/11 11:54:36:523 CEST] 00000023 EJBContainerI I   WSVR0037I: Starting EJB jar: monAAMBootstrap.jar
+[8/16/11 11:54:36:616 CEST] 00000023 InternalOracl I   ojdbc5.jar must be used when configuring to run with 11g database in this application server release.
+[8/16/11 11:54:36:887 CEST] 00000023 EJBContainerI I   WSVR0057I: EJB jar started: monAAMBootstrap.jar
+[8/16/11 11:54:37:733 CEST] 00000021 SibMessage    I   [:] CWSID0021I: Configuration reload is enabled for bus CommonEventInfrastructure_Bus.
+[8/16/11 11:54:38:040 CEST] 00000023 InternalOracl I   DSRA8203I: Database product name : Oracle
+[8/16/11 11:54:38:044 CEST] 00000023 InternalOracl I   DSRA8204I: Database product version : Oracle Database 11g Enterprise Edition Release 11.1.0.7.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+[8/16/11 11:54:38:045 CEST] 00000023 InternalOracl I   DSRA8205I: JDBC driver name  : Oracle JDBC driver
+[8/16/11 11:54:38:046 CEST] 00000023 InternalOracl I   DSRA8206I: JDBC driver version  : 11.1.0.7.0-Production
+[8/16/11 11:54:38:047 CEST] 00000023 InternalOracl I   DSRA8212I: DataStoreHelper name is: com.ibm.websphere.rsadapter.Oracle11gDataStoreHelper@72c872c8.
+[8/16/11 11:54:38:475 CEST] 00000023 StartupBean   I com.ibm.wbimonitor.actionmgr.StartupBean start() CWMAA0005I: Monitor action services have been initialized successfully.
+[8/16/11 11:54:38:489 CEST] 00000023 ApplicationMg A   WSVR0221I: Application started: IBM_WBM_ACTIONSERVICES
+[8/16/11 11:54:40:742 CEST] 00000021 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000021_11.08.16_11.54.40_0.txt
+[8/16/11 11:54:40:761 CEST] 00000021 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000021_11.08.16_11.54.40_0.txt
+[8/16/11 11:54:40:762 CEST] 00000021 ActivationSpe I   J2CA0523I: The Message Endpoint for ActivationSpec jms/cei/QueueActivationSpec (com.ibm.ws.sib.api.jmsra.impl.JmsJcaActivationSpecImpl) and MDB Application EventService#EventServerMdb.jar#EventBusMdbBean is activated.
+[8/16/11 11:54:40:770 CEST] 00000021 EJBContainerI I   WSVR0057I: EJB jar started: EventServerMdb.jar
+[8/16/11 11:54:40:782 CEST] 00000021 ApplicationMg A   WSVR0221I: Application started: EventService
+[8/16/11 11:54:40:796 CEST] 0000000a BSpaceMBeansS I com.ibm.bspace.plugin.BSpaceMBeansStartup activateMBean( String, RuntimeCollaborator, String, String ) CWMDS0207I:BSPACE- [BSpaceSecurityAdmin] MBean activated.
+[8/16/11 11:54:40:802 CEST] 0000000a BSpaceMBeansS I com.ibm.bspace.plugin.BSpaceMBeansStartup start() CWMDS0203I:BSPACE- MBeans startup processing completed.
+[8/16/11 11:54:40:814 CEST] 0000000a WebContainer  A   SRVE0161I: IBM WebSphere Application Server - Web Container.  Copyright IBM Corp. 1998-2006
+[8/16/11 11:54:40:816 CEST] 0000000a WebContainer  A   SRVE0162I: Servlet Specification Level: 2.4
+[8/16/11 11:54:40:817 CEST] 0000000a WebContainer  A   SRVE0163I: Supported JSP Specification Level: 2.0
+[8/16/11 11:54:40:897 CEST] 0000000a WebContainer  A   SRVE0239I: Extension Factory [class com.ibm.ws.webcontainer.extension.ExtHandshakeVHostExtensionFactory] was registered successfully.
+[8/16/11 11:54:40:899 CEST] 0000000a WebContainer  A   SRVE0240I: Extension Factory [class com.ibm.ws.webcontainer.extension.ExtHandshakeVHostExtensionFactory] has been associated with patterns [VH:_WS_EH* ].
+[8/16/11 11:54:40:922 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel TCP_1 is listening on host *  (IPv6) port 9061. 
+[8/16/11 11:54:40:926 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain WCInboundAdmin.
+[8/16/11 11:54:40:928 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel TCP_2 is listening on host *  (IPv6) port 9080. 
+[8/16/11 11:54:40:934 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain WCInboundDefault.
+[8/16/11 11:54:40:937 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel TCP_3 is listening on host *  (IPv6) port 9044. 
+[8/16/11 11:54:40:940 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain WCInboundAdminSecure.
+[8/16/11 11:54:40:942 CEST] 0000000a TCPChannel    I   TCPC0001I: TCP Channel TCP_4 is listening on host *  (IPv6) port 9443. 
+[8/16/11 11:54:40:946 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain WCInboundDefaultSecure.
+[8/16/11 11:54:40:948 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain SOAPAcceptorChain1.
+[8/16/11 11:54:40:950 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain SOAPAcceptorChain2.
+[8/16/11 11:54:40:951 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain SOAPAcceptorChain3.
+[8/16/11 11:54:40:952 CEST] 0000000a WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain SOAPAcceptorChain4.
+[8/16/11 11:54:40:958 CEST] 00000022 SchedulerServ I   SCHD0077I: The Scheduler Service is starting the Schedulers.
+[8/16/11 11:54:40:993 CEST] 0000000a RMIConnectorC A   ADMC0026I: The RMI Connector is available at port 9810
+[8/16/11 11:54:41:010 CEST] 00000022 SchedulerImpl I   SCHD0032I: The Scheduler sched/wbm/DataServicesScheduler is initializing.
+[8/16/11 11:54:41:058 CEST] 00000026 UserManagemen I   CWWIM6002I Received notification that the server has finished starting.
+[8/16/11 11:54:41:076 CEST] 00000026 UserManagemen I   CWWIM6003I Initialization of the dynamic reload manager completed successfully.
+[8/16/11 11:54:41:190 CEST] 0000000a WsServerImpl  A   WSVR0001I: Server SupportCM01 open for e-business
+[8/16/11 11:54:41:726 CEST] 00000022 SchedulerImpl I   SCHD0033I: The Scheduler sched/wbm/DataServicesScheduler has initialized.
+[8/16/11 11:54:41:760 CEST] 00000022 SchedulerDaem I   SCHD0038I: The Scheduler Daemon for instance sched/wbm/DataServicesScheduler has started.
+[8/16/11 11:54:41:763 CEST] 00000022 SchedulerServ I   SCHD0078I: The Scheduler Service has completed starting the Schedulers.
+[8/16/11 11:54:41:815 CEST] 00000010 LeaseAlarm    I   SCHD0133I: Scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has acquired the lease and will run all tasks on this application server.
+[8/16/11 11:54:41:983 CEST] 0000002f ServerCache   I   DYNA1001I: WebSphere Dynamic Cache instance named ws/MGI-ActiveDirectory/SearchResultsCache initialized successfully.
+[8/16/11 11:54:41:985 CEST] 0000002f ServerCache   I   DYNA1071I: The cache provider "default" is being used.
+[8/16/11 11:54:41:986 CEST] 0000002f CacheServiceI I   DYNA1001I: WebSphere Dynamic Cache instance named ws/MGI-ActiveDirectory/SearchResultsCache initialized successfully.
+[8/16/11 11:54:42:007 CEST] 0000002f ServerCache   I   DYNA1001I: WebSphere Dynamic Cache instance named ws/MGI-ActiveDirectory/AttributesCache initialized successfully.
+[8/16/11 11:54:42:008 CEST] 0000002f ServerCache   I   DYNA1071I: The cache provider "default" is being used.
+[8/16/11 11:54:42:011 CEST] 0000002f CacheServiceI I   DYNA1001I: WebSphere Dynamic Cache instance named ws/MGI-ActiveDirectory/AttributesCache initialized successfully.
+[8/16/11 11:54:42:595 CEST] 00000032 DiscoveryMBea I   ADMD0023I: The system discovered process (name: nodeagent, type: NodeAgent, pid: 9822)
+[8/16/11 11:54:43:036 CEST] 0000002f SharedPool    I   J2CA0086W: Shareable connection MCWrapper id 4500450  Managed connection WSRdbManagedConnectionImpl@71a071a0  State:STATE_TRAN_WRAPPER_INUSE
+ from resource jdbc/wbm/MonitorDatabase was used within a local transaction containment boundary.
+[8/16/11 11:55:07:622 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0218_01\MonAppCM01.
+[8/16/11 11:55:10:776 CEST] 00000035 WSChannelFram A   CHFW0019I: The Transport Channel Service has started chain chain_2.
+[8/16/11 11:55:10:807 CEST] 00000035 SibMessage    I   [:] CWSIV0777I: A connection to remote messaging engine MessagingCluster.000-CommonEventInfrastructure_Bus for destination MessagingCluster.CommonEventInfrastructureQueueDestination on bus CommonEventInfrastructure_Bus for endpoint activation [com.ibm.ws.sib.ra.inbound.impl.SibRaStaticDestinationEndpointActivation@db60db6 <active=true> <connections={}> <messageEndpointFactory=com.ibm.ejs.container.MessageEndpointFactoryImpl@22870fd5> <endpointConfiguration=[com.ibm.ws.sib.api.jmsra.impl.JmsJcaActivationSpecImpl$JmsJcaEndpointConfigurationImpl@629548422 <JmsJcaActivationSpecImpl.this=[com.ibm.ws.sib.api.jmsra.impl.JmsJcaActivationSpecImpl@391386964 <userName=null> <password=null> <xaRecoveryAlias=null> <destination=queue://MessagingCluster.CommonEventInfrastructureQueueDestination?deliveryMode=NonPersistent&busName=CommonEventInfrastructure_Bus> <durableSubscriptionHome=null> <destinationType=javax.jms.Queue> <messageSelector=null> <acknowledgeMode=Auto-acknowledge> <subscriptionDurability=NonDurable> <shareDurableSubscriptions=InCluster> <clientId=null> <subscriptionName=null> <maxBatchSize=1> <maxConcurrency=10> <busName=CommonEventInfrastructure_Bus> <shareDataSourceWithCMP=false> <targetTransportChain=null> <readAhead=Default> <target=null> <targetType=BusMember> <targetSignificance=Preferred> <providerEndpoints=null>]>]> <endpointInvoker=com.ibm.ws.sib.api.jmsra.impl.JmsJcaEndpointInvokerImpl@2c982c98> <workManager=com.ibm.ejs.j2c.work.WorkManagerImpl@42de42de> <endpointMethodTransactional=true> <remoteConnection=com.ibm.ws.sib.ra.inbound.impl.SibRaMessagingEngineConnection@3fa23fa2> <remoteDestination=true> <timer=java.util.Timer@56465646>] is successfully created.
+[8/16/11 11:55:11:274 CEST] 0000003a SystemOut     O EventBusEJB!!!!eventBusEjbInstance=1
+[8/16/11 11:55:11:276 CEST] 00000039 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=2
+[8/16/11 11:55:11:277 CEST] 0000003d SystemOut     O EventBusEJB!!!!eventBusEjbInstance=3
+[8/16/11 11:55:11:278 CEST] 00000037 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=4
+[8/16/11 11:55:11:280 CEST] 00000038 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=5
+[8/16/11 11:55:11:280 CEST] 0000003e SystemOut     O EventBusEJB!!!!eventBusEjbInstance=6
+[8/16/11 11:55:11:281 CEST] 0000003b SystemOut     O EventBusEJB!!!!eventBusEjbInstance=7
+[8/16/11 11:55:11:282 CEST] 0000003f SystemOut     O EventBusEJB!!!!eventBusEjbInstance=8
+[8/16/11 11:55:11:283 CEST] 0000003c SystemOut     O EventBusEJB!!!!eventBusEjbInstance=9
+[8/16/11 11:55:11:284 CEST] 00000040 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=10
+[8/16/11 11:55:11:398 CEST] 0000003e InternalOracl I   ojdbc5.jar must be used when configuring to run with 11g database in this application server release.
+[8/16/11 11:55:11:886 CEST] 00000037 InternalOracl I   DSRA8203I: Database product name : Oracle
+[8/16/11 11:55:11:888 CEST] 00000037 InternalOracl I   DSRA8204I: Database product version : Oracle Database 11g Enterprise Edition Release 11.1.0.7.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+[8/16/11 11:55:11:889 CEST] 00000037 InternalOracl I   DSRA8205I: JDBC driver name  : Oracle JDBC driver
+[8/16/11 11:55:11:890 CEST] 00000037 InternalOracl I   DSRA8206I: JDBC driver version  : 11.1.0.7.0-Production
+[8/16/11 11:55:11:891 CEST] 00000037 InternalOracl I   DSRA8212I: DataStoreHelper name is: com.ibm.websphere.rsadapter.Oracle11gDataStoreHelper@10e010e.
+[8/16/11 11:55:31:555 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (4:0.MTIM_Cell\DmgrNode\dmgr). The internal details are None.
+[8/16/11 11:55:31:610 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:55:31:615 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (5:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 5.
+[8/16/11 11:55:31:617 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (5:0.MTIM_Cell\DmgrNode\dmgr), view size is 5 (AV=5, CD=5, CN=5, DF=11)
+[8/16/11 11:55:31:646 CEST] 00000010 ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (5:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 11:55:52:780 CEST] 0000003a SystemOut     O EventBusEJB!!!!eventBusEjbInstance=11
+[8/16/11 11:56:09:398 CEST] 0000002e ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002e_11.08.16_11.56.09_0.txt
+[8/16/11 11:56:09:421 CEST] 0000002e ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002e_11.08.16_11.56.09_0.txt
+[8/16/11 11:56:10:630 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0219_01\nodeagent.
+[8/16/11 11:56:15:667 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0218_01\WebAppCM01.
+[8/16/11 11:56:35:687 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0219_01\MessagingCM01.
+[8/16/11 11:56:39:709 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (5:0.MTIM_Cell\DmgrNode\dmgr). The internal details are None.
+[8/16/11 11:56:39:740 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:56:39:742 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (6:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 8.
+[8/16/11 11:56:39:744 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (6:0.MTIM_Cell\DmgrNode\dmgr), view size is 8 (AV=8, CD=8, CN=8, DF=11)
+[8/16/11 11:56:39:821 CEST] 00000010 ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (6:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 11:56:42:765 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D203B1CB000000010000000DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D203B1CB000000010000000DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 11:57:05:690 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0219_01\SupportCM01.
+[8/16/11 11:57:29:327 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (6:0.MTIM_Cell\DmgrNode\dmgr). The internal details are None.
+[8/16/11 11:57:29:426 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:57:29:426 CEST] 00000010 ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (7:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 11:57:29:428 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (7:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 9.
+[8/16/11 11:57:29:429 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (7:0.MTIM_Cell\DmgrNode\dmgr), view size is 9 (AV=9, CD=9, CN=9, DF=11)
+[8/16/11 11:58:01:351 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0219_01\MonAppCM01.
+[8/16/11 11:58:17:349 CEST] 00000038 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=12
+[8/16/11 11:58:17:432 CEST] 0000004a SystemOut     O EventBusEJB!!!!eventBusEjbInstance=13
+[8/16/11 11:58:17:456 CEST] 0000003d SystemOut     O EventBusEJB!!!!eventBusEjbInstance=14
+[8/16/11 11:58:17:545 CEST] 0000003f SystemOut     O EventBusEJB!!!!eventBusEjbInstance=15
+[8/16/11 11:58:17:702 CEST] 00000058 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=16
+[8/16/11 11:58:17:779 CEST] 0000005a SystemOut     O EventBusEJB!!!!eventBusEjbInstance=17
+[8/16/11 11:58:17:789 CEST] 0000005b SystemOut     O EventBusEJB!!!!eventBusEjbInstance=18
+[8/16/11 11:58:17:797 CEST] 00000040 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=19
+[8/16/11 11:58:17:804 CEST] 0000005c SystemOut     O EventBusEJB!!!!eventBusEjbInstance=20
+[8/16/11 11:58:17:813 CEST] 0000005d SystemOut     O EventBusEJB!!!!eventBusEjbInstance=21
+[8/16/11 11:58:17:909 CEST] 00000061 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=22
+[8/16/11 11:58:17:917 CEST] 00000062 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=23
+[8/16/11 11:58:17:928 CEST] 00000037 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=24
+[8/16/11 11:58:18:734 CEST] 00000063 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=25
+[8/16/11 11:58:18:767 CEST] 0000005f SystemOut     O EventBusEJB!!!!eventBusEjbInstance=26
+[8/16/11 11:58:18:770 CEST] 00000060 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=27
+[8/16/11 11:58:18:855 CEST] 0000003e SystemOut     O EventBusEJB!!!!eventBusEjbInstance=28
+[8/16/11 11:58:19:505 CEST] 00000053 SystemOut     O EventBusEJB!!!!eventBusEjbInstance=29
+[8/16/11 11:58:25:835 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (7:0.MTIM_Cell\DmgrNode\dmgr). The internal details are None.
+[8/16/11 11:58:25:884 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:58:25:888 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (8:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 10.
+[8/16/11 11:58:25:890 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (8:0.MTIM_Cell\DmgrNode\dmgr), view size is 10 (AV=10, CD=10, CN=10, DF=11)
+[8/16/11 11:58:26:163 CEST] 0000000f ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (8:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 11:59:00:306 CEST] 0000001a MbuRmmAdapter I   DCSV1032I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Connected a defined member MTIM_Cell\node_lx0219_01\WebAppCM01.
+[8/16/11 11:59:24:132 CEST] 0000001a VSyncAlgo1    I   DCSV2004I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: View synchronization completed successfully. The View Identifier is (8:0.MTIM_Cell\DmgrNode\dmgr). The internal details are None.
+[8/16/11 11:59:24:181 CEST] 0000001c CoordinatorIm I   HMGR0228I: The Coordinator is not an Active Coordinator for core group DefaultCoreGroup. The active coordinator set is [MTIM_Cell\DmgrNode\dmgr].
+[8/16/11 11:59:24:183 CEST] 0000001c CoordinatorIm I   HMGR0218I: A new core group view has been installed. The core group is DefaultCoreGroup. The view identifier is (9:0.MTIM_Cell\DmgrNode\dmgr). The number of members in the new view is 11.
+[8/16/11 11:59:24:185 CEST] 0000001c CoreGroupMemb I   DCSV8050I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: New view installed, identifier (9:0.MTIM_Cell\DmgrNode\dmgr), view size is 11 (AV=11, CD=11, CN=11, DF=11)
+[8/16/11 11:59:24:267 CEST] 0000000e ViewReceiver  I   DCSV1033I: DCS Stack DefaultCoreGroup at Member MTIM_Cell\node_lx0218_01\SupportCM01: Confirmed all new view members in view identifier (9:0.MTIM_Cell\DmgrNode\dmgr). View channel type is View|Ptp.
+[8/16/11 12:05:57:653 CEST] 0000000d ThreadMonitor W   WSVR0605W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) has been active for 675711 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:155)
+	at oracle.net.ns.Packet.receive(Packet.java:240)
+	at oracle.net.ns.DataPacket.receive(DataPacket.java:92)
+	at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:172)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:117)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:92)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:77)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1034)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:1010)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:588)
+	at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:191)
+	at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:950)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1222)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3468)
+	at oracle.jdbc.driver.OracleCallableStatement.executeUpdate(OracleCallableStatement.java:3861)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1062)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.pmiExecuteUpdate(WSJdbcPreparedStatement.java:1101)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeUpdate(WSJdbcPreparedStatement.java:768)
+	at com.ibm.wbimonitor.dmsservice.DMSServiceSPI.invokeDmsSP(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.callVersionServiceSPI(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeService(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeServicesByPriorityForModel(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.process(Unknown Source)
+	at com.ibm.websphere.scheduler.EJSRemoteStatelessModelRootTaskHandler_89479f93.process(Unknown Source)
+	at com.ibm.websphere.scheduler._TaskHandler_Stub.process(_TaskHandler_Stub.java:269)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:113)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/16/11 12:05:57:655 CEST] 0000000d SchedulerDaem W   SCHD0131W: Task 51 on thread DataServicesWorkManager.Alarm Pool : 0 (0000002f) for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has been running for 675711 milliseconds and may be hung.
+[8/16/11 12:26:30:442 CEST] 0000005c SystemOut     O Loading Classes
+[8/16/11 12:26:30:457 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/root.baroc
+[8/16/11 12:26:30:510 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tec.baroc
+[8/16/11 12:26:30:552 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/Tmw2k.baroc
+[8/16/11 12:26:30:564 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/hb_events.baroc
+[8/16/11 12:26:30:579 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/ebusiness.baroc
+[8/16/11 12:26:30:588 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/itmwas_dm_events.baroc
+[8/16/11 12:26:30:606 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/WebSphere_MQ_Channel.baroc
+[8/16/11 12:26:30:611 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/WebSphere_MQ_QueueManager.baroc
+[8/16/11 12:26:30:622 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/WebSphere_MQ_Queue.baroc
+[8/16/11 12:26:30:628 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2_Event.baroc
+[8/16/11 12:26:30:634 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2Agents.baroc
+[8/16/11 12:26:30:636 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2HostThroughput.baroc
+[8/16/11 12:26:30:648 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2CpuUtilization.baroc
+[8/16/11 12:26:30:649 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2DatabaseStatus.baroc
+[8/16/11 12:26:30:654 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/DB2InstanceStatus.baroc
+[8/16/11 12:26:30:655 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/netview.baroc
+[8/16/11 12:26:30:675 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/dependency.baroc
+[8/16/11 12:26:30:677 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecadnw4.baroc
+[8/16/11 12:26:30:681 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_logfile.baroc
+[8/16/11 12:26:30:700 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_nt.baroc
+[8/16/11 12:26:30:708 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecados2.baroc
+[8/16/11 12:26:30:710 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_snmp.baroc
+[8/16/11 12:26:30:744 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_ov.baroc
+[8/16/11 12:26:30:749 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_hpov.baroc
+[8/16/11 12:26:30:769 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/sem_events.baroc
+[8/16/11 12:26:30:784 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_nv6k.baroc
+[8/16/11 12:26:30:789 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/as400msg.baroc
+[8/16/11 12:26:30:798 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_snaevent.baroc
+[8/16/11 12:26:30:802 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/tecad_nv390msg.baroc
+[8/16/11 12:26:30:807 CEST] 0000005c SystemOut     O Parsing /ibm/product/wbm620/profiles/MTIMProfile01/eventext/tec_classes/MGI_Event.baroc
+[8/16/11 12:33:20:919 CEST] 0000003f LocalServiceP I com.ibm.websphere.wim.client.LocalServiceProvider locateService Looking up EJB: corbaloc:iiop:lxsrvmgi0218.mgi.de:9809...
+[8/16/11 12:33:22:005 CEST] 0000003f LocalServiceP I com.ibm.websphere.wim.client.LocalServiceProvider locateService EJB ejb/com/ibm/websphere/wim/ejb/WIMServiceHome is found.
+[8/16/11 15:16:47:265 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.InvoiceUploadMM and version: 20101108120000.
+[8/16/11 15:17:24:350 CEST] 0000002f Prune         I   CWMAR0083I: 0 instances of model: /mtim.mcc.xx.InvoiceUploadMM and version: 20101108120000 are purged by CN=srv_BPM,OU=User,OU=DUS,DC=de,DC=madm,DC=net. The criteria is: the instances for which the termination time is after null and before 2011-07-27 15:16:47 +0200.
+[8/16/11 15:17:24:772 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.InvoiceUploadMM and version: 20110307140000.
+[8/16/11 16:00:35:633 CEST] 0000002f Prune         I   CWMAR0083I: 1,728,235 instances of model: /mtim.mcc.xx.InvoiceUploadMM and version: 20110307140000 are purged by CN=srv_BPM,OU=User,OU=DUS,DC=de,DC=madm,DC=net. The criteria is: the instances for which the termination time is after null and before 2011-07-27 15:17:24 +0200.
+[8/16/11 16:00:35:793 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.16_16.00.35_0.txt
+[8/16/11 16:00:35:847 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.16_16.00.35_0.txt
+[8/16/11 16:00:35:870 CEST] 0000002f ThreadMonitor W   WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) was previously reported to be hung but has completed.  It was active for approximately 14753950 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
+[8/16/11 16:08:22:378 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D2EA18A8000000010006EC3AAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D2EA18A8000000010006EC3AAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 16:17:59:434 CEST] 0000000d ThreadMonitor W   WSVR0605W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) has been active for 696987 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:155)
+	at oracle.net.ns.Packet.receive(Packet.java:240)
+	at oracle.net.ns.DataPacket.receive(DataPacket.java:92)
+	at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:172)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:117)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:92)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:77)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1034)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:1010)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:588)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForDescribe(T4CPreparedStatement.java:791)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:866)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3431)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeQuery(OraclePreparedStatementWrapper.java:1203)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.pmiExecuteQuery(WSJdbcPreparedStatement.java:1031)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcPreparedStatement.executeQuery(WSJdbcPreparedStatement.java:681)
+	at com.ibm.wbimonitor.kpi.KpiCalculator.executeSQLStatement(KpiCalculator.java:111)
+	at com.ibm.wbimonitor.kpi.KpiCalculator.evaluateKpi(KpiCalculator.java:313)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.evaluateKpi(KpiAccess.java:434)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.addKpiHistoryByKpiIdAndModelIDAndVersion(KpiAccess.java:3439)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.generateKPIHistoryMissingData(KpiAccess.java:3358)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.checkKPIHistoryMissingData(KpiAccess.java:3181)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.generateKPIHistory(KpiAccess.java:3536)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.callVersionServiceSPI(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeService(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeServicesByPriorityForModel(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.process(Unknown Source)
+	at com.ibm.websphere.scheduler.EJSRemoteStatelessModelRootTaskHandler_89479f93.process(Unknown Source)
+	at com.ibm.websphere.scheduler._TaskHandler_Stub.process(_TaskHandler_Stub.java:269)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:113)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/16/11 16:17:59:454 CEST] 0000000d SchedulerDaem W   SCHD0131W: Task 51 on thread DataServicesWorkManager.Alarm Pool : 0 (0000002f) for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has been running for 696987 milliseconds and may be hung.
+[8/16/11 16:19:48:231 CEST] 0000002f ThreadMonitor W   WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) was previously reported to be hung but has completed.  It was active for approximately 805856 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
+[8/16/11 17:02:10:120 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D31B590600000001000854B7AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D31B590600000001000854B7AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 18:05:02:383 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D354E86D00000001000A09E9AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D354E86D00000001000A09E9AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 19:02:10:174 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D389363C00000001000B9ABBAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D389363C00000001000B9ABBAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 20:02:10:169 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D3C024B700000001000D4D4CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D3C024B700000001000D4D4CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 20:11:39:384 CEST] 00000030 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000030_11.08.16_20.11.39_0.txt
+[8/16/11 20:11:39:403 CEST] 00000030 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000030_11.08.16_20.11.39_0.txt
+[8/16/11 21:03:15:136 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.monitor.DiscountDownload and version: 20110429090000.
+[8/16/11 21:03:17:532 CEST] 0000002f Prune         I   CWMAR0083I: 2,339 instances of model: /mtim.mcc.xx.monitor.DiscountDownload and version: 20110429090000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-08-09 21:03:15 +0200.
+[8/16/11 21:05:37:366 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D3FA3C9400000001000F2101AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D3FA3C9400000001000F2101AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 21:45:10:060 CEST] 0000002f ServerCache   I   DYNA1001I: WebSphere Dynamic Cache instance named ws/WSSecureMap initialized successfully.
+[8/16/11 21:45:10:073 CEST] 0000002f ServerCache   I   DYNA1071I: The cache provider "default" is being used.
+[8/16/11 21:45:10:090 CEST] 0000002f CacheServiceI I   DYNA1001I: WebSphere Dynamic Cache instance named ws/WSSecureMap initialized successfully.
+[8/16/11 22:08:10:252 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D433804A000000010010FDB2AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D433804A000000010010FDB2AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/16/11 23:02:10:253 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D464F08B0000000100112E75AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D464F08B0000000100112E75AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 0:02:10:100 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D49BDE7200000001001147E6AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D49BDE7200000001001147E6AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 0:20:11:108 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D4AC5D22000000010011500AAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D4AC5D22000000010011500AAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 0:23:10:320 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D4AF192E0000000100115109AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D4AF192E0000000100115109AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 1:07:45:911 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110615100000.
+[8/17/11 1:07:47:258 CEST] 0000002f Prune         I   CWMAR0083I: 0 instances of model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110615100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-27 01:07:45 +0200.
+[8/17/11 1:07:47:279 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110628100000.
+[8/17/11 1:07:48:694 CEST] 0000002f Prune         I   CWMAR0083I: 909 instances of model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110628100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-27 01:07:47 +0200.
+[8/17/11 1:09:30:703 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D4D9860D0000000100116C4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D4D9860D0000000100116C4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 1:18:06:839 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.real.xx.monitor.InvoiceUpload and version: 20110228100000.
+[8/17/11 1:19:04:542 CEST] 0000002f Prune         I   CWMAR0083I: 58,576 instances of model: /mtim.real.xx.monitor.InvoiceUpload and version: 20110228100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-27 01:18:06 +0200.
+[8/17/11 1:23:10:160 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D4E6070E00000001001182E2AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D4E6070E00000001001182E2AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 2:08:26:358 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D50F7934000000010011B8B8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D50F7934000000010011B8B8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 2:16:33:427 CEST] 00000030 Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.InvoiceUploadMM and version: 20101108120000.
+[8/17/11 2:17:17:390 CEST] 00000030 Prune         I   CWMAR0083I: 0 instances of model: /mtim.mcc.xx.InvoiceUploadMM and version: 20101108120000 are purged by CN=srv_BPM,OU=User,OU=DUS,DC=de,DC=madm,DC=net. The criteria is: the instances for which the termination time is after null and before 2011-07-28 02:16:33 +0200.
+[8/17/11 2:17:17:418 CEST] 00000030 Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.InvoiceUploadMM and version: 20110307140000.
+[8/17/11 2:17:59:924 CEST] 000000b9 ThreadMonitor W   WSVR0605W: Thread "DataServicesWorkManager.Alarm Pool : 1" (00000030) has been active for 693516 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:155)
+	at oracle.net.ns.Packet.receive(Packet.java:240)
+	at oracle.net.ns.DataPacket.receive(DataPacket.java:92)
+	at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:172)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:117)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:92)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:77)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1034)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:1010)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:588)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:194)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:953)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeMaybeDescribe(T4CPreparedStatement.java:897)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3387)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeQuery(OraclePreparedStatement.java:3431)
+	at oracle.jdbc.driver.ScrollableResultSet.refreshRowsInCache(ScrollableResultSet.java:266)
+	at oracle.jdbc.driver.SensitiveScrollableResultSet.refreshRow(SensitiveScrollableResultSet.java:183)
+	at oracle.jdbc.driver.SensitiveScrollableResultSet.handle_refetch(SensitiveScrollableResultSet.java:267)
+	at oracle.jdbc.driver.SensitiveScrollableResultSet.next(SensitiveScrollableResultSet.java:68)
+	at oracle.jdbc.driver.UpdatableResultSet.next(UpdatableResultSet.java:300)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcResultSet.next(WSJdbcResultSet.java:2509)
+	at com.ibm.wbimonitor.archive.BaseReposAccess.queryViewForTargetMCIIDs(BaseReposAccess.java:340)
+	at com.ibm.wbimonitor.archive.Prune.pruneInstancesForMC(Prune.java:172)
+	at com.ibm.wbimonitor.archive.Prune.pruneInstances(Prune.java:127)
+	at com.ibm.wbimonitor.archive.Prune.pruneInstances(Prune.java:75)
+	at com.ibm.wbimonitor.archive.ArchiveService.performScheduledPruneForModel(ArchiveService.java:471)
+	at com.ibm.wbimonitor.archive.ArchiveService.performScheduledServiceForModel(ArchiveService.java:443)
+	at com.ibm.wbimonitor.archive.spi.ArchiveScheduler.performScheduledService(ArchiveScheduler.java:138)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.callVersionServiceSPI(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeService(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeServicesByPriorityForModel(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.process(Unknown Source)
+	at com.ibm.websphere.scheduler.EJSRemoteStatelessModelRootTaskHandler_89479f93.process(Unknown Source)
+	at com.ibm.websphere.scheduler._TaskHandler_Stub.process(_TaskHandler_Stub.java:269)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:113)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/17/11 2:17:59:929 CEST] 000000b9 SchedulerDaem W   SCHD0131W: Task 51 on thread DataServicesWorkManager.Alarm Pool : 1 (00000030) for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has been running for 693516 milliseconds and may be hung.
+[8/17/11 2:29:43:651 CEST] 00000030 Prune         I   CWMAR0083I: 175,541 instances of model: /mtim.mcc.xx.InvoiceUploadMM and version: 20110307140000 are purged by CN=srv_BPM,OU=User,OU=DUS,DC=de,DC=madm,DC=net. The criteria is: the instances for which the termination time is after null and before 2011-07-28 02:17:17 +0200.
+[8/17/11 2:29:43:717 CEST] 00000030 ThreadMonitor W   WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool : 1" (00000030) was previously reported to be hung but has completed.  It was active for approximately 1397362 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
+[8/17/11 2:31:24:704 CEST] 00000556 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000556_11.08.17_02.31.24_0.txt
+[8/17/11 2:31:24:705 CEST] 00000556 ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_00000556_11.08.17_02.31.24_0.txt
+[8/17/11 2:31:24:865 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl initialize FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.24_0.txt
+[8/17/11 2:31:25:017 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.24_0.txt
+[8/17/11 2:31:25:018 CEST] 0000002f LTPAServerObj W   SECJ0371W: Validation of the LTPA token failed because the token expired with the following info: Token expiration Date: Tue Aug 16 21:55:00 CEST 2011, current Date: Wed Aug 17 02:31:24 CEST 2011.
+[8/17/11 2:31:25:020 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_0.txt
+[8/17/11 2:31:25:023 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_0.txt
+[8/17/11 2:31:25:026 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_1.txt
+[8/17/11 2:31:25:029 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_1.txt
+[8/17/11 2:31:25:031 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_2.txt
+[8/17/11 2:31:25:077 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_2.txt
+[8/17/11 2:31:25:087 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_3.txt
+[8/17/11 2:31:25:088 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_3.txt
+[8/17/11 2:31:25:078 CEST] 0000002f WSCredentialT E   SECJ5010E: Could not create default AuthenticationToken during propagation login.  The following exception occurred: com.ibm.websphere.security.auth.TokenExpiredException: Token expiration Date: Tue Aug 16 21:55:00 CEST 2011, current Date: Wed Aug 17 02:31:24 CEST 2011
+	at com.ibm.ws.security.ltpa.LTPAToken.isValid(LTPAToken.java:294)
+	at com.ibm.ws.security.ltpa.LTPAToken.<init>(LTPAToken.java:86)
+	at com.ibm.ws.security.ltpa.LTPATokenFactory.validateTokenBytes(LTPATokenFactory.java:84)
+	at com.ibm.ws.security.ltpa.LTPAServerObject.validateToken(LTPAServerObject.java:982)
+	at com.ibm.ws.security.ltpa.LTPAServerObject.validateToken(LTPAServerObject.java:891)
+	at com.ibm.ws.security.token.AuthenticationTokenImpl.initializeToken(AuthenticationTokenImpl.java:212)
+	at com.ibm.ws.security.token.WSCredentialTokenMapper.createAuthTokenFromWSCredential(WSCredentialTokenMapper.java:870)
+	at com.ibm.ws.security.server.lm.wsMapCSIv2OutboundLoginModule$1.run(wsMapCSIv2OutboundLoginModule.java:301)
+	at com.ibm.ws.security.util.AccessController.doPrivileged(AccessController.java:118)
+	at com.ibm.ws.security.server.lm.wsMapCSIv2OutboundLoginModule.login(wsMapCSIv2OutboundLoginModule.java:283)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:79)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:618)
+	at javax.security.auth.login.LoginContext.invoke(LoginContext.java:795)
+	at javax.security.auth.login.LoginContext.access$000(LoginContext.java:209)
+	at javax.security.auth.login.LoginContext$4.run(LoginContext.java:709)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at javax.security.auth.login.LoginContext.invokePriv(LoginContext.java:706)
+	at javax.security.auth.login.LoginContext.login(LoginContext.java:603)
+	at com.ibm.ws.security.auth.JaasLoginHelper.jaas_login(JaasLoginHelper.java:728)
+	at com.ibm.ws.security.auth.ContextManagerImpl.login(ContextManagerImpl.java:3036)
+	at com.ibm.ISecurityLocalObjectBaseL13Impl.CSIClientRIBase$3.run(CSIClientRIBase.java:1679)
+	at com.ibm.ws.security.util.AccessController.doPrivileged(AccessController.java:118)
+	at com.ibm.ISecurityLocalObjectBaseL13Impl.CSIClientRIBase.mapOutboundOrCreateOAT(CSIClientRIBase.java:1674)
+	at com.ibm.ISecurityLocalObjectBaseL13Impl.CSIClientRI.send_request(CSIClientRI.java:501)
+	at com.ibm.rmi.pi.InterceptorManager.invokeInterceptor(InterceptorManager.java:597)
+	at com.ibm.rmi.pi.InterceptorManager.iterateClientInterceptors(InterceptorManager.java:415)
+	at com.ibm.rmi.pi.InterceptorManager.iterateSendRequest(InterceptorManager.java:665)
+	at com.ibm.rmi.iiop.ClientRequestImpl.<init>(ClientRequestImpl.java:165)
+	at com.ibm.rmi.iiop.GIOPImpl.createRequest(GIOPImpl.java:169)
+	at com.ibm.rmi.corba.ClientDelegate._createRequest_WLM(ClientDelegate.java:2073)
+	at com.ibm.rmi.corba.ClientDelegate.createRequest(ClientDelegate.java:1149)
+	at com.ibm.rmi.corba.ClientDelegate.createRequest(ClientDelegate.java:1270)
+	at com.ibm.CORBA.iiop.ClientDelegate.createRequest(ClientDelegate.java:1326)
+	at com.ibm.rmi.corba.ClientDelegate.createRequest(ClientDelegate.java:1131)
+	at com.ibm.CORBA.iiop.ClientDelegate.createRequest(ClientDelegate.java:1292)
+	at com.ibm.rmi.corba.ClientDelegate.request(ClientDelegate.java:1869)
+	at com.ibm.CORBA.iiop.ClientDelegate.request(ClientDelegate.java:1248)
+	at org.omg.CORBA.portable.ObjectImpl._request(ObjectImpl.java:458)
+	at com.ibm.websphere.scheduler._TaskHandlerHome_Stub.create(_TaskHandlerHome_Stub.java:214)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.createBeanInstance(BeanTaskInfoWork.java:192)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:108)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+
+[8/17/11 2:31:25:196 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_4.txt
+[8/17/11 2:31:25:199 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_4.txt
+[8/17/11 2:31:25:201 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl open FFDC0009I: FFDC opened incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_5.txt
+[8/17/11 2:31:25:205 CEST] 0000002f ServiceLogger I com.ibm.ws.ffdc.IncidentStreamImpl resetIncidentStream FFDC0010I: FFDC closed incident stream file /ibm/product/wbm620/profiles/MTIMProfile01/logs/ffdc/SupportCM01_0000002f_11.08.17_02.31.25_5.txt
+[8/17/11 2:31:43:720 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D524CBA6000000010011BF2CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D524CBA6000000010011BF2CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 2:35:54:079 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D5289D9D000000010011BF92AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D5289D9D000000010011BF92AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 3:02:10:256 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D540AA8E000000010011C286AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D540AA8E000000010011C286AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 4:06:03:728 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D57B290E0000000100124FCEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D57B290E0000000100124FCEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 5:02:10:345 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D5AE87E7000000010012F5A8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D5AE87E7000000010012F5A8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 6:05:08:712 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D5E82F260000000100142B57AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D5E82F260000000100142B57AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 7:02:10:239 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D61C647D0000000100153962AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D61C647D0000000100153962AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 7:22:38:314 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D62F21A800000001001596F3AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D62F21A800000001001596F3AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 8:02:10:170 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D65352B800000001001674F1AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D65352B800000001001674F1AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 9:02:10:277 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D68A416E0000000100181A99AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D68A416E0000000100181A99AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 10:02:10:163 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D6C12FB10000000100199901AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D6C12FB10000000100199901AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 11:05:57:226 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D6FB952700000001001B807EAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D6FB952700000001001B807EAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 12:05:19:933 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D731F1FB00000001001D86BFAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D731F1FB00000001001D86BFAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 13:02:10:281 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D765FBA700000001001F6C4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D765FBA700000001001F6C4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 14:02:10:053 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D79CE9420000000100216C03AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D79CE9420000000100216C03AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 15:02:10:334 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D7D3D8DC0000000100235371AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D7D3D8DC0000000100235371AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 15:12:00:940 CEST] 0000000d ThreadMonitor W   WSVR0605W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) has been active for 710534 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:155)
+	at oracle.net.ns.Packet.receive(Packet.java:240)
+	at oracle.net.ns.DataPacket.receive(DataPacket.java:92)
+	at oracle.net.ns.NetInputStream.getNextPacket(NetInputStream.java:172)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:117)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:92)
+	at oracle.net.ns.NetInputStream.read(NetInputStream.java:77)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalUB1(T4CMAREngine.java:1034)
+	at oracle.jdbc.driver.T4CMAREngine.unmarshalSB1(T4CMAREngine.java:1010)
+	at oracle.jdbc.driver.T4C8Oall.receive(T4C8Oall.java:588)
+	at oracle.jdbc.driver.T4CStatement.doOall8(T4CStatement.java:183)
+	at oracle.jdbc.driver.T4CStatement.executeForDescribe(T4CStatement.java:780)
+	at oracle.jdbc.driver.T4CStatement.executeMaybeDescribe(T4CStatement.java:855)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1186)
+	at oracle.jdbc.driver.OracleStatement.executeInternal(OracleStatement.java:1770)
+	at oracle.jdbc.driver.OracleStatement.execute(OracleStatement.java:1739)
+	at oracle.jdbc.driver.OracleStatementWrapper.execute(OracleStatementWrapper.java:299)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcStatement.pmiExecute(WSJdbcStatement.java:1404)
+	at com.ibm.ws.rsadapter.jdbc.WSJdbcStatement.execute(WSJdbcStatement.java:591)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.checkKPIHistoryMissingData(KpiAccess.java:3104)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.generateKPIHistory(KpiAccess.java:3536)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.callVersionServiceSPI(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeService(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeServicesByPriorityForModel(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.process(Unknown Source)
+	at com.ibm.websphere.scheduler.EJSRemoteStatelessModelRootTaskHandler_89479f93.process(Unknown Source)
+	at com.ibm.websphere.scheduler._TaskHandler_Stub.process(_TaskHandler_Stub.java:269)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:113)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/17/11 15:12:00:950 CEST] 0000000d SchedulerDaem W   SCHD0131W: Task 51 on thread DataServicesWorkManager.Alarm Pool : 0 (0000002f) for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has been running for 710534 milliseconds and may be hung.
+[8/17/11 15:12:12:128 CEST] 0000002f ThreadMonitor W   WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool : 0" (0000002f) was previously reported to be hung but has completed.  It was active for approximately 721797 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
+[8/17/11 16:02:10:170 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D80AC6B800000001002504BBAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D80AC6B800000001002504BBAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 17:06:12:196 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D84566A200000001002711F5AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D84566A200000001002711F5AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 18:05:21:979 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D87B90F90000000100290D8FAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D87B90F90000000100290D8FAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 19:06:00:399 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D8B3158D00000001002B2920AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D8B3158D00000001002B2920AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 20:02:10:480 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D8E6809000000001002CC0ACAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D8E6809000000001002CC0ACAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 21:02:10:270 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D91D6F9D00000001002DEDA3AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D91D6F9D00000001002DEDA3AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 21:08:51:774 CEST] 00000030 Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.mcc.xx.monitor.DiscountDownload and version: 20110429090000.
+[8/17/11 21:08:59:743 CEST] 00000030 Prune         I   CWMAR0083I: 11,046 instances of model: /mtim.mcc.xx.monitor.DiscountDownload and version: 20110429090000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-08-10 21:08:51 +0200.
+[8/17/11 22:02:10:286 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9545E2C00000001002E8A68AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9545E2C00000001002E8A68AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:02:10:138 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D98B4C1700000001002EB128AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D98B4C1700000001002EB128AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:11:34:701 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D993E96B00000001002EB574AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D993E96B00000001002EB574AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:35:12:034 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9A989E000000001002EC224AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9A989E000000001002EC224AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:41:10:245 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9AF012300000001002EC46CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9AF012300000001002EC46CAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:44:13:228 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9B1CBEA00000001002EC556AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9B1CBEA00000001002EC556AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:53:12:228 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D9BA056200000001002ECB31AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9BA056200000001002ECB31AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/17/11 23:59:10:569 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D9BF7D2700000001002ECDABAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9BF7D2700000001002ECDABAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:02:10:277 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131D9C23B2300000001002ECFC8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9C23B2300000001002ECFC8AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:18:38:402 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131D9D14F0000000001002EDBB6AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9D14F0000000001002EDBB6AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:23:10:514 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D9D575F000000001002EDCDEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9D575F000000001002EDCDEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:28:10:567 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9DA0A0500000001002EDE4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9DA0A0500000001002EDE4DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:33:10:620 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131D9DE9E1900000001002EDF37AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9DE9E1900000001002EDF37AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:39:10:794 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D9E41D0800000001002EE19EAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9E41D0800000001002EE19EAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:48:11:027 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D9EC5B5100000001002EE4CEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9EC5B5100000001002EE4CEAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 0:57:02:341 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131D9F476C300000001002EE974AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131D9F476C300000001002EE974AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 1:06:01:612 CEST] 0000001b ThreadMonitor W   WSVR0605W: Thread "DataServicesWorkManager.Alarm Pool : 1" (00000030) has been active for 659264 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.checkKPIHistoryMissingData(KpiAccess.java:3093)
+	at com.ibm.wbimonitor.kpi.spi.KpiAccess.generateKPIHistory(KpiAccess.java:3532)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.callVersionServiceSPI(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeService(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.invokeServicesByPriorityForModel(Unknown Source)
+	at com.ibm.wbimonitor.scheduler.tasks.ModelRootTaskHandlerBean.process(Unknown Source)
+	at com.ibm.websphere.scheduler.EJSRemoteStatelessModelRootTaskHandler_89479f93.process(Unknown Source)
+	at com.ibm.websphere.scheduler._TaskHandler_Stub.process(_TaskHandler_Stub.java:269)
+	at com.ibm.ws.scheduler.tasks.BeanTaskInfoWork.doWork(BeanTaskInfoWork.java:113)
+	at com.ibm.ws.scheduler.AlarmListener.executeTaskWithNotification(AlarmListener.java:795)
+	at com.ibm.ws.scheduler.AlarmListener.access$700(AlarmListener.java:120)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.doWork(AlarmListener.java:426)
+	at com.ibm.ws.scheduler.AlarmListener$TaskWork.run(AlarmListener.java:212)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:261)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:757)
+	at com.ibm.ws.asynchbeans.ExecutionContextImpl.go(ExecutionContextImpl.java:85)
+	at com.ibm.ws.scheduler.AlarmListener.fireTask(AlarmListener.java:1400)
+	at com.ibm.ws.scheduler.AlarmListener.fired(AlarmListener.java:1318)
+	at com.ibm.ws.asynchbeans.AlarmImpl.callListenerMethod(AlarmImpl.java:338)
+	at com.ibm.ws.asynchbeans.timer.GenericTimer.run(GenericTimer.java:216)
+	at com.ibm.ws.asynchbeans.J2EEContext$RunProxy.run(J2EEContext.java:257)
+	at java.security.AccessController.doPrivileged(AccessController.java:214)
+	at javax.security.auth.Subject.doAs(Subject.java:495)
+	at com.ibm.websphere.security.auth.WSSubject.doAs(WSSubject.java:118)
+	at com.ibm.ws.asynchbeans.J2EEContext$DoAsProxy.run(J2EEContext.java:328)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at com.ibm.ws.asynchbeans.J2EEContext.run(J2EEContext.java:1111)
+	at com.ibm.ws.asynchbeans.AlarmImpl.runListenerAsCJWork(AlarmImpl.java:173)
+	at com.ibm.ws.asynchbeans.am._Alarm.fireAlarm(_Alarm.java:332)
+	at com.ibm.ws.asynchbeans.am._Alarm.run(_Alarm.java:229)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/18/11 1:06:01:622 CEST] 0000001b SchedulerDaem W   SCHD0131W: Task 51 on thread DataServicesWorkManager.Alarm Pool : 1 (00000030) for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has been running for 659264 milliseconds and may be hung.
+[8/18/11 1:19:34:490 CEST] 00000030 ThreadMonitor W   WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool : 1" (00000030) was previously reported to be hung but has completed.  It was active for approximately 1472152 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
+[8/18/11 1:20:27:007 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.real.xx.monitor.InvoiceUpload and version: 20110228100000.
+[8/18/11 1:21:25:977 CEST] 0000002f Prune         I   CWMAR0083I: 58,567 instances of model: /mtim.real.xx.monitor.InvoiceUpload and version: 20110228100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-28 01:20:27 +0200.
+[8/18/11 1:21:51:203 CEST] 00000010 TimeoutManage I   WTRN0006W: Transaction 00000131DA0B2EA000000001002F2B59AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131DA0B2EA000000001002F2B59AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 1:25:47:650 CEST] 0000000e TimeoutManage I   WTRN0006W: Transaction 00000131DA0ECA4000000001002F34E0AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131DA0ECA4000000001002F34E0AC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 1:28:11:778 CEST] 00000030 DaemonCoordin W   SCHD0132W: Task 51 for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has exceeded the failure threshold limit and has been deactivated.
+[8/18/11 1:28:17:403 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110615100000.
+[8/18/11 1:28:18:094 CEST] 0000002f Prune         I   CWMAR0083I: 0 instances of model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110615100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-28 01:28:17 +0200.
+[8/18/11 1:28:18:117 CEST] 0000002f Prune         I   CWMAR0080I: Prune begins to work on model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110628100000.
+[8/18/11 1:28:19:215 CEST] 0000002f Prune         I   CWMAR0083I: 606 instances of model: /mtim.xxx.xx.monitor.SAPPOTransfer and version: 20110628100000 are purged by server:MTIM_Cell_node_lx0218_01_SupportCM01. The criteria is: the instances for which the termination time is after null and before 2011-07-28 01:28:18 +0200.
+[8/18/11 1:30:11:787 CEST] 0000000f TimeoutManage I   WTRN0006W: Transaction 00000131DA12D20900000001002F3D8DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131DA12D20900000001002F3D8DAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 1:32:07:767 CEST] 00000030 DaemonCoordin W   SCHD0132W: Task 51 for scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has exceeded the failure threshold limit and has been deactivated.
+[8/18/11 6:52:00:010 CEST] 00000031 SchedulerDaem I   SCHD0039I: The Scheduler Daemon for instance sched/wbm/DataServicesScheduler has been stopped.
+[8/18/11 6:52:28:631 CEST] 00000031 SchedulerDaem I   SCHD0038I: The Scheduler Daemon for instance sched/wbm/DataServicesScheduler has started.
+[8/18/11 6:52:28:640 CEST] 00000011 LeaseAlarm    I   SCHD0134I: Scheduler DataServicesScheduler (sched/wbm/DataServicesScheduler) has lost its lease and will no longer run tasks on this application server.  Tasks will now run on server MTIM_Cell\node_lx0219_01\SupportCM01.
+[8/18/11 16:59:01:349 CEST] 00000011 TimeoutManage I   WTRN0006W: Transaction 00000131DD652FA3000000010042104FAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000131DD652FA3000000010042104FAC66B2708B31A8A4F8F1F36F97059DB350FF353E00000001 has timed out after 120 seconds.
+[8/18/11 17:09:02:470 CEST] 0000001b ThreadMonitor W   WSVR0605W: Thread "SoapConnectorThreadPool : 1" (00000031) has been active for 721114 milliseconds and may be hung.  There is/are 1 thread(s) in total in the server that may be hung.
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:231)
+	at com.sun.jndi.ldap.Connection.readReply(Connection.java:463)
+	at com.sun.jndi.ldap.LdapClient.getSearchReply(LdapClient.java:643)
+	at com.sun.jndi.ldap.LdapClient.search(LdapClient.java:566)
+	at com.sun.jndi.ldap.LdapCtx.doSearch(LdapCtx.java:1985)
+	at com.sun.jndi.ldap.LdapCtx.doSearchOnce(LdapCtx.java:1934)
+	at com.sun.jndi.ldap.LdapCtx.c_getAttributes(LdapCtx.java:1327)
+	at com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(ComponentDirContext.java:228)
+	at com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(PartialCompositeDirContext.java:136)
+	at javax.naming.directory.InitialDirContext.getAttributes(InitialDirContext.java:144)
+	at com.ibm.ws.wim.adapter.ldap.LdapConnection.getRangeAttributes(LdapConnection.java:985)
+	at com.ibm.ws.wim.adapter.ldap.LdapConnection.getAttributes(LdapConnection.java:931)
+	at com.ibm.ws.wim.adapter.ldap.LdapConnection.checkAttributesCache(LdapConnection.java:1211)
+	at com.ibm.ws.wim.adapter.ldap.LdapConnection.getEntityByIdentifier(LdapConnection.java:2494)
+	at com.ibm.ws.wim.adapter.ldap.LdapConnection.getEntityByIdentifier(LdapConnection.java:2411)
+	at com.ibm.ws.wim.adapter.ldap.LdapAdapter.get(LdapAdapter.java:1357)
+	at com.ibm.ws.wim.ProfileManager.retrieveEntityFromRepository(ProfileManager.java:2520)
+	at com.ibm.ws.wim.ProfileManager.retrieveEntity(ProfileManager.java:2633)
+	at com.ibm.ws.wim.ProfileManager.getImpl(ProfileManager.java:1387)
+	at com.ibm.ws.wim.ProfileManager.genericProfileManagerMethod(ProfileManager.java:298)
+	at com.ibm.ws.wim.ProfileManager.get(ProfileManager.java:351)
+	at com.ibm.websphere.wim.ServiceProvider.get(ServiceProvider.java:345)
+	at com.ibm.ws.wim.registry.util.SecurityNameBridge.getUserSecurityName(SecurityNameBridge.java:175)
+	at com.ibm.ws.wim.registry.WIMUserRegistry$7.run(WIMUserRegistry.java:403)
+	at com.ibm.ws.security.auth.ContextManagerImpl.runAs(ContextManagerImpl.java:4158)
+	at com.ibm.ws.security.auth.ContextManagerImpl.runAsSystem(ContextManagerImpl.java:4255)
+	at com.ibm.ws.wim.security.authz.jacc.JACCSecurityManager.runAsSuperUser(JACCSecurityManager.java:497)
+	at com.ibm.ws.wim.security.authz.ProfileSecurityManager.runAsSuperUser(ProfileSecurityManager.java:964)
+	at com.ibm.ws.wim.registry.WIMUserRegistry.getUserSecurityName(WIMUserRegistry.java:389)
+	at com.ibm.ws.security.registry.UserRegistryImpl.getUserSecurityName(UserRegistryImpl.java:476)
+	at com.ibm.ws.security.ltpa.LTPAServerObject.getSecurityName(LTPAServerObject.java:1425)
+	at com.ibm.ws.security.ltpa.LTPAServerObject.validate(LTPAServerObject.java:1259)
+	at com.ibm.ws.security.ltpa.LTPAServerObject.validate(LTPAServerObject.java:1225)
+	at com.ibm.ws.security.server.lm.ltpaLoginModule.login(ltpaLoginModule.java:607)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:79)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:618)
+	at javax.security.auth.login.LoginContext.invoke(LoginContext.java:795)
+	at javax.security.auth.login.LoginContext.access$000(LoginContext.java:209)
+	at javax.security.auth.login.LoginContext$4.run(LoginContext.java:709)
+	at java.security.AccessController.doPrivileged(AccessController.java:241)
+	at javax.security.auth.login.LoginContext.invokePriv(LoginContext.java:706)
+	at javax.security.auth.login.LoginContext.login(LoginContext.java:603)
+	at com.ibm.ws.security.auth.JaasLoginHelper.jaas_login(JaasLoginHelper.java:188)
+	at com.ibm.ws.security.auth.ContextManagerImpl.login(ContextManagerImpl.java:2965)
+	at com.ibm.ws.security.auth.ContextManagerImpl.login(ContextManagerImpl.java:2739)
+	at com.ibm.ISecurityLocalObjectTokenBaseImpl.WSSecurityContextLTPAImpl.acceptSecContext(WSSecurityContextLTPAImpl.java:304)
+	at com.ibm.ISecurityLocalObjectTokenBaseImpl.WSSecurityContextLTPAImpl.acceptSecContext(WSSecurityContextLTPAImpl.java:222)
+	at com.ibm.ws.management.connector.soap.SOAPConnector.tokenBasedAuth(SOAPConnector.java:475)
+	at com.ibm.ws.management.connector.soap.SOAPConnector.service(SOAPConnector.java:192)
+	at com.ibm.ws.management.connector.soap.SOAPConnection.handleRequest(SOAPConnection.java:64)
+	at com.ibm.ws.http.HttpConnection.readAndHandleRequest(HttpConnection.java:742)
+	at com.ibm.ws.http.HttpConnection.run(HttpConnection.java:528)
+	at com.ibm.ws.util.ThreadPool$Worker.run(ThreadPool.java:1497)
+[8/18/11 17:13:17:475 CEST] 00000031 ThreadMonitor W   WSVR0606W: Thread "SoapConnectorThreadPool : 1" (00000031) was previously reported to be hung but has completed.  It was active for approximately 976131 milliseconds.  There is/are 0 thread(s) in total in the server that still may be hung.
