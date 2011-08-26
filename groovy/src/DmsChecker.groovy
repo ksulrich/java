@@ -16,7 +16,6 @@ hungFinishedPattern = '.*WSVR0606W: Thread "DataServicesWorkManager.Alarm Pool.*
 deactivePattern = '.*SCHD0132W: Task (\\d+) for scheduler DataServicesScheduler.*has exceeded the failure threshold limit and has been deactivated'
 
 for (a in this.args) {
-    println "XXX: " + a
     new File(a).eachLine {
         matcher = (it =~ hungDetectPattern)
         if (matcher) {
