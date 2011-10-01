@@ -1,0 +1,823 @@
+ +NARIANI, VINEET       -5724E7600  -L13G/WPSTUN-P1S1-11/09/05-09:58--CE
+Contact: Bhupendra Singh
+Email:   Bhupendra.singh@us.hsbc.com
+
+Phone: 91+     90 49890438
+------------------------------------------------------------------------
+****** FI 1610 New Call Format Insert ******
+Operating System:                         Linux
+Operating System Version/Release:         268
+
+Product with Version/Release:             websphere portal 71
+Stand-alone or Bundle?:                   Stand-alone
+
+Usage or Defect (zSeries Only):           Non-zSeries Request
+
+24x7 Contact Method(s) Verified for Sev 1?Yes
+
+Prob. Description:
+
+issue with portal url generation code.
+
+Additional Information:
+****** End of Format Insert ******
+XML file version: 001471 CP Version: 1.07
+cprompt-NCSDTOP : 3
+Portal-START : NEW PMR for Customer
+Portal-PORTAL : Any area not covered above
+Portal-UNCLR : WPSTUN,13G
+Portal-PORTAL : Any area not covered above
+RESULT ==>  : WPSTUN,13G
+****** FI 1610 New Call Format Insert ******
+Operating System:                         Linux
+Operating System Version/Release:         268
+
+Product with Version/Release:             websphere portal 61
+Stand-alone or Bundle?:                   Stand-alone
+
+Usage or Defect (zSeries Only):           Non-zSeries Request
+
+24x7 Contact Method(s) Verified for Sev 1?Yes
+
+Prob. Description:
+
+issue with portal url generation code.
+
+Additional Information:
+****** End of Format Insert ******
+ +NARIANI, VINEET       -5724E7600  -L135/-------P1S1-11/09/05-09:58--AL
+ +NARIANI, VINEET       -5724E7600  -L12G/PAGE  -P1S1-11/09/05-09:59-SCE
+ +NARIANI, VINEET       -5724E7600  -L12G/PAGE  -P1S1-11/09/05-09:59-SAT
+ +NARIANI, VINEET       -5724E7600  -L135/-------P1S1-11/09/05-09:59--AL
+ +PORTAL TOOLS          -5724E7600  -L135/-------P1S1-11/09/05-10:00--AL
+ +PORTAL TOOLS          -5724E7600  -L13G/WPSTUN-P1S1-11/09/05-10:00--CR
+ +PORTAL TOOLS          -5724E7600  -L13G/PORT  -P1S1-11/09/05-10:00--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ +NARIANI, VINEET       -5724E7600  -L135/-------P1S1-11/09/05-10:04--AT
+Informed customer about callback.
+
+**** Format Insert 1700 ******
+Tool ReviewedCRF#1065
+Instructions Callback (Technical queue is currently being monitored)
+****** End of Format Insert ******
+ -CDDR10 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-10:56--AT
+ECuRep Mail Gateway - mail from support
+ (websphere_support@ecurep.ibm.com)
+/ecurep/pmr/5/5/55635,180,000/mail20110905-095632-websphere_support
+ +AMIT KUMAR SINGH      -5724E7600  -L328/-------P1S1-11/09/05-10:58--AL
+ +AMIT KUMAR SINGH      -5724E7600  -L328/-------P1S1-11/09/05-10:58--AL
+ +AMIT KUMAR SINGH      -5724E7600  -L13G/PORT  -P1S1-11/09/05-10:58--CR
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* INITIAL CALL RECORD TEMPLATE  **********************
+CUSTOMER REP:               Bhupendra
+PREFERRED METHOD OF CONTACT:
+ALTERNATE CONTACT:
+ALT CONTACT HOURS:
+ENVIRONMENT:                Wp 7.0
+PROBLEM:
+
+issue with portal url generation code.
+
+BUSIMPACT:
+Sev 1 :-
+
+ACTION TAKEN:
+
+Called and send following intial mail to customer.
+
+<mail to customer>
+------------------------------------------------------------------------
+ Hi Bhupendra,
+
+This is just to inform you that we have received the subject pmr and
+someone from the appropriate timezeone would be taking the ownership of
+this pmr and would be assisting you further with this issue. before we
+could move ahead, would you please provide us with the following
+environment details :-
+
+WebSphere® Portal version                      :- 7.0
+WCM version                                                  :- 7.0
+WAS Version                                                  :- ??
+Clustered Environment, if yes, explain   :- ??
+Operating system name and version    :- Linux ??
+Internet browser name and version        :- ??
+JRE version                                                   :- ??
+Database                                                       :- ??
+LDAP                                                               :- ??
+Screen shots of the error message getting on the front end if any.
+Ifixes :-??
+
+As per i understand, you are facing issue with URL generation code of
+portal. You are using WCM API to call some statemanagement API and
+passing some Page ID and are getting blank page. Would you please
+explain the issue in more details with screenshot showing this issue.
+
+Also, you mentioned that you did some changes in the environment like
+adding VMM and custom repository, would you please explain the changes
+done in the environment?
+
+You also mentioned that you have another environment where this scenario
+is working. Would you please check and see if there are any difference
+in the working and non-working environment? What is the difference in
+those two environments? Is this issue happening only on virtual portal?
+
+Would you please make sure that you have installed all the latest Portal
+and WCM Cumulative fix on top of your server to marrow down the issue.
+You can download the fixes from the fix central site :-
+http://www-933.ibm.com/support/fixcentral/
+
+If the above suggestion doesn't resolve this issue, then would you
+please enable the following traces and recreate the issue :-
+com.ibm.wps.engine.*=all
+
+and recreate the issue and send us the trace files for further
+investigation.
+
+
+Business Impact :- Please explain the business impact of this issue in
+brief? Are we working against any deadline?
+------------------------------------------------------------------------
+</mail to customer>
+
+ACTION PLAN:
+
+Customer to check the suggestion and if it dodn't help, send us the
+requested files for further investigation.
+
+ACTION PLAN OWNER:                        Cust
+NEXT COMMUNICATION DATE:                  ASAP
+*********************************************************** LotusCRT01**
+ +NARIANI, VINEET       -5724E7600  -L12G/PAGE  -P1S1-11/09/05-11:05-SCC
+ S5> SERVICE GIVEN= 99  SG/99/
+Closing PAGE,12G as technician is working on the pmr.
+ -CDDR13 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-11:06--AT
+ECuRep Mail Gateway - received a mail reject information
+------------------------------------------------------------------------
+Subject : PMR 55635,180,000
+/ecurep/pmr/5/5/55635,180,000/mail20110905-100556-Postmaster
+File: mail.wri                                    1362 bytes
+Mail: 1 nested mail
+------------------------REJECT INFORMATION START------------------------
+Your message
+  Subject: PMR 55635,180,000
+was not delivered to:
+  bhupendra.singh@hsbc.co.in
+because:
+  User bhupendra.singh (bhupendra.singh@hsbc.co.in) not listed in Domino
+Directory
+-----------------------------------------
+*******************************************************************
+This e-mail is confidential. It may also be legally privileged.
+-- skipped 9 lines see mail in ECuRep for complete message ---------
+ -CDDR13 PMRUPDATE BDC  -5724E7600  -L13G/PORT  -P1S1-11/09/05-11:06-SCG
+ -CDDR4 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/05-11:25--AT
+ECuRep Mail Gateway - mail from support (lotus_support@ecurep.ibm.com)
+/ecurep/pmr/5/5/55635,180,000/mail20110905-102516-lotus_support
+ +MOHAN, ADITYA         -5724E7600  -L13G/PORT  -P1S1-11/09/05-11:27-SCT
+ +MOHAN, ADITYA         -5724E7600  -L13G/PORT  -P1S1-11/09/05-11:27-SCR
+ S5> SERVICE GIVEN= 99  SG/99/
+PQM:
+
+Looked at delv failure, it is only from one ID so perhaps the mail was
+delivered but just to be sure, sent it to US id again
+
+AP:
+
+L2 to act on response
+ +MOHAN, ADITYA         -5724E7600  -L13G/PORT  -P1S1-11/09/05-11:48-S2D
+ -CDDR20 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-13:04--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110905-120450-bhupendra.singh
+File: mail.html                                  19316 bytes
+File: mail.wri                                    8857 bytes
+ -CDDR20 PMRUPDATE BDC  -5724E7600  -L13G/PORT  -P1S1-11/09/05-13:05-SCG
+ -CDDR11 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-13:20--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110905-121954-bhupendra.singh
+File: mail.html                                  22641 bytes
+File: mail.wri                                   10715 bytes
+ +MADA, BHAVA           -5724E7600  -L13G/PORT  -P1S1-11/09/05-13:58-SCT
+ -CDDR16 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-14:02--AT
+ECuRep Mail Gateway - mail from support (bhava.mada@ie.ibm.com)
+/ecurep/pmr/5/5/55635,180,000/mail20110905-130223-Bhava_Mada
+ +MADA, BHAVA           -5724E7600  -L13G/PORT  -P1S1-11/09/05-14:03-SCC
+ S5> SERVICE GIVEN= 99  SG/99/
+pqm:
+===============
+mails from customer
+
+=======================
+
+Hi
+
+Business Impact :- Please explain the business impact of this issue in
+brief? Are we working against any deadline?
+Yes , A critical release is pending(To be released on 9th sept) due to
+this issue, because of which release might defer impacting business.
+
+Regards,
+=============
+
+Hi
+
+PMR Details : 55635#180
+
+Following are the details as required :
+
+
+WebSphere® Portal version                      :- 7.0
+
+Name           IBM WebSphere Portal
+Version        7.0
+
+Technology List
+------------------------------------------------------------------------
+--------
+MP             installed
+CFGFW          installed
+
+Installed Product
+------------------------------------------------------------------------
+--------
+Name           IBM WebSphere Portal Configuration Framework
+Version        7.0.0.1
+ID             CFGFW
+Build Level    wp7001CF03_001_20 2011-04-25
+Build Date     04/25/2011
+
+Installed Product
+------------------------------------------------------------------------
+--------
+Name           IBM WebSphere Portal MultiPlatform
+Version        7.0.0.1
+ID             MP
+Build Level    wp7001CF03_001_20 2011-04-25
+Build Date     04/25/2011
+
+
+WAS Version
+
+                                             :-
+Name                     IBM WebSphere Application Server - ND
+Version                  7.0.0.15
+ID                       ND
+Build Level              cf151107.06
+Build Date               2/15/11
+Architecture             AMD (64 bit)
+
+
+
+Clustered Environment, if yes, explain   :-  Yes
+
+Operating system name and version    :-    Red Hat Enterprise Linux
+Server release 5.6 (Tikanga)
+
+Internet browser name and version        :-  Internet Explorer 6
+
+JRE version                                                   :- 1.6
+
+Database                                                       :- NA
+
+LDAP                                                               :-
+SunOne
+
+Ifixes :-
+
+  WP_PTF_7001 (IBM WebSphere Portal, Version 7.0.0.1 Fix Pack)
+  PM35462 (IBM WebSphere Portal,
+7.0.0.1-WP-WCM-Combined-CFPM35462-CF003)
+  PM42573 (STEP UP AUTHENTICATION FAILS WITH NUMBERFORMATEXCEPTION
+DURING USER LOGIN.)
+  WP_PTF_7001 / ptf / selective-install / 2011-05-13T16:18:02Z
+  WP_PTF_7001 / ptf / selective-install / 2011-05-13T16:45:56Z
+  PM35462 / efix / install / 2011-05-13T17:40:44Z
+  PM35462 / efix / install / 2011-05-13T18:02:55Z
+  PM42573 / efix / install / 2011-07-18T22:21:23Z
+
+
+Problem Description :
+
+We use IBM navigationation api and statemanagement api to generate URl
+to redirect User to once it is authenticated.
+
+final PortalStateManagerService stateManagerService =
+serviceHome.getPortalStateManagerService(request, response);
+                                        final URLFactory urlFactory =
+stateManagerService.getURLFactory();
+                                        final EngineURL url =
+urlFactory.newURL(null);
+                                        final SelectionAccessorFactory
+selectionFct = (SelectionAccessorFactory)
+stateManagerService.getAccessorFactory(SelectionAccessorFactory.class);
+final SelectionAccessorController selectionController =
+selectionFct.getSelectionAccessorController(url.getState());
+url.setProtected(new Boolean(true));
+selectionController.setSelection(pageId);
+StringWriter writer = new StringWriter();
+url.writeDispose(writer);
+urlString = writer.toString();
+
+The Url being generated currently by the API, that is urlString value is
+:
+
+ /1/3/!ut/p/b1/04_SjzQzMzczMjUxtNSP0I_KSyzLTE8syczPS8wB8aPM4g0MwnwsnQxMv
+SwMzAy9_byczAygAKggEqwAO3A0wKrfEqE_NyrHEQCpUL2H/
+
+But  this URL result in a blank page at the browser.
+
+Also to clarify on the point we don't use WCM API in our application.
+
+The environment in which we are getting this behaviour is different from
+our other environment as this environment uses VMM and Custom Repository
+to authenticate the users.
+
+
+Please let me know if you need any more details.
+
+
+
+Regards,
+
+Bhupendra SINGH
+========================================================================
+
+called customer but looks phone is switched off. sent an email that our
+US L2 team will work on it further tomorrow.
+
+Action Plan : L2 to respond based on the customer response.
+ +PORTAL TOOLS          -5724E7600  -L135/-------P1S1-11/09/05-15:02--AL
+ +PORTAL TOOLS          -5724E7600  -L13G/PORTDE-P1S1-11/09/05-15:02--CR
+ +PORTAL TOOLS          -5724E7600  -L13G/PORT  -P1S1-11/09/05-15:02--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ +O'REILLY, JAMES       -5724E7600  -L13G/PORT  -P1S1-11/09/05-16:02--CR
+ +O'REILLY, JAMES       -5724E7600  -L13G/PORTDE-P1S1-11/09/05-16:02--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ -CDDR1 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/05-16:27--AT
+ECuRep Mail Gateway - mail from support (bhava.mada@ie.ibm.com)
+/ecurep/pmr/5/5/55635,180,000/mail20110905-152747-Bhava_Mada
+ +MADA, BHAVA           -5724E7600  -L328/-------P1S1-11/09/05-18:41--AT
+<ESCALATION>
+<UPDATE>
+hello L3,
+This PMR will be handled by US API L2 tomorrow, mean while customer asks
+to take Dev team help as per his email.
+
+================================================
+
+Hi Bhava
+
+Can you please transfer the ticket to Germany development team. Reason
+being  Stefan  and Don Jones are familiar with HSBC implementation so
+they
+can help us quickly with the issue.
+
+As i mentioned we are running for critical release this weekend and this
+is
+a show stopper to us.
+
+Regards,
+
+Bhupendra SINGH
+===================================================
+
+
+
+</UPDATE>
+<L2PBQUEUE> PB=Queue,Center==>port,13g
+</L2PBQUEUE>
+</ESCALATION>
+ +MADA, BHAVA           -5724E7600  -L249/WPS   -P1S1-11/09/05-18:42-SCG
+ +MADA, BHAVA           -5724E7600  -L249/WPS   -P1S1-11/09/05-18:42-SAT
+ +MADA, BHAVA           -5724E7600  -L13G/PORTDE-P1S1-11/09/05-18:42--CR
+ +MADA, BHAVA           -5724E7600  -L13G/PORTDE-P1S1-11/09/05-18:42--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ -CDDR18 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-18:56--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110905-175623-Stefan_Schmitt
+File: pic06945.jpg                                5612 bytes
+File: pic03659.jpg                                 865 bytes
+File: pic09037.gif                                 106 bytes
+File: pic31404.gif                                5352 bytes
+File: mail.wri                                    6729 bytes
+ -CDDR18 PMRUPDATE BDC  -5724E7600  -L13G/PORT  -P1S1-11/09/05-18:56-SCG
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/-------P1S1-11/09/05-19:01--AL
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/-------P1S1-11/09/05-19:01--AT
+Updated next queue to PORTDE,13G
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/-------P1S1-11/09/05-19:01--AL
+ -CDDR12 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-19:59--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110905-185911-bhupendra.singh
+File: pic06945.jpg                                5612 bytes
+File: pic03659.jpg                                 865 bytes
+File: pic09037.gif                                 106 bytes
+File: pic31404.gif                                5352 bytes
+File: traceLogin.log.zip                         54668 bytes
+File: paint.JPG.zip                              47912 bytes
+File: mail.html                                  15347 bytes
+File: mail.wri                                    8376 bytes
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/-------P1S1-11/09/05-19:59--AT
+Requeing to PORTDE,13G to allow pageout.
+ -CDDR11 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-19:59--AT
+unpacked mail20110905-185911-bhupendra.singh/paint.JPG.zip to
+ mail20110905-185911-bhupendra.singh/paint.JPG.zip_unpack
+ -CDDR20 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-19:59--AT
+unpacked mail20110905-185911-bhupendra.singh/traceLogin.log.zip to
+ mail20110905-185911-bhupendra.singh/traceLogin.log.zip_unpack
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/PORT  -P1S1-11/09/05-19:59-SCR
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/PORTDE-P1S1-11/09/05-19:59-SAT
+ S5> SERVICE GIVEN= 99  SG/99/
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/PORTDE-P1S1-11/09/05-20:34-SCT
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/-------P1S1-11/09/05-20:34--AT
+Progress Made
+ -CDDR2 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/05-20:34--AT
+ECuRep Mail Gateway - mail from support
+ (websphere_support@ecurep.ibm.com)
+/ecurep/pmr/5/5/55635,180,000/mail20110905-193406-websphere_support
+ +CORNWELL, TRAVIS W.   -5724E7600  -L13G/PORTDE-P1S1-11/09/05-20:35-SCR
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE*********************
+
+ACTION TAKEN:  PMRalert not working?  Called and spoke with Duty
+Programmer WJT, who indicated would pickup PMR shortly.  Emailed
+customer with following:
+
+Hi folks,
+
+A quick note the PMR has been sent to the Portal L3 / Development team
+for review.  I have also engaged our Portal L2 colleagues in the US to
+review the logs in parallel.  The Portal L2 team will contact you once
+their analysis is completed (and/or once L3 analysis is completed).
+
+Please let us know if any questions, or if we may assist further before
+then.  Thank You.
+-Travis
+
+
+ACTION PLAN:  Allow WJT to analyze further today.
+ACTION PLAN OWNER:                      L2
+NEXT COMMUNICATION DATE:                9.5
+
+************************************************************LotusCRT02**
+ -CDDR19 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-21:14--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110905-201436-Stefan_Schmitt
+File: pic32261.jpg                                5612 bytes
+File: pic30738.jpg                                 865 bytes
+File: pic15559.gif                                 106 bytes
+File: pic06945.jpg                                5612 bytes
+File: pic03659.jpg                                 865 bytes
+File: pic09037.gif                                 106 bytes
+File: pic31404.gif                                5352 bytes
+File: traceLogin.log.zip                         54668 bytes
+File: paint.JPG.zip                              47912 bytes
+File: mail.wri                                   21257 bytes
+ -CDDR3 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/05-21:15--AT
+unpacked mail20110905-201436-Stefan_Schmitt/paint.JPG.zip to
+ mail20110905-201436-Stefan_Schmitt/paint.JPG.zip_unpack
+ -CDDR18 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-21:15--AT
+unpacked mail20110905-201436-Stefan_Schmitt/traceLogin.log.zip to
+ mail20110905-201436-Stefan_Schmitt/traceLogin.log.zip_unpack
+ -CDDR18 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-21:26--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110905-202633-bhupendra.singh
+File: pic32261.jpg                                5612 bytes
+File: pic30738.jpg                                 865 bytes
+File: pic15559.gif                                 106 bytes
+File: pic06945.jpg                                5612 bytes
+File: pic03659.jpg                                 865 bytes
+File: pic09037.gif                                 106 bytes
+File: pic31404.gif                                5352 bytes
+File: traceLogin.log.zip                         54668 bytes
+File: paint.JPG.zip                              47912 bytes
+File: mail.html                                  43742 bytes
+File: mail.wri                                   23090 bytes
+ -CDDR5 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/05-21:26--AT
+unpacked mail20110905-202633-bhupendra.singh/paint.JPG.zip to
+ mail20110905-202633-bhupendra.singh/paint.JPG.zip_unpack
+ -CDDR18 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/05-21:32--AT
+unpacked mail20110905-202633-bhupendra.singh/traceLogin.log.zip to
+ mail20110905-202633-bhupendra.singh/traceLogin.log.zip_unpack
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P1S1-11/09/05-21:38-S2D
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/-------P1S1-11/09/05-22:44--AL
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P1S1-11/09/05-22:44--CR
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN: Taking ownership of this issue.
+
+
+ACTION PLAN:    Follow-up with the l3 team on this issue tomorrow and
+check the status of their investigation.
+
+ACTION PLAN OWNER:  WJT  / WPS l3
+NEXT COMMUNICATION DATE: 9/6
+************************************************************LotusCRT02**
+ =VIDONI, CORNELIA      -5724E7600  -L249/-------P1S1-11/09/06-08:55--AL
+ =VIDONI, CORNELIA      -5724E7600  -L249/-------P1S1-11/09/06-08:55--AT
+Investigating ...
+ -CDDR8 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-10:06--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110906-090626-Stefan_Schmitt
+File: pic09279.jpg                                5612 bytes
+File: pic08446.jpg                                 865 bytes
+File: pic20599.gif                                 106 bytes
+File: mail.wri                                   27343 bytes
+ -CDDR8 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-10:27--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110906-092718-bhupendra.singh
+File: pic09279.jpg                                5612 bytes
+File: pic08446.jpg                                 865 bytes
+File: pic20599.gif                                 106 bytes
+File: tracevmm.log.zip                          111137 bytes
+File: wimconfig.xml.zip                           2658 bytes
+File: mail.html                                  48795 bytes
+File: mail.wri                                   27400 bytes
+ -CDDR6 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-10:27--AT
+unpacked mail20110906-092718-bhupendra.singh/wimconfig.xml.zip to
+ mail20110906-092718-bhupendra.singh/wimconfig.xml.zip_unpack
+ -CDDR1 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-10:27--AT
+unpacked mail20110906-092718-bhupendra.singh/tracevmm.log.zip to
+ mail20110906-092718-bhupendra.singh/tracevmm.log.zip_unpack
+ -CDDR3 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-11:06--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110906-100608-Stefan_Schmitt
+File: pic07462.jpg                                5612 bytes
+File: pic06660.jpg                                 865 bytes
+File: pic17937.gif                                 106 bytes
+File: pic09279.jpg                                5612 bytes
+File: pic08446.jpg                                 865 bytes
+File: pic20599.gif                                 106 bytes
+File: tracevmm.log.zip                          111137 bytes
+File: wimconfig.xml.zip                           2658 bytes
+File: mail.wri                                   31316 bytes
+ -CDDR4 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-11:06--AT
+unpacked mail20110906-100608-Stefan_Schmitt/tracevmm.log.zip to
+ mail20110906-100608-Stefan_Schmitt/tracevmm.log.zip_unpack
+ -CDDR10 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/06-11:06--AT
+unpacked mail20110906-100608-Stefan_Schmitt/wimconfig.xml.zip to
+ mail20110906-100608-Stefan_Schmitt/wimconfig.xml.zip_unpack
+ -CDDR4 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-12:48--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110906-114816-bhupendra.singh
+File: pic07462.jpg                                5612 bytes
+File: pic06660.jpg                                 865 bytes
+File: pic17937.gif                                 106 bytes
+File: pic09279.jpg                                5612 bytes
+File: pic08446.jpg                                 865 bytes
+File: pic20599.gif                                 106 bytes
+File: tracevmm.log.zip                          111137 bytes
+File: wimconfig.xml.zip                           2658 bytes
+File: tracevmm2.log.zip                         107944 bytes
+File: mail.html                                  54811 bytes
+File: mail.wri                                   32044 bytes
+ -CDDR15 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/06-12:48--AT
+unpacked mail20110906-114816-bhupendra.singh/wimconfig.xml.zip to
+ mail20110906-114816-bhupendra.singh/wimconfig.xml.zip_unpack
+ -CDDR10 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/06-12:48--AT
+unpacked mail20110906-114816-bhupendra.singh/tracevmm.log.zip to
+ mail20110906-114816-bhupendra.singh/tracevmm.log.zip_unpack
+ -CDDR10 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/06-12:48--AT
+unpacked mail20110906-114816-bhupendra.singh/tracevmm2.log.zip to
+ mail20110906-114816-bhupendra.singh/tracevmm2.log.zip_unpack
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P4S1-11/09/06-15:33-S2D
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P1S1-11/09/06-17:14--CR
+ +TROTMAN, WILLIAM J.   -5724E7600  -L249/WPS   -P1S1-11/09/06-17:14--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ +L3  PORTAL            -5724E7600  -B669/WPS   -P1S1-11/09/06-18:11-S2D
+ -CDDR16 PMRUPDATE BDC  -5724E7600  -L503/-------P1S1-11/09/06-22:03--AT
+unpacked mail20110906-210240-Stefan_Schmitt/tracevmm4.log.zip to
+ mail20110906-210240-Stefan_Schmitt/tracevmm4.log.zip_unpack
+ -CDDR7 PMRUPDATE RS4   -5724E7600  -L203/-------P1S1-11/09/06-22:03--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110906-210240-Stefan_Schmitt
+File: pic11572.jpg                                5612 bytes
+File: pic20868.jpg                                 865 bytes
+File: pic31406.gif                                 106 bytes
+File: pic07418.jpg                                5612 bytes
+File: pic13992.jpg                                 865 bytes
+File: pic07446.gif                                 106 bytes
+File: tracevmm4.log.zip                         116644 bytes
+File: mail.wri                                   36429 bytes
+ -CDDR7 PMRUPDATE RS4   -5724E7600  -L13G/PORTDE-P1S1-11/09/06-22:03-SCG
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P1S1-11/09/06-22:11-S2D
+ -CDDR2 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-22:13--AT
+unpacked mail20110906-211247-bhupendra.singh/tracevmm4.log.zip to
+ mail20110906-211247-bhupendra.singh/tracevmm4.log.zip_unpack
+ -CDDR26 PMRUPDATE RS4  -5724E7600  -L203/-------P1S1-11/09/06-22:14--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: bhupendra.singh@us.hsbc.com
+/ecurep/pmr/5/5/55635,180,000/mail20110906-211247-bhupendra.singh
+File: pic11572.jpg                                5612 bytes
+File: pic20868.jpg                                 865 bytes
+File: pic31406.gif                                 106 bytes
+File: pic07418.jpg                                5612 bytes
+File: pic13992.jpg                                 865 bytes
+File: pic07446.gif                                 106 bytes
+File: tracevmm4.log.zip                         116644 bytes
+File: mail.html                                  56277 bytes
+File: mail.wri                                   38493 bytes
+ -CDDR26 PMRUPDATE RS4  -5724E7600  -L13G/PORTDE-P1S1-11/09/06-22:14-SCG
+ -CDDR3 PMRUPDATE BDC   -5724E7600  -L503/-------P1S1-11/09/06-22:33--AT
+unpacked mail20110906-213237-Stefan_Schmitt/tracevmm4.log.zip to
+ mail20110906-213237-Stefan_Schmitt/tracevmm4.log.zip_unpack
+ -CDDR4 PMRUPDATE RS4   -5724E7600  -L203/-------P1S1-11/09/06-22:33--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Stefan Schmitt <st.schmitt@de.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110906-213237-Stefan_Schmitt
+File: pic25106.jpg                                5612 bytes
+File: pic24531.jpg                                 865 bytes
+File: pic13743.gif                                 106 bytes
+File: pic11572.jpg                                5612 bytes
+File: pic20868.jpg                                 865 bytes
+File: pic31406.gif                                 106 bytes
+File: pic07418.jpg                                5612 bytes
+File: pic13992.jpg                                 865 bytes
+File: pic07446.gif                                 106 bytes
+File: tracevmm4.log.zip                         116644 bytes
+File: mail.wri                                   40572 bytes
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P1S1-11/09/07-00:56-S2D
+ =VIDONI, CORNELIA      -5724E7600  -L249/-------P1S1-11/09/07-10:48--AT
+Stefan asked for a secondary to be sent to VMM ...
+ +VIDONI, CORNELIA      -5724E7600  -L13K/VMML3 -P3S3-11/09/07-10:49-SCE
+ +VIDONI, CORNELIA      -5724E7600  -L13K/VMML3 -P3S3-11/09/07-10:49-SAT
+ +L3  PORTAL            -5724E7600  -B669/-------P3S1-11/09/07-15:33--AL
+ +L3  PORTAL            -5724E7600  -B669/-------P3S1-11/09/07-15:33--AT
+Updated by: Stefan S.
+response from VMM tea. The log shows the call to the CMR and the direct
+ response, but did not include any message from the CMR. Can you please
+ recheck and verify your trace settings for the CMR? Do they need a
+ restart?
+
+Based on the current investigation the CMR does not return a result for
+ the dn
+ +L3  PORTAL            -5724E7600  -B669/WPS   -P1S1-11/09/07-15:33--CR
+ +L3  PORTAL            -5724E7600  -B669/PORT  -P1S1-11/09/07-15:33--AT
+ S5> SERVICE GIVEN= 99  SG/99/
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORT  -P3S1-11/09/07-17:23--CR
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN:   sent update to the customer.
+ACTION PLAN:    wait for reply and follow-up tomorrow if no update
+before then.
+
+ACTION PLAN OWNER:  Customer
+
+NEXT COMMUNICATION DATE: 9/8
+************************************************************LotusCRT02**
+ -CDDR8 PMRUPDATE BDC   -5724E7600  -L503/-------P3S1-11/09/07-17:30--AT
+ECuRep Mail Gateway - Received Mail and stored in ECuRep
+Mail From: Chandrajit G Joshi <Chandrajit.Joshi@in.ibm.com>
+/ecurep/pmr/5/5/55635,180,000/mail20110907-163027-Chandrajit_G_Joshi
+File: mail.html                                  60970 bytes
+File: mail.wri                                   41378 bytes
+ -CDDR8 PMRUPDATE BDC   -5724E7600  -L13G/PORTDE-P3S1-11/09/07-17:30-SCG
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P3S1-11/09/07-19:43-S2D
+ +TAYAL, SHREY          -5724E7600  -L13K/VMML3 -P3S3-11/09/07-20:17-SCR
+ S5> SERVICE GIVEN= 99  SG/99/
+Hi VMM L2,
+
+Looking at the logs, VMM identifies the repository for the user as
+follows:
+
+[9/6/11 13:39:40:971 GMT] 0000007a RepositoryMan >
+com.ibm.ws.wim.RepositoryManager getRepository ENTRY reposId=IDVCR
+[9/6/11 13:39:40:971 GMT] 0000007a RepositoryMan <
+com.ibm.ws.wim.RepositoryManager getRepository RETURN
+
+Once the repository is identified, VMM passes the control to underlying
+adapter(in this case custom adapter).
+
+From the traces, we cannot determine what is happening on the adapter
+side. Could you request the customer to verify if the adapter is working
+correctly. Perhaps they can enable traces on custom adapter which will
+give us more information.
+
+Thanks and Regards,
+Shrey Tayal
+ +RODRIGUEZ, ROBERT D.  -5724E7600  -L12H/VMML2 -P3S3-11/09/07-21:25-SCT
+ +RODRIGUEZ, ROBERT D.  -5724E7600  -L74J/-------P3S1-11/09/07-21:42--AL
+ +RODRIGUEZ, ROBERT D.  -5724E7600  -L74J/-------P3S1-11/09/07-21:42--AL
+ +RODRIGUEZ, ROBERT D.  -5724E7600  -L74J/-------P3S1-11/09/07-21:42--AL
+ +RODRIGUEZ, ROBERT D.  -5724E7600  -L12H/VMML2 -P3S3-11/09/07-21:44-SCR
+ S5> SERVICE GIVEN= 99  SG/99/
+CUSTOMER REPRESENTATIVE:
+PROBLEM: VMM Custom adapter issue
+
+BusImpact: Pending customer reply.
+
+ACTION TAKEN:
+________________
+Hello Portal L2
+________________
+In regards to your issue, please review the update from VMM L3
+concerning your PMR. Let us know if you need additional assistance on
+this issue.
+Thanks and Regards,
+
+ACTION PLANNED: Updating PMR, passing over to Portal L2 for follow
+up and review of updates.
+
+NEGOTIATED CONTACT: WFB L2
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P3S1-11/09/07-22:09--CC
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN:
+
+Sent updates to the customer asking for more information on the CMR.
+
+ACTION PLAN:
+
+wait for details and I will follow-up with the l3 team.  Check for
+update 9/8
+
+ACTION PLAN OWNER:                      WJT
+NEXT COMMUNICATION DATE:                9/8
+************************************************************LotusCRT02**
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORT  -P3S3-11/09/07-22:43--2D
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P3S1-11/09/08-21:40--CC
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN:  no update from the customer.  SEnding email to the
+customer on this issue asking for a status update.
+
+ACTION PLAN:   Follow-up with the customer 9/9
+ACTION PLAN OWNER: WJT
+NEXT COMMUNICATION DATE: 9/9
+************************************************************LotusCRT02**
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P3S1-11/09/09-16:52--CC
+ S5> SERVICE GIVEN= 99  SG/99/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN:    emailed the customer and asked for a status on this
+issue.
+
+ACTION PLAN:  Follow-up with the customer 9/12 if no update before then.
+
+ACTION PLAN OWNER:   customer
+NEXT COMMUNICATION DATE:  9/12
+************************************************************LotusCRT02**
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/-------P3S1-11/09/12-20:26--AL
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/-------P3S1-11/09/12-20:26--AL
+ +TROTMAN, WILLIAM J.   -5724E7600  -L13G/PORTDE-P2S2-11/09/12-20:26--CC
+ S5> SERVICE GIVEN= 29  SG/29/
+******************* SUBSEQUENT CALL RECORD TEMPLATE  *******************
+CUSTOMER REP:(if changed)
+PREFERRED METHOD OF CONTACT:(if changed)
+ENVIRONMENT:(if changed)
+PROBLEM:(if changed)
+BUSIMPACT:(if changed)
+ACTION TAKEN:
+
+Customer sent the following:
+
+My Apologies for delayed reply. We did have some custom trace in our
+Custom User Repository which we expected to get printed when repository
+will be called.
+
+We later found out that because of get method not returning correct
+object it was not returning correct User DN which resulted in member not
+found exception.
+
+Our issue is resolved now. You can close the PMR.
+
+
+ACTION PLAN: Close PMR
+
+
+ACTION PLAN OWNER:   none
+NEXT COMMUNICATION DATE:  none
+************************************************************LotusCRT02**

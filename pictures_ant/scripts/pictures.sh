@@ -3,8 +3,8 @@
 # $Id: pictures.sh,v 1.4 2005/05/16 18:57:16 klaus Exp $
 
 # Default path for picture directory
-#PICS=/local/digicam/pictures
-PICS=/c/pictures
+PICS=/usr/local/digicam/pictures
+#PICS=/c/pictures
 
 if [ "$1" != "" ]
 then
