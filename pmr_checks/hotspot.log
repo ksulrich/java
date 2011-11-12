@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<hotspot_log version='160 1' process='3725' time_ms='1317493959818'>
+<hotspot_log version='160 1' process='4856' time_ms='1317498707641'>
 <vm_version>
 <name>
 Java HotSpot(TM) Server VM
@@ -13,10 +13,10 @@ Java HotSpot(TM) Server VM (21.0-b17-fastdebug) for linux-x86 JRE (1.7.0-fastdeb
 </vm_version>
 <vm_arguments>
 <args>
--Didea.launcher.port=7536 -Didea.launcher.bin.path=/usr/local/idea-IC-107.322/bin -Dfile.encoding=UTF-8 
+-Didea.launcher.port=7532 -Didea.launcher.bin.path=/usr/local/idea-IC-107.322/bin -Dfile.encoding=UTF-8 
 </args>
 <command>
-com.intellij.rt.execution.application.AppMain com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 test.de.ulrich.pmr.test.EventTest
+com.intellij.rt.execution.application.AppMain com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 @/tmp/idea_junit1039015450742097145.tmp -socket42977
 </command>
 <launcher>
 SUN_STANDARD
@@ -31,24 +31,24 @@ java.endorsed.dirs=/usr/local/jdk1.7.0/fastdebug/jre/lib/endorsed
 sun.boot.library.path=/usr/local/jdk1.7.0/fastdebug/jre/lib/i386
 java.library.path=/usr/local/jdk1.7.0/fastdebug/jre/lib/i386/server:/usr/local/jdk1.7.0/fastdebug/jre/lib/i386:/usr/local/jdk1.7.0/fastdebug/jre/../lib/i386:/usr/local/jdk1.6.0_26/jre/lib/i386/server:/usr/local/jdk1.6.0_26/jre/lib/i386:/usr/local/jdk1.6.0_26/jre/../lib/i386:.::/usr/java/packages/lib/i386:/lib:/usr/lib
 java.home=/usr/local/jdk1.7.0/fastdebug/jre
-java.class.path=/usr/local/idea-IC-107.322/lib/idea_rt.jar:/usr/local/idea-IC-107.322/plugins/junit/lib/junit-rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jce.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/resources.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/charsets.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/alt-rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/management-agent.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jsse.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/plugin.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/deploy.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/javaws.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/localedata.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunec.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunpkcs11.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/dnsns.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/zipfs.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunjce_provider.jar:/home/klaus/proj/tesing/out/production/tesing:/home/klaus/.IdeaIC10/config/plugins/idea-remoteGroovyConsole/lib/groovy-all-1.8.0.jar:/home/klaus/.IdeaIC10/config/plugins/idea-remoteGroovyConsole/lib/remoteconsole-groovy-1.0.14.jar:/home/klaus/.IdeaIC10/config/plugins/idea-remoteGroovyConsole/lib/autoimports-groovy-1.0.7.jar:/usr/share/java/junit4.jar
+java.class.path=/usr/local/idea-IC-107.322/lib/idea_rt.jar:/usr/local/idea-IC-107.322/plugins/junit/lib/junit-rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jce.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/resources.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/charsets.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/alt-rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/management-agent.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jsse.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/plugin.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/deploy.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/javaws.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/localedata.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunec.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunpkcs11.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/dnsns.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/zipfs.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/ext/sunjce_provider.jar:/home/klaus/proj/java/pmr_checks/out/test/Pmr_checks:/home/klaus/proj/java/pmr_checks/out/production/Pmr_checks:/usr/local/idea-IC-107.322/lib/junit-4.8.jar
 sun.boot.class.path=/usr/local/jdk1.7.0/fastdebug/jre/lib/resources.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/rt.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/sunrsasign.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jsse.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/jce.jar:/usr/local/jdk1.7.0/fastdebug/jre/lib/charsets.jar:/usr/local/jdk1.7.0/fastdebug/jre/classes
 java.vm.specification.vendor=Oracle Corporation
 java.vm.specification.version=1.7
 java.vm.vendor=Oracle Corporation
-idea.launcher.port=7536
+idea.launcher.port=7532
 idea.launcher.bin.path=/usr/local/idea-IC-107.322/bin
 file.encoding=UTF-8
-sun.java.command=com.intellij.rt.execution.application.AppMain com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 test.de.ulrich.pmr.test.EventTest
+sun.java.command=com.intellij.rt.execution.application.AppMain com.intellij.rt.execution.junit.JUnitStarter -ideVersion5 @/tmp/idea_junit1039015450742097145.tmp -socket42977
 sun.java.launcher=SUN_STANDARD
 </properties>
 </vm_arguments>
 <tty>
-<writer thread='-1236612240'/>
+<writer thread='-1236055184'/>
 C1 Runtime statistics:
  _resolve_invoke_virtual_cnt:     0
- _resolve_invoke_opt_virtual_cnt: 0
- _resolve_invoke_static_cnt:      0
+ _resolve_invoke_opt_virtual_cnt: 2
+ _resolve_invoke_static_cnt:      1
  _handle_wrong_method_cnt:        0
  _ic_miss_cnt:                    0
  _generic_arraycopy_cnt:          0
@@ -80,60 +80,65 @@ C1 Runtime statistics:
  _throw_count:                                  0:
 
 <statistics type='nmethod'>
-Statistics for 6 bytecoded nmethods:
- total in heap  = 11504
- relocation     = 244
- main code      = 3360
- stub code      = 132
- oops           = 24
- scopes data    = 1524
- scopes pcs     = 4752
- dependencies   = 24
- handler table  = 72
- nul chk table  = 96
-Debug Data Chunks: 343, shared 51+95, non-SP&apos;s elided 1
-PcDesc Statistics:  2 queries, 11.00 comparisons per query
-  caches=6 queries=2/0, hits=0+0, tests=4+18, adds=2
+Statistics for 1 native nmethods:
+ N. total size  = 656
+ N. relocation  = 68
+ N. main code   = 376
+Statistics for 13 bytecoded nmethods:
+ total in heap  = 29468
+ relocation     = 748
+ main code      = 9280
+ stub code      = 424
+ oops           = 88
+ scopes data    = 3616
+ scopes pcs     = 11424
+ dependencies   = 56
+ handler table  = 744
+ nul chk table  = 228
+Debug Data Chunks: 881, shared 162+263, non-SP&apos;s elided 5
+PcDesc Statistics:  10 queries, 9.90 comparisons per query
+  caches=13 queries=10/0, hits=0+2, tests=24+75, adds=8
 </statistics>
 <statistics type='opto'>
 --- Compiler Statistics ---
-Methods seen: 6  Methods parsed: 6  Nodes created: 7674
-Blocks parsed: 78  Blocks seen: 79
-41 original NULL checks - 32 elided (78%); optimizer leaves 24,
-9 made implicit (37%)
-CCP: 6  constants found: 0
-Total frameslots = 120, Max frameslots = 8
+Methods seen: 24  Methods parsed: 24  Nodes created: 18411
+Blocks parsed: 180  Blocks seen: 183
+109 original NULL checks - 82 elided (75%); optimizer leaves 40,
+23 made implicit (57%)
+CCP: 13  constants found: 0
+Total frameslots = 168, Max frameslots = 20
 Inserted 0 spill loads, 0 spill stores, 0 mem-mem moves and 0 copies.
 Total load cost=      0, store cost =      0, mem-mem cost =  0.00, copy cost =     0.
 Adjusted spill cost =       0.
-Conservatively coalesced 47 copies, 0 pairs, 196 post alloc.
-Used cisc instruction  46,  remained in register 103
-Average allocation trips 1.250000
+Conservatively coalesced 79 copies, 0 pairs, 380 post alloc.
+Used cisc instruction  89,  remained in register 178
+Average allocation trips 1.407407
 High Pressure Blocks = 0, Low Pressure Blocks = 0
-Nops added 0 bytes to total of 4940 bytes, for 0.00%
+Nops added 0 bytes to total of 10699 bytes, for 0.00%
 Peephole: peephole rules applied: 0
-PhaseIdealLoop=38, sum _unique=17073
+PhaseIdealLoop=80, sum _unique=46485
 </statistics>
 <statistics type='intrinsic'>
 Compiler intrinsic usage:
-     2 (100.0%) _min (worked)
-     2 (100.0%) total (worked)
+     2 (66.7%) _min (worked)
+     1 (33.3%) _arraycopy (worked)
+     3 (100.0%) total (worked)
 </statistics>
 <statistics type='SharedRuntime'>
     0 inline cache miss in compiled
     0 wrong method
-    0 unresolved static call site
+    1 unresolved static call site
     0 unresolved virtual call site
-    0 unresolved opt virtual call site
-   59 slow partial subtype
+    2 unresolved opt virtual call site
+  245 slow partial subtype
    12 byte array copies
    12 short array copies
    12 int array copies
    12 long array copies
-AdapterHandlerTable: empty 231 longest 2 total 70 average 1.129032
-AdapterHandlerTable: lookups 6107 buckets 6073 equals 6038 hits 6037 compact 6037
+AdapterHandlerTable: empty 227 longest 3 total 75 average 1.136364
+AdapterHandlerTable: lookups 7080 buckets 7045 equals 7006 hits 7005 compact 7005
 </statistics>
-<tty_done stamp='0.888'/>
+<tty_done stamp='2.903'/>
 </tty>
-<hotspot_log_done stamp='0.888'/>
+<hotspot_log_done stamp='2.903'/>
 </hotspot_log>

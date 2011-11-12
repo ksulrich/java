@@ -65,7 +65,7 @@ public class Consumption {
         Consumption usage = new Consumption();
         for (int i = 1; i < usage.entries.size(); i++) {
             Entry e = usage.entries.get(i);
-            System.out.println(e + ": " + usage.average(i));
+            System.out.printf("%-80s => %2.2f\n", e, usage.average(i));
         }
         System.out.println("Overall average: " + usage.average());
     }
