@@ -1,5 +1,6 @@
 package de.ulrich.pmr;
 
+import java.text.ParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,23 +15,29 @@ public class Event {
     public static final String SCT_Type = "SCT";
     public static final String AT_Type = "AT";
 
+    public final static Pattern pattern = Pattern.compile("^ \\+(......................)-(...........)-(...........)-(....)-(........-.....)-(...)");
+
     String user;
     String type;
     String line;
     Queue queue;
     TimeStamp timeStamp;
 
-    public Event(String line) {
+    public Event(String line) throws ParseException {
         this.line = line;
         init();
     }
 
-    private void init() {
+    public static boolean isEvent(String line) {
+        return pattern.matcher(line).find();
+    }
+
+    private void init() throws ParseException {
         // Event line has the form of:
         // " +NARIANI, VINEET       -5724E7600  -L13G/WPSTUN-P1S1-11/09/05-09:58--CE"
         // " +......................-...........-...........-....-........-.....-..."
         //Pattern pattern = Pattern.compile("^ +\\+(\\w+,\\s*\\w+)\\s+-(\\w+)\\s+-(\\w+/\\w+)-(P\\dS\\d)-(\\d\\d/\\d\\d/\\d\\d-\\d\\d:\\d\\d)-+(\\w+)");
-        Pattern pattern = Pattern.compile("^ \\+(......................)-(...........)-(...........)-(....)-(........-.....)-(...)");
+
         //Pattern pattern = Pattern.compile("^\\s+\\+(.*)");
         Matcher matcher = pattern.matcher(line);
         while (matcher.find()) {
@@ -44,14 +51,42 @@ public class Event {
         }
     }
 
+    public String getCompId() {
+        return compId;
+    }
+
+    public String getUser() {
+        return user;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Queue getQueue() {
+        return queue;
+    }
+
+    public TimeStamp getTimeStamp() {
+        return timeStamp;
+    }
+
+    public boolean isSev1() {
+        return severity.charAt(3) == '1';
+    }
+
+    public int getSeverity() {
+        return Integer.parseInt(severity.substring(3));
+    }
+
     @Override
     public String toString() {
         return "Event{" +
-                "severity='" + severity + '\'' +
+                "severity='" + getSeverity() + '\'' +
                 ", compId='" + compId + '\'' +
                 ", user='" + user + '\'' +
                 ", type='" + type + '\'' +
-                ", queue=" + queue +
+                ", queueString=" + queue +
                 ", timeStamp=" + timeStamp +
                 ", line='" + line + '\'' +
                 '}';
