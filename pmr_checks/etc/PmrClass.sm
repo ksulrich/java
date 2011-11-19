@@ -1,0 +1,76 @@
+%{
+// -*- mode: text; tab-width: 4; -*-
+//
+// State Machine
+//  PMR Handling
+//
+// Description
+//  This state machine for PMR handling
+//
+%}
+
+%start PmrMap::Idle
+%class PmrClass
+%package de.ulrich.pmr
+
+%map PmrMap
+%%
+Idle
+{
+    CE
+        CE
+        {
+            StartTimer("CE");
+        }
+    SCE
+      [ctxt.isSev1()]
+        SCE
+        {
+            StartTimer("SCE");
+        }
+}
+
+CE
+{
+    Timeout
+        Idle
+        {
+            Report();
+        }
+    CT
+	Idle
+	{
+	    StopTimer("CT");
+	}
+	
+}
+SCE
+{
+    Timeout
+        Idle
+        {
+            Report();
+        }
+    SCT
+	Idle
+	{
+	    StopTimer("SCT");
+	}
+	
+}
+
+Default
+{
+    AT
+        nil
+        {}
+    SCE
+	    nil
+	    {}
+	Unknown
+	    nil
+	    {
+	        Unknown();
+	    }
+}
+%%

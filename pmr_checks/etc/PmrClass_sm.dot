@@ -1,0 +1,54 @@
+digraph PmrClass {
+
+    node
+        [shape=Mrecord width=1.5];
+
+    subgraph cluster_PmrMap {
+
+        label="PmrMap";
+
+        //
+        // States (Nodes)
+        //
+
+        "PmrMap::Idle"
+            [label="{Idle}"];
+
+        "PmrMap::CE"
+            [label="{CE}"];
+
+        "PmrMap::SCE"
+            [label="{SCE}"];
+
+        "PmrMap::DefaultState"
+            [label="{&laquo; Default &raquo;|AT/\lSCE/\lUnknown/\l&nbsp;&nbsp;&nbsp;Unknown;\l}"];
+
+        "%start"
+            [label="" shape=circle style=filled fillcolor=black width=0.25];
+
+        //
+        // Transitions (Edges)
+        //
+
+        "PmrMap::Idle" -> "PmrMap::CE"
+            [label="CE/\lStartTimer;\l"];
+
+        "PmrMap::Idle" -> "PmrMap::SCE"
+            [label="SCE\l\[ctxt.isSev1()\]/\lStartTimer;\l"];
+
+        "PmrMap::CE" -> "PmrMap::Idle"
+            [label="Timeout/\lReport;\l"];
+
+        "PmrMap::CE" -> "PmrMap::Idle"
+            [label="CT/\lStopTimer;\l"];
+
+        "PmrMap::SCE" -> "PmrMap::Idle"
+            [label="Timeout/\lReport;\l"];
+
+        "PmrMap::SCE" -> "PmrMap::Idle"
+            [label="SCT/\lStopTimer;\l"];
+
+        "%start" -> "PmrMap::Idle"
+    }
+
+}
