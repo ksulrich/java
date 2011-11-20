@@ -30,6 +30,7 @@
   <target name="clean">
     <delete dir="${build.dir}" />
     <delete dir="${gen.dir}" />
+    <delete file="${src.dir}/de/ulrich/pmr/PmrClassContext.java" />
   </target>
 
   <target name="gen" description="Generate state support code (smc)" depends="init">
