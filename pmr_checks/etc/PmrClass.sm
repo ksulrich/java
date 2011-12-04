@@ -63,10 +63,45 @@ Default
 {
     AT
         nil
-        {}
+        {
+            AT();
+        }
+    CE
+        nil
+        {
+            CE();
+        }
     SCE
 	    nil
-	    {}
+	    {
+	        SCE();
+	    }
+	SAT
+	    nil
+	    {
+	        SAT();
+	    }
+	AL
+	    nil
+	    {
+	        AL();
+	    }
+	CR
+	    nil
+	    {
+	        CR();
+	    }
+	CT
+	    nil
+	    {
+	        CT();
+	    }
+	SCT
+	    nil
+	    {
+	        SCT();
+	    }
+
 	Unknown
 	    nil
 	    {

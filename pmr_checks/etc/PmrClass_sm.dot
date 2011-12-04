@@ -21,7 +21,7 @@ digraph PmrClass {
             [label="{SCE}"];
 
         "PmrMap::DefaultState"
-            [label="{&laquo; Default &raquo;|AT/\lSCE/\lUnknown/\l&nbsp;&nbsp;&nbsp;Unknown;\l}"];
+            [label="{&laquo; Default &raquo;|AT/\l&nbsp;&nbsp;&nbsp;AT;\lCE/\l&nbsp;&nbsp;&nbsp;CE;\lSCE/\l&nbsp;&nbsp;&nbsp;SCE;\lSAT/\l&nbsp;&nbsp;&nbsp;SAT;\lAL/\l&nbsp;&nbsp;&nbsp;AL;\lCR/\l&nbsp;&nbsp;&nbsp;CR;\lCT/\l&nbsp;&nbsp;&nbsp;CT;\lSCT/\l&nbsp;&nbsp;&nbsp;SCT;\lUnknown/\l&nbsp;&nbsp;&nbsp;Unknown;\l}"];
 
         "%start"
             [label="" shape=circle style=filled fillcolor=black width=0.25];
