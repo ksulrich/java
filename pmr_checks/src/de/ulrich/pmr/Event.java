@@ -14,6 +14,9 @@ public class Event {
     public static final String SCE_Type = "SCE";
     public static final String SCT_Type = "SCT";
     public static final String AT_Type = "AT";
+    public static final String SAT_Type = "SAT";
+    public static final String AL_Type = "AL";
+    public static final String CR_Type = "CR";
 
     public final static Pattern pattern = Pattern.compile("^ \\+(......................)-(...........)-(...........)-(....)-(........-.....)-(...)");
 
