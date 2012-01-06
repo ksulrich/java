@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="StockWatcher" default="build" basedir=".">
   <!-- Configure path to GWT SDK -->
-  <property name="gwt.sdk" location="/path/to/gwt.sdk" />
+  <property name="gwt.sdk" location="/local/gwt-2.4.0" />
 
   <path id="project.class.path">
     <pathelement location="war/WEB-INF/classes"/>
@@ -125,7 +125,14 @@
 
   <target name="clean" description="Cleans this project">
     <delete dir="war/WEB-INF/classes" failonerror="false" />
+    <delete dir="war/WEB-INF/deploy" failonerror="false" />
+    <delete dir="war/WEB-INF/lib" failonerror="false" />
+    <delete dir="war/com.google.gwt.sample.stockwatcher.StockWatcher.JUnit" failonerror="false" />
     <delete dir="war/stockwatcher" failonerror="false" />
+    <delete dir="gwt-unitCache" failonerror="false" />
+    <delete dir="reports" failonerror="false" />
+    <delete dir="test" failonerror="false" />
+    <delete dir="www-test" failonerror="false" />
   </target>
 
 </project>
