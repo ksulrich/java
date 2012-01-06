@@ -131,7 +131,7 @@
     <delete dir="war/stockwatcher" failonerror="false" />
     <delete dir="gwt-unitCache" failonerror="false" />
     <delete dir="reports" failonerror="false" />
-    <delete dir="test" failonerror="false" />
+    <delete dir="test/**" failonerror="false" />
     <delete dir="www-test" failonerror="false" />
   </target>
 
