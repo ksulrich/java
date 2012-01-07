@@ -16,11 +16,6 @@
         <url-pattern>/stockwatcher/stockPrices</url-pattern>
     </servlet-mapping>
 
-  <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/stockwatcher/greet</url-pattern>
-  </servlet-mapping>
-  
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>StockWatcher.html</welcome-file>
