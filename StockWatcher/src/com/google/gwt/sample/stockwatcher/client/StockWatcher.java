@@ -181,6 +181,7 @@ public class StockWatcher implements EntryPoint {
             public void onFailure(Throwable caught) {
                 // If the stock code is in the list of delisted codes, display an error message.
                 String details = caught.getMessage();
+                System.out.println("Callback: onFailure: caught="+caught.getClass().toString());
                 if (caught instanceof DelistedException) {
                     details = "Company '" + ((DelistedException)caught).getSymbol() + "' was delisted";
                 }

@@ -17,6 +17,7 @@ public class StockPriceServiceImpl extends RemoteServiceServlet implements Stock
         StockPrice[] prices = new StockPrice[symbols.length];
         for (int i=0; i<symbols.length; i++) {
             if (symbols[i].equals("ERR")) {
+                System.out.println("StockPriceServiceImpl: Throw DelistedException");
                 throw new DelistedException("ERR");
             }
 
