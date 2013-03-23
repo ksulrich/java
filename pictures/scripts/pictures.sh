@@ -4,7 +4,7 @@
 
 # Default path for picture directory
 #PICS=/local/digicam/pictures
-PICS=/c/pictures
+PICS=$HOME/Pictures
 
 if [ "$1" != "" ]
 then
