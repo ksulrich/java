@@ -1,54 +1,59 @@
-<!-- Build file for com tree 
+<!-- Build file for com tree
 $Id: build.xml,v 1.5 2005/12/21 19:59:27 klaus Exp $
 -->
 
 
 <project name="JAVA" default="tools" basedir=".">
 
-  <property name="home.dir" value="/users/klaus"/>
-  <property name="classes.dir" value="${home.dir}/classes"/>
-  <property name="deploy.dir" value="${home.dir}/deploy"/>
-  <property name="JUnit" value="/usr/local/src/java/junit3.8.1/junit.jar"/>
-  <property name="idea-libs" value="/usr/local/IntelliJ-IDEA-4.5/lib/forms_rt.jar"/>
+    <property name="home.dir" value="/users/klaus"/>
+    <property name="classes.dir" value="${home.dir}/classes"/>
+    <property name="deploy.dir" value="${home.dir}/deploy"/>
+    <property name="JUnit" value="/usr/local/src/java/junit3.8.1/junit.jar"/>
+    <property name="idea-libs" value="${basedir}/lib/forms_rt.jar"/>
 
-  <path id="class.path">
-    <pathelement location="${JUnit}"/>
-    <pathelement location="${idea-libs}"/>
-    <pathelement location="${classes.dir}"/>
-  </path>
+    <path id="class.path">
+        <pathelement location="${JUnit}"/>
+        <pathelement location="${idea-libs}"/>
+        <pathelement location="${classes.dir}"/>
+    </path>
 
-  <property name="classpath" refid="class.path"/>
+    <property name="classpath" refid="class.path"/>
 
-  <target name="prepare">
-    <mkdir dir="${classes.dir}"/>
-  </target>
+    <target name="prepare">
+        <mkdir dir="${classes.dir}"/>
+    </target>
 
-  <target name="tools" depends="prepare">
-    <javac srcdir="src" destdir="${classes.dir}"
-      classpath="${classpath}"
-      debug="on" optimize="off" deprecation="off"/>
-  </target>
+    <target name="tools" depends="prepare">
+        <javac srcdir="src" destdir="${classes.dir}"
+               classpath="${classpath}"
+               debug="on" optimize="off" deprecation="off"/>
+    </target>
 
-  <!-- Create jar file for Zeiten tool -->
-  <target name="zeiten" depends="tools">
-    <mkdir dir="${deploy.dir}"/>
-    <delete file="${deploy.dir}/zeiten.jar"/>
-    <jar jarfile="${deploy.dir}/zeiten.jar"
-      basedir="${classes.dir}"
-      includes="com/com.danet/gui/Zeiten*,
-                com/com.danet/util/TimeStamp*,
-                com/com.danet/util/ListElement*,
-                com/com.danet/util/SwingWorker*,
-                com/com.danet/exceptions/IllegalSizeException*"/>
-  </target>
-  <target name="clean">
-    <deltree dir="${classes.dir}"/>
-  </target>
+    <!-- Create jar file for Zeiten tool -->
+    <target name="zeiten" depends="tools">
+        <mkdir dir="${deploy.dir}"/>
+        <delete file="${deploy.dir}/zeiten.jar"/>
+        <jar jarfile="${deploy.dir}/zeiten.jar"
+             basedir="${classes.dir}"
+             includes="com/danet/gui/Zeiten*,
+                com/danet/gui/FileBase*,
+                com/danet/util/TimeStamp*,
+                com/danet/util/ListElement*,
+                com/danet/util/SwingWorker*,
+                com/danet/exceptions/IllegalSizeException*"/>
+    </target>
+    <target name="run" depends="zeiten">
+        <java classpath="${deploy.dir}/zeiten.jar" classname="com.danet.gui.Zeiten"
+              args="${home.dir}/Wissen/zeiten"></java>
+    </target>
+    <target name="clean">
+        <deltree dir="${classes.dir}"/>
+    </target>
 
-  <target name="testcase" depends="prepare">
-    <javac srcdir="." destdir="${classes.dir}" classpath="${classpath}" debug="on" deprecation="on"
-      includes="com/com.danet/xml/*.java">
-    </javac>
-  </target>
+    <target name="testcase" depends="prepare">
+        <javac srcdir="." destdir="${classes.dir}" classpath="${classpath}" debug="on" deprecation="on"
+               includes="com/com.danet/xml/*.java">
+        </javac>
+    </target>
 
 </project>

@@ -30,7 +30,7 @@ public class Zeiten extends JFrame {
     private final static String[] MONTH = {
             "JANUAR",
             "FEBRUAR",
-            "MÄRZ",
+            "MÃ„RZ",
             "APRIL",
             "MAI",
             "JUNI",

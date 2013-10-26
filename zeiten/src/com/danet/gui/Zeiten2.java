@@ -27,7 +27,7 @@ public class Zeiten2 {
     private final static String[] MONTH = {
             "JANUAR",
             "FEBRUAR",
-            "MÄRZ",
+            "MÃ„RZ",
             "APRIL",
             "MAI",
             "JUNI",
