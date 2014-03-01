@@ -70,7 +70,7 @@ public class MainFrame {
                     degree += 90;
                 } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
                     degree -= 90;
-                } else if (e.getKeyChar() == 'm') {
+                } else if (e.getKeyCode() == KeyEvent.VK_F1) {
                     currentElement.mark();
                     fileList.repaint();
                 } else {
