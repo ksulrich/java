@@ -39,6 +39,6 @@ public class EntryTest {
 
     @Test
     public void toStringTest() {
-        assertEquals(e8.toString(), "Entry{date='22.12.08', fuel=32.24, kilometer=18507, cost=35.75, full=true}");
+        assertEquals(e8.toString(), "Entry{date='22.12.2008', fuel=32.24, kilometer=18507, cost=35.75, full=true}");
     }
 }
